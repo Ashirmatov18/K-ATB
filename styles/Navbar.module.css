@@ -1,0 +1,48 @@
+.app_main {
+  /* min-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw); */
+  background-color: #000;
+}
+
+.navbar_pos {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1280px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.nav_info {
+  color: white;
+  padding-top: 10px;
+}
+
+.nav_info ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_info ul li {
+  padding-right: 50px;
+}
+
+.nav_add {
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  padding-top: 10px;
+}
+
+.burger_menu {
+  padding-top: 22px;
+}
+
+.flag {
+  padding-top: 17px;
+}
+
+.search {
+  padding-top: 10px;
+}
