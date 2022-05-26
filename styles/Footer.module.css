@@ -1,0 +1,51 @@
+.horse_section {
+  padding-top: 100px;
+}
+
+.horse_section h1 {
+  color: #333333;
+  font-size: 50px;
+}
+
+.horse_section p {
+  color: #2f2f2f;
+  font-size: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  padding: 2px;
+  width: 810px;
+  height: 75px;
+  margin-top: 60px;
+}
+
+.confirm_inp {
+  flex-grow: 2;
+  border: none;
+  border-radius: 10px;
+  position: relative;
+  padding-left: 55px;
+  font-size: 17px;
+}
+
+.confirm_inp:focus {
+  outline: none;
+}
+
+.confirm_but {
+  border: none;
+  background: #a80f02;
+  width: 180px;
+  height: 45px;
+  border-radius: 10px;
+  color: white;
+  position: absolute;
+  margin-left: 600px;
+  margin-top: 15px;
+}
+
+.footer_info {
+  background-color: #000;
+}
