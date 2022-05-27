@@ -137,3 +137,6 @@
 .slider_whole_but:first-child {
   margin-right: 30px;
 }
+.slider_left {
+  margin-right: 20px;
+}

@@ -134,31 +134,45 @@ export default function Exploration() {
           </div>
           <div className={styles.residents}>
             <div>
-              <div className={styles.first_res}></div>
+              <div className={styles.first_logo}>
+                {" "}
+                <p className={styles.logo}>LOGO</p>
+              </div>
               <div className={styles.res_name}>
                 <p>Travel Company</p>
               </div>
             </div>
             <div>
-              <div className={styles.second_res}></div>
+              <div className={styles.first_logo}>
+                {" "}
+                <p className={styles.logo}>LOGO</p>
+              </div>
               <div className={styles.res_name}>
                 <p>Travel Company</p>
               </div>
             </div>
             <div>
-              <div className={styles.third_res}></div>
+              <div className={styles.first_logo}>
+                <p className={styles.logo}>LOGO</p>
+              </div>
               <div className={styles.res_name}>
                 <p>Travel Company</p>
               </div>
             </div>
             <div>
-              <div className={styles.fourth_res}></div>
+              <div className={styles.first_logo}>
+                {" "}
+                <p className={styles.logo}>LOGO</p>
+              </div>
               <div className={styles.res_name}>
                 <p>Travel Company</p>
               </div>
             </div>
             <div>
-              <div className={styles.fifth_res}></div>
+              <div className={styles.first_logo}>
+                {" "}
+                <p className={styles.logo}>LOGO</p>
+              </div>
               <div className={styles.res_name}>
                 <p>Travel Company</p>
               </div>
