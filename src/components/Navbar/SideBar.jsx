@@ -7,63 +7,63 @@ export default function SideBar() {
     <div>
       <Menu right>
         <div className="bottom_line">
-          <a className="menu-item" href="/">
+          <p className="menu-item" href="/">
             Главная
-          </a>
+          </p>
           <SideIcon />
         </div>
         <div className="bottom_line">
-          <a className="menu-item" href="/salads">
+          <p className="menu-item" href="/salads">
             О нас
-          </a>
+          </p>
           <SideIcon />
         </div>
         <div className="bottom_line">
-          <a className="menu-item" href="/pizzas">
+          <p className="menu-item" href="/pizzas">
             Кыргызстан
-          </a>
+          </p>
           <SideIcon />
         </div>
         <div className="bottom_line">
-          <a className="menu-item" href="/desserts">
+          <p className="menu-item" href="/desserts">
             Гиды и тур.фирмы
-          </a>
+          </p>
           <SideIcon />
         </div>
         <div className="bottom_line">
-          <a className="menu-item" href="/desserts">
+          <p className="menu-item" href="/desserts">
             Услуги
-          </a>
+          </p>
           <SideIcon />
         </div>
         <div className="bottom_line">
-          <a className="menu-item" href="/desserts">
+          <p className="menu-item" href="/desserts">
             Отели
-          </a>
+          </p>
           <SideIcon />
         </div>
         <div className="bottom_line">
-          <a className="menu-item" href="/desserts">
+          <p className="menu-item" href="/desserts">
             Кафе-рестораны
-          </a>
+          </p>
           <SideIcon />
         </div>
         <div className="bottom_line">
-          <a className="menu-item" href="/desserts">
+          <p className="menu-item" href="/desserts">
             Развлечения
-          </a>
+          </p>
           <SideIcon />
         </div>
         <div className="bottom_line">
-          <a className="menu-item" href="/desserts">
+          <p className="menu-item" href="/desserts">
             Партнеры
-          </a>
+          </p>
           <SideIcon />
         </div>
         <div className="bottom_line">
-          <a className="menu-item" href="/desserts">
+          <p className="menu-item" href="/desserts">
             Новости
-          </a>
+          </p>
           <SideIcon />
         </div>
       </Menu>
