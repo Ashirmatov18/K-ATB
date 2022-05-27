@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../../../styles/Main.module.css";
 import MainLayout from "../ui/MainLayout";
 import { ReadMore } from "./MainIcons";
+import SimpleSlider from "./SimpleSlider";
 
 export default function Main() {
   return (
@@ -22,6 +23,7 @@ export default function Main() {
               <button>Click me</button>
             </div>
           </div>
+          <SimpleSlider />
         </MainLayout>
       </div>
 

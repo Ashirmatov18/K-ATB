@@ -4,6 +4,7 @@ import { Burger, Flag, MainLogo } from "./NavbarIcons";
 import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
+import SideBar from "./SideBar";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -79,7 +80,8 @@ export default function Navbar() {
             <Flag />
           </div>
           <div className={styles.burger_menu}>
-            <Burger />
+            {/* <Burger /> */}
+            <SideBar />
           </div>
         </div>
       </div>
