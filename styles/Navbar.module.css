@@ -46,3 +46,7 @@
 .search {
   padding-top: 10px;
 }
+
+.nav_info ul li:hover {
+  color: red;
+}

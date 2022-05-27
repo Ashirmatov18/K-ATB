@@ -1,5 +1,6 @@
 .horse_section {
   padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .horse_section h1 {
@@ -48,4 +49,31 @@
 
 .footer_info {
   background-color: #000;
+  height: 350px;
+}
+
+.footer_main {
+  color: white;
+}
+
+.footer_main ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+  font-size: 14px;
+  margin: 0;
+}
+
+.post_li {
+  padding-top: 20px;
+  color: #bdbdbd;
+}
+
+.footer_last {
+  display: flex;
+  justify-content: space-between;
+  color: #828282;
+  padding-top: 50px;
+  align-items: center;
 }
