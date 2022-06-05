@@ -1,0 +1,75 @@
+.about_main_info {
+  display: flex;
+  justify-content: space-between;
+}
+.about_sea {
+  background-image: url("../public/images/sea.jpg");
+  width: 503.07px;
+  height: 661.93px;
+  margin-top: 170px;
+}
+
+.info_explore {
+  margin-top: 250px;
+}
+
+.info_img {
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+
+.bishkek {
+  width: 326px;
+  height: 626.84px;
+  background-image: url("../public/images/bish.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ala_osh {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ala_archa {
+  width: 437.82px;
+  height: 304.59px;
+  background-image: url("../public/images/ala.jpg");
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.osh {
+  background-image: url("../public/images/osh.jpg");
+  width: 437.82px;
+  height: 304.59px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.issyk_kul {
+  width: 894.71px;
+  height: 304.59px;
+  background-image: url("../public/images/issyk.jpg");
+  margin-top: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: #ffffff;
+  text-align: center;
+}

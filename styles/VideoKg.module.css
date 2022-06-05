@@ -1,0 +1,15 @@
+.video {
+  background-image: url("../public/images/car.jpg");
+  height: 720px;
+  width: 100%;
+  background-size: cover;
+  text-align: center;
+  padding-top: 90px;
+}
+
+.video span {
+  font-weight: 700;
+  font-size: 128px;
+  color: #ffffff;
+  opacity: 0.2;
+}
