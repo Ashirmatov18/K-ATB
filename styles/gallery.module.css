@@ -1,0 +1,47 @@
+/* .carousel .slider-wrapper {
+  width: 50%;
+} */
+.gallery {
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow {
+  margin-right: 30px;
+}
+
+.f {
+  background-image: url("../public/images/fff.jpg");
+  width: 147.15px;
+  height: 155px;
+}
+.s {
+  background-image: url("../public/images/fff.jpg");
+  width: 147.15px;
+  height: 155px;
+}
+
+.t {
+  background-image: url("../public/images/first.jpg");
+  width: 147.15px;
+  height: 155px;
+}
+
+.foo {
+  background-image: url("../public/images/first.jpg");
+  width: 147.15px;
+  height: 155px;
+}
+
+.fii {
+  background-image: url("../public/images/first.jpg");
+  width: 147.15px;
+  height: 155px;
+}
+
+.sii {
+  background-image: url("../public/images/first.jpg");
+  /* width: 147.15px;
+  height: 155px; */
+  background-size: cover;
+}

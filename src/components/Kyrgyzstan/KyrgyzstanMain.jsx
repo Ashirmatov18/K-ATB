@@ -2,6 +2,9 @@ import React from "react";
 import MainLayout from "../ui/MainLayout";
 import VideoKg from "./VideoKg";
 import styles from "../../../styles/Kyrgyzstan.module.css";
+import Gallery from "./Gallery";
+import News from "../News/News";
+import Footer from "../Footer/Footer";
 
 export default function KyrgyzstanMain() {
   return (
@@ -73,6 +76,9 @@ export default function KyrgyzstanMain() {
           </div>
         </div>
       </MainLayout>
+      <Gallery />
+      <News />
+      <Footer />
     </div>
   );
 }
