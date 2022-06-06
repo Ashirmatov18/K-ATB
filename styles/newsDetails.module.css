@@ -1,0 +1,21 @@
+.main_pic {
+  background-image: url("../public/images/detail.jpg");
+  /* width: 1440px; */
+  height: 720px;
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+}
+
+.kyrgyzstan {
+  padding-top: 50px;
+}
+
+.kyrgyzstan span {
+  color: #333333;
+  font-size: 50px;
+}
+
+.kyrgyzstan p {
+  color: #2f2f2f;
+  font-size: 24px;
+}

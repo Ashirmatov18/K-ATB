@@ -1,5 +1,5 @@
 .main_guides {
-  background-image: url("../public/images/guides.jpg");
+  background-image: url("../public/images/hot.jpg");
   height: 322px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -81,7 +81,7 @@
 }
 
 .first_per {
-  background-image: url("../public/images/card1.jpg");
+  background-image: url("../public/images/hotel.jpg");
   width: 386.14px;
   height: 284px;
 }
@@ -169,4 +169,18 @@
 .next_prev {
   margin-right: 15px;
   margin-left: 10px;
+}
+
+.but_group {
+  margin-top: 55px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.but_filter {
+  width: 216px;
+  height: 50px;
+  background: #f2f2f2;
+  border-radius: 5px;
+  border: none;
 }

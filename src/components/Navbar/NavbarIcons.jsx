@@ -284,3 +284,22 @@ export const SideIcon = (props) => (
     />
   </svg>
 );
+
+export const Exit = (props) => (
+  <svg
+    width="34"
+    height="34"
+    viewBox="0 0 34 34"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M2.33389 31.6667L31.6654 2.33338M31.6635 31.6667L2.33203 2.33337"
+      stroke="#333333"
+      stroke-width="3"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);

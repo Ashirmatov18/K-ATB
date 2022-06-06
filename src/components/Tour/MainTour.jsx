@@ -6,15 +6,15 @@ import {
   Mobile,
   Search,
   Whats,
-} from "./OrderCarsSvg";
+} from "../OrderCars/OrderCarsSvg";
 import React from "react";
-import styles from "../../../styles/ordercars.module.css";
+import styles from "../../../styles/tour.module.css";
 import MainLayout from "../ui/MainLayout";
 import { useState } from "react";
 import { Left, Right } from "../Main/MainIcons";
 import { Exit } from "../Navbar/NavbarIcons";
 
-export default function Guides() {
+export default function MainTour() {
   const [modal, setModal] = useState(false);
 
   const imgs = [
@@ -48,7 +48,7 @@ export default function Guides() {
           <Search className={styles.search_icon} />
         </div>
         <div className={styles.about_title}>
-          <span>Гиды</span>
+          <span>Турфирмы</span>
         </div>
       </div>
       <MainLayout>
@@ -78,7 +78,7 @@ export default function Guides() {
                 }}
               >
                 <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Олжобай Ташполотов
+                  Travel Company
                 </h2>
                 <div>
                   <span className={styles.line}>
@@ -126,7 +126,7 @@ export default function Guides() {
               <div className={styles.first_per}></div>
               <div className={styles.person_info}>
                 <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Олжобай Ташполотов
+                  Travel Company
                 </h2>
                 <div>
                   <span className={styles.line}>
@@ -175,7 +175,7 @@ export default function Guides() {
               <div className={styles.first_per}></div>
               <div className={styles.person_info}>
                 <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Олжобай Ташполотов
+                  Travel Company
                 </h2>
                 <div>
                   <span className={styles.line}>
@@ -222,7 +222,7 @@ export default function Guides() {
               <div className={styles.first_per}></div>
               <div className={styles.person_info}>
                 <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Олжобай Ташполотов
+                  Travel Company
                 </h2>
                 <div>
                   <span className={styles.line}>
@@ -271,7 +271,7 @@ export default function Guides() {
               <div className={styles.first_per}></div>
               <div className={styles.person_info}>
                 <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Олжобай Ташполотов
+                  Travel Company
                 </h2>
                 <div>
                   <span className={styles.line}>
@@ -318,7 +318,7 @@ export default function Guides() {
               <div className={styles.first_per}></div>
               <div className={styles.person_info}>
                 <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Олжобай Ташполотов
+                  Travel Company
                 </h2>
                 <div>
                   <span className={styles.line}>

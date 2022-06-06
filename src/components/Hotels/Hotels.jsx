@@ -6,15 +6,15 @@ import {
   Mobile,
   Search,
   Whats,
-} from "./OrderCarsSvg";
+} from "../OrderCars/OrderCarsSvg";
 import React from "react";
-import styles from "../../../styles/ordercars.module.css";
+import styles from "../../../styles/hotels.module.css";
 import MainLayout from "../ui/MainLayout";
 import { useState } from "react";
 import { Left, Right } from "../Main/MainIcons";
 import { Exit } from "../Navbar/NavbarIcons";
 
-export default function Guides() {
+export default function Hotels() {
   const [modal, setModal] = useState(false);
 
   const imgs = [
@@ -48,7 +48,7 @@ export default function Guides() {
           <Search className={styles.search_icon} />
         </div>
         <div className={styles.about_title}>
-          <span>Гиды</span>
+          <span>ОТЕЛИ</span>
         </div>
       </div>
       <MainLayout>
@@ -66,7 +66,13 @@ export default function Guides() {
             </div>
           </div>
         </div>
-
+        <div className={styles.but_group}>
+          <button className={styles.but_filter}>Все</button>
+          <button className={styles.but_filter}>Отели</button>
+          <button className={styles.but_filter}>Гостиницы</button>
+          <button className={styles.but_filter}>Гостевые дома</button>
+          <button className={styles.but_filter}>Юрты</button>
+        </div>
         <div className={styles.person_cards}>
           <div>
             <div className={styles.persons}>
@@ -78,7 +84,7 @@ export default function Guides() {
                 }}
               >
                 <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Олжобай Ташполотов
+                  Jannat Resort
                 </h2>
                 <div>
                   <span className={styles.line}>
@@ -126,7 +132,7 @@ export default function Guides() {
               <div className={styles.first_per}></div>
               <div className={styles.person_info}>
                 <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Олжобай Ташполотов
+                  Jannat Resort
                 </h2>
                 <div>
                   <span className={styles.line}>
@@ -175,7 +181,7 @@ export default function Guides() {
               <div className={styles.first_per}></div>
               <div className={styles.person_info}>
                 <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Олжобай Ташполотов
+                  Jannat Resort
                 </h2>
                 <div>
                   <span className={styles.line}>
@@ -222,7 +228,7 @@ export default function Guides() {
               <div className={styles.first_per}></div>
               <div className={styles.person_info}>
                 <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Олжобай Ташполотов
+                  Jannat Resort
                 </h2>
                 <div>
                   <span className={styles.line}>
@@ -271,7 +277,7 @@ export default function Guides() {
               <div className={styles.first_per}></div>
               <div className={styles.person_info}>
                 <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Олжобай Ташполотов
+                  Jannat Resort
                 </h2>
                 <div>
                   <span className={styles.line}>
@@ -318,7 +324,7 @@ export default function Guides() {
               <div className={styles.first_per}></div>
               <div className={styles.person_info}>
                 <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Олжобай Ташполотов
+                  Jannat Resort
                 </h2>
                 <div>
                   <span className={styles.line}>

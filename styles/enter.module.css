@@ -1,5 +1,5 @@
 .main_guides {
-  background-image: url("../public/images/guides.jpg");
+  background-image: url("../public/images/tobias-keller-73F4pKoUkM0-unsplash\ 1.jpg");
   height: 322px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -40,18 +40,21 @@
   padding-top: 20px !important;
 }
 
-.kyrgyzstan {
-  padding-top: 50px;
+.person_cards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 150px;
+  margin-bottom: 100px;
 }
 
-.kyrgyzstan span {
-  color: #333333;
-  font-size: 50px;
-}
-
-.kyrgyzstan p {
-  color: #2f2f2f;
-  font-size: 24px;
+.persons {
+  width: 386px;
+  height: 560px;
+  margin-bottom: 15px;
+  margin-top: 50px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .person_cards {
@@ -80,8 +83,37 @@
   margin-bottom: 55px;
 }
 
+.persons_fourth {
+  width: 386px;
+  height: 560px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  position: absolute;
+  margin-left: 430px;
+  margin-top: -8 0px;
+}
+
 .first_per {
-  background-image: url("../public/images/card1.jpg");
+  background-image: url("../public/images/Rectangle\ 328.jpg");
+  width: 386.14px;
+  height: 284px;
+}
+
+.sec_per {
+  background-image: url("../public/images/Rectangle\ 2.jpg");
+  width: 386.14px;
+  height: 284px;
+}
+
+.th_per {
+  background-image: url("../public/images/Rectangle\ 3.jpg");
+  width: 386.14px;
+  height: 284px;
+}
+
+.fou_per {
+  background-image: url("../public/images/Rectangle\ 4.jpg");
   width: 386.14px;
   height: 284px;
 }
@@ -113,60 +145,4 @@
 .line {
   font-size: 17px;
   color: #2f2f2f;
-}
-
-.modal {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(207, 201, 201, 0.893);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-.guides {
-  position: relative;
-}
-
-.main {
-  text-align: center;
-  margin-top: 30px;
-}
-.flex_row {
-  justify-content: left;
-  display: flex;
-  padding-top: 20px;
-}
-
-.clicked {
-  border: 5px solid black;
-}
-
-.main_carousel {
-  width: 1240px;
-  height: 658px;
-  border-radius: 20px;
-}
-
-.mini_carousel {
-  width: 147.15px;
-  height: 155px;
-  margin-right: 20px;
-  border-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.controllers {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-}
-
-.next_prev {
-  margin-right: 15px;
-  margin-left: 10px;
 }
