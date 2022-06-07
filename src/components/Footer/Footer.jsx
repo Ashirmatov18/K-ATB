@@ -6,7 +6,7 @@ import { LogoFooter } from "./FooterSvg";
 export default function Footer() {
   return (
     <div>
-      <div style={{ backgroundColor: "#000", color: "#fff" }}>
+      <div className={styles.footer_img} style={{ color: "#fff" }}>
         <MainLayout>
           <div className={styles.horse_section}>
             <h1>

@@ -10,26 +10,26 @@ import {
 import React from "react";
 import styles from "../../../styles/ordercars.module.css";
 import MainLayout from "../ui/MainLayout";
-import { useState } from "react";
-import { Left, Right } from "../Main/MainIcons";
-import { Exit } from "../Navbar/NavbarIcons";
+// import { useState } from "react";
+// import { Left, Right } from "../Main/MainIcons";
+// import { Exit } from "../Navbar/NavbarIcons";
 
 export default function Guides() {
-  const [modal, setModal] = useState(false);
+  // const [modal, setModal] = useState(false);
 
-  const imgs = [
-    { id: 0, value: "https://wallpaperaccess.com/full/2637581.jpg" },
-    { id: 1, value: "https://source.unsplash.com/user/c_v_r/1900x800" },
-    { id: 2, value: "https://source.unsplash.com/user/c_v_r/100x100" },
-  ];
+  // const imgs = [
+  //   { id: 0, value: "https://wallpaperaccess.com/full/2637581.jpg" },
+  //   { id: 1, value: "https://source.unsplash.com/user/c_v_r/1900x800" },
+  //   { id: 2, value: "https://source.unsplash.com/user/c_v_r/100x100" },
+  // ];
 
-  const [wordData, setWordData] = useState(imgs[0]);
-  const [slideIndex, setSlideIndex] = useState(1);
+  // const [wordData, setWordData] = useState(imgs[0]);
+  // const [slideIndex, setSlideIndex] = useState(1);
 
-  const handleClick = (index) => {
-    const wordSlider = imgs[index];
-    setWordData(wordSlider);
-  };
+  // const handleClick = (index) => {
+  //   const wordSlider = imgs[index];
+  //   setWordData(wordSlider);
+  // };
 
   // const next = (index) => {
   //   const currentImageIndex = imgs[0];
@@ -43,20 +43,26 @@ export default function Guides() {
   return (
     <div className={styles.guides}>
       <div className={styles.main_guides}>
-        <div className={styles.main_search}>
-          <input type="text" className={styles.search} placeholder="Поиск" />
-          <Search className={styles.search_icon} />
-        </div>
         <div className={styles.about_title}>
-          <span>Гиды</span>
+          <span>ГИДЫ</span>
         </div>
       </div>
       <MainLayout>
         <div style={{ paddingTop: "150px" }} className={styles.kyrgyzstan}>
           <div>
-            <span>Explore our world with us</span>
+            <div className={styles.search_explore}>
+              <span>Explore our world with us</span>
+              <div className={styles.main_search}>
+                <input
+                  type="text"
+                  className={styles.search}
+                  placeholder="Поиск"
+                />
+                <Search className={styles.search_icon} />
+              </div>
+            </div>
             <div>
-              <p>
+              <p style={{ paddingTop: "20px" }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
                 ligula rhoncus, ut erat dictumst. Vitae non et <br />{" "}
                 scelerisque libero. Odio auctor ut tortor bibendum. Sapien nisl,
@@ -73,9 +79,9 @@ export default function Guides() {
               <div className={styles.first_per}></div>
               <div
                 className={styles.person_info}
-                onClick={() => {
-                  setModal(true);
-                }}
+                // onClick={() => {
+                //   setModal(true);
+                // }}
               >
                 <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
                   Олжобай Ташполотов
@@ -364,18 +370,18 @@ export default function Guides() {
           </div>
         </div>
       </MainLayout>
-      {modal && (
+      {/* {modal && (
         <div className={styles.modal}>
           <div className={styles.main}>
             <div className={styles.controllers}>
               <div>
                 <Left className={styles.next_prev} />
                 <Right />
-              </div>
-              <div>
+              </div> */}
+      {/* <div>
                 <Exit onClick={() => setModal(false)} />
-              </div>
-            </div>
+              </div> */}
+      {/* </div>
             <img src={wordData.value} className={styles.main_carousel} />
             <div className={styles.flex_row}>
               {imgs.map((data, i) => (
@@ -384,16 +390,16 @@ export default function Guides() {
                     // className={wordData.id == i ? "clicked" : ""}
                     className={styles.mini_carousel}
                     src={data.value}
-                    onClick={() => handleClick(i)}
+                    // onClick={() => handleClick(i)}
                     height="70"
                     width="100"
                   />
                 </div>
-              ))}
-            </div>
+              ))} */}
+      {/* </div>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

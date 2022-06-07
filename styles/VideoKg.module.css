@@ -13,3 +13,17 @@
   color: #ffffff;
   opacity: 0.2;
 }
+.video_player {
+  height: 720px !important;
+  position: relative;
+}
+.text_video {
+  font-weight: 700;
+  font-size: 128px;
+  color: #ffffff;
+  opacity: 0.2;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  z-index: 9999;
+}

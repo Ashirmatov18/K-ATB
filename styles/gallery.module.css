@@ -45,3 +45,47 @@
   height: 155px; */
   background-size: cover;
 }
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.main {
+  text-align: center;
+  margin-top: 30px;
+}
+.flex_row {
+  justify-content: left;
+  display: flex;
+  padding-top: 20px;
+}
+
+.clicked {
+  border: 5px solid black;
+}
+
+.main_carousel {
+  width: 1240px;
+  height: 658px;
+  border-radius: 20px;
+}
+
+.mini_carousel {
+  width: 147.15px;
+  height: 155px;
+  margin-right: 20px;
+  border-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.carousel {
+  position: relative;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+}

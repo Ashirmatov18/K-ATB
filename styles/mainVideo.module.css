@@ -1,0 +1,34 @@
+.video {
+  background-color: #000;
+  width: 330px;
+  height: 210px;
+  z-index: 999;
+  position: absolute;
+  margin-left: 200px;
+  margin-bottom: 50px;
+  border-radius: 10px !important;
+}
+
+.video_player {
+  width: 339px !important;
+  height: 216px !important;
+  border-radius: 10px !important;
+}
+
+/* @media only screen and (max-width: 1320px) {
+  .video {
+    margin-left: 850px;
+  }
+} */
+
+/* @media only screen and (max-width: 1285px) {
+  .video {
+    margin-left: 0px;
+  }
+} */
+
+/* @media only screen and (max-width: 1171px) {
+  .video {
+    margin-left: 770px;
+  }
+} */

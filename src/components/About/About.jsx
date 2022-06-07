@@ -3,6 +3,7 @@ import styles from "../../../styles/about.module.css";
 import MainLayout from "../ui/MainLayout";
 import News from "../News/News";
 import Footer from "../Footer/Footer";
+import ExpoSlider from "../Exploration/ExpoSlider";
 
 export default function About() {
   return (
@@ -74,14 +75,17 @@ export default function About() {
             </div>
           </div>
         </div>
+      </MainLayout>
 
+      <ExpoSlider />
+      <MainLayout>
         <div className={styles.about_text}>
           <h1
             style={{
               color: "#333333",
               fontWeight: "500",
               fontSize: "50px",
-              paddingTop: "150px",
+              paddingTop: "20px",
             }}
           >
             Explore our world with us
@@ -103,6 +107,7 @@ export default function About() {
       </MainLayout>
       <News />
       <div className={styles.empty}></div>
+
       <Footer />
     </div>
   );

@@ -19,6 +19,7 @@ a {
   position: absolute;
   width: 30px;
   height: 16px;
+  /* right: 10px; */
 }
 
 /* Color/shape of burger icon bars */
@@ -35,15 +36,15 @@ a {
 .bm-cross-button {
   height: 28px !important;
   width: 28px !important;
-  right: 190px !important;
+  right: 120px !important;
   top: 20px !important;
 }
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: #fff;
-  margin-right: 40px !important;
+  background: #f2f2f2 !important;
   padding-top: 10px;
+  height: 28px !important;
 }
 
 /*
@@ -95,7 +96,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   text-decoration: none;
   transition: color 0.2s;
   padding-top: 10px;
-  margin-right: 150px !important;
+  margin-right: 100px !important;
   padding-bottom: 10px;
 }
 
@@ -107,4 +108,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
   border-bottom: 2px #a4a8b4 solid;
   display: flex !important;
   justify-content: space-between !important;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1320px) {
+  .bm-burger-button {
+    right: 10px;
+  }
 }

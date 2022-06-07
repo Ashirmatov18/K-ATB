@@ -15,21 +15,21 @@ import { Left, Right } from "../Main/MainIcons";
 import { Exit } from "../Navbar/NavbarIcons";
 
 export default function MainTour() {
-  const [modal, setModal] = useState(false);
+  // const [modal, setModal] = useState(false);
 
-  const imgs = [
-    { id: 0, value: "https://wallpaperaccess.com/full/2637581.jpg" },
-    { id: 1, value: "https://source.unsplash.com/user/c_v_r/1900x800" },
-    { id: 2, value: "https://source.unsplash.com/user/c_v_r/100x100" },
-  ];
+  // const imgs = [
+  //   { id: 0, value: "https://wallpaperaccess.com/full/2637581.jpg" },
+  //   { id: 1, value: "https://source.unsplash.com/user/c_v_r/1900x800" },
+  //   { id: 2, value: "https://source.unsplash.com/user/c_v_r/100x100" },
+  // ];
 
-  const [wordData, setWordData] = useState(imgs[0]);
-  const [slideIndex, setSlideIndex] = useState(1);
+  // const [wordData, setWordData] = useState(imgs[0]);
+  // const [slideIndex, setSlideIndex] = useState(1);
 
-  const handleClick = (index) => {
-    const wordSlider = imgs[index];
-    setWordData(wordSlider);
-  };
+  // const handleClick = (index) => {
+  //   const wordSlider = imgs[index];
+  //   setWordData(wordSlider);
+  // };
 
   // const next = (index) => {
   //   const currentImageIndex = imgs[0];
@@ -73,9 +73,9 @@ export default function MainTour() {
               <div className={styles.first_per}></div>
               <div
                 className={styles.person_info}
-                onClick={() => {
-                  setModal(true);
-                }}
+                // onClick={() => {
+                //   setModal(true);
+                // }}
               >
                 <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
                   Travel Company
@@ -364,7 +364,7 @@ export default function MainTour() {
           </div>
         </div>
       </MainLayout>
-      {modal && (
+      {/* {modal && (
         <div className={styles.modal}>
           <div className={styles.main}>
             <div className={styles.controllers}>
@@ -393,7 +393,7 @@ export default function MainTour() {
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

@@ -32,7 +32,7 @@ const SearchIconWrapper = styled("div")(({ theme }) => ({
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: "inherit",
+  color: "white",
   "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
@@ -40,9 +40,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create("width"),
     width: "70%",
     [theme.breakpoints.up("sm")]: {
-      width: "12ch",
+      width: "15ch",
       "&:focus": {
-        width: "15ch",
+        width: "18ch",
       },
     },
   },
@@ -66,14 +66,11 @@ export default function Navbar() {
         </div>
         <div className={styles.nav_add}>
           <div className={styles.search}>
-            <Search>
+            <Search className={styles.main_search}>
               <SearchIconWrapper>
-                <SearchIcon />
+                <SearchIcon className={styles.search_icon} />
               </SearchIconWrapper>
-              <StyledInputBase
-                placeholder="Search…"
-                inputProps={{ "aria-label": "search" }}
-              />
+              <StyledInputBase inputProps={{ "aria-label": "search" }} />
             </Search>
           </div>
           <div className={styles.flag}>

@@ -9,7 +9,7 @@ export default function News() {
       <MainLayout>
         <div style={{ paddingTop: "100px" }} className={styles.kyrgyzstan}>
           <div>
-            <h1>ТУРФИРМЫ</h1>
+            <h1>НОВОСТИ</h1>
             <span>Explore our world with us</span>
             <div>
               <p>

@@ -44,12 +44,7 @@ export default function Partners() {
               <div className={styles.ex}>
                 <div className={styles.first_per}></div>
               </div>
-              <div
-                className={styles.person_info}
-                onClick={() => {
-                  setModal(true);
-                }}
-              >
+              <div className={styles.person_info}>
                 <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
                   Emblem of Qatar
                 </h2>
@@ -101,12 +96,7 @@ export default function Partners() {
               <div className={styles.ex}>
                 <div className={styles.sec_per}></div>
               </div>
-              <div
-                className={styles.person_info}
-                onClick={() => {
-                  setModal(true);
-                }}
-              >
+              <div className={styles.person_info}>
                 <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
                   Ministry of Foreign Affairs
                 </h2>
@@ -158,12 +148,7 @@ export default function Partners() {
               <div className={styles.ex}>
                 <div className={styles.th_per}></div>
               </div>
-              <div
-                className={styles.person_info}
-                onClick={() => {
-                  setModal(true);
-                }}
-              >
+              <div className={styles.person_info}>
                 <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
                   Department of Tourism
                 </h2>

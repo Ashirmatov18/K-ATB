@@ -3,6 +3,7 @@ import styles from "../../../styles/Main.module.css";
 import MainLayout from "../ui/MainLayout";
 import { ReadMore } from "./MainIcons";
 import SimpleSlider from "./SimpleSlider";
+import MainVideo from "./MainVideo";
 
 export default function Main() {
   return (
@@ -28,7 +29,6 @@ export default function Main() {
       </div>
 
       <MainLayout>
-        <div className={styles.video}></div>
         <div className={styles.about}>
           <div>
             <h1 className={styles.about_us}>О НАС</h1>
@@ -52,7 +52,11 @@ export default function Main() {
               </div>
             </div>
           </div>
+
           <div className={styles.about_second}>
+            <div>
+              <MainVideo />
+            </div>
             <div className={styles.first_img}></div>
           </div>
         </div>

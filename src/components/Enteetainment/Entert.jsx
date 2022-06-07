@@ -10,15 +10,12 @@ import {
   Whats,
 } from "../OrderCars/OrderCarsSvg";
 import MainLayout from "../ui/MainLayout";
+import Footer from "../Footer/Footer";
 
 export default function Entert() {
   return (
     <div>
       <div className={styles.main_guides}>
-        <div className={styles.main_search}>
-          <input type="text" className={styles.search} placeholder="Поиск" />
-          <Search className={styles.search_icon} />
-        </div>
         <div className={styles.about_title}>
           <span>РАЗВЛЕЧЕНИЯ</span>
         </div>
@@ -29,12 +26,7 @@ export default function Entert() {
           <div>
             <div className={styles.persons}>
               <div className={styles.first_per}></div>
-              <div
-                className={styles.person_info}
-                onClick={() => {
-                  setModal(true);
-                }}
-              >
+              <div className={styles.person_info}>
                 <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
                   Emblem of Qatar
                 </h2>
@@ -136,12 +128,7 @@ export default function Entert() {
               <div className={styles.ex}>
                 <div className={styles.th_per}></div>
               </div>
-              <div
-                className={styles.person_info}
-                onClick={() => {
-                  setModal(true);
-                }}
-              >
+              <div className={styles.person_info}>
                 <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
                   Department of Tourism
                 </h2>
@@ -188,7 +175,7 @@ export default function Entert() {
             </div>
           </div>
         </div>
-        <div>
+        <div className={styles.last_card}>
           <div className={styles.persons_fourth}>
             <div className={styles.fou_per}></div>
             <div className={styles.person_info}>
@@ -236,6 +223,7 @@ export default function Entert() {
           </div>
         </div>
       </MainLayout>
+      <Footer style={{ margin: "300px" }} />
     </div>
   );
 }

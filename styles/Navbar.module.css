@@ -50,3 +50,24 @@
 .nav_info ul li:hover {
   color: red;
 }
+.search_icon {
+  color: white !important;
+  margin-top: 6px;
+}
+.main_search {
+  display: flex !important;
+  justify-content: end;
+  background-color: #000;
+}
+
+@media only screen and (max-width: 1320px) {
+  .nav_info {
+    display: none;
+  }
+  .flag {
+    display: none;
+  }
+  .search {
+    display: none;
+  }
+}

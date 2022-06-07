@@ -2,6 +2,7 @@ import React from "react";
 import MainLayout from "../ui/MainLayout";
 import styles from "../../../styles/Exploration.module.css";
 import { ReadMore } from "../Main/MainIcons";
+import ExpoSlider from "./ExpoSlider";
 
 export default function Exploration() {
   // const logo = [
@@ -45,11 +46,12 @@ export default function Exploration() {
           </div>
         </MainLayout>
 
-        <div className={styles.carousel}>
+        {/* <div className={styles.carousel}>
           <div className={styles.first}></div>
           <div className={styles.second}></div>
           <div className={styles.third}></div>
-        </div>
+        </div> */}
+        <ExpoSlider />
       </div>
 
       <MainLayout>
