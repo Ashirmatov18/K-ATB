@@ -297,9 +297,9 @@ export const Exit = (props) => (
     <path
       d="M2.33389 31.6667L31.6654 2.33338M31.6635 31.6667L2.33203 2.33337"
       stroke="#333333"
-      stroke-width="3"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
