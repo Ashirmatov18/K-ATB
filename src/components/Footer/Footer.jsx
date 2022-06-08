@@ -62,7 +62,7 @@ export default function Footer() {
             <div>
               <p>© K-BAT- 2022</p>
             </div>
-            <div style={{ fontSize: "20px" }}>
+            <div className={styles.phone_footer} style={{ fontSize: "20px" }}>
               <p>+996 123 456</p>
             </div>
           </div>

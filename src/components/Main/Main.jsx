@@ -27,7 +27,6 @@ export default function Main() {
           <SimpleSlider />
         </MainLayout>
       </div>
-
       <MainLayout>
         <div className={styles.about}>
           <div>
@@ -46,13 +45,12 @@ export default function Main() {
               </div>
               <div className={styles.read_more}>
                 <span>Read more</span>
-                <div styles={{ paddingTop: "10px" }}>
+                <div className={styles.pic_vid} styles={{ paddingTop: "10px" }}>
                   <ReadMore />
                 </div>
               </div>
             </div>
           </div>
-
           <div className={styles.about_second}>
             <div>
               <MainVideo />

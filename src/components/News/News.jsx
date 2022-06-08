@@ -5,7 +5,7 @@ import { ReadMore } from "../Main/MainIcons";
 
 export default function News() {
   return (
-    <div style={{ backgroundColor: "#F4F4F4" }}>
+    <div className={styles.main_news} style={{ backgroundColor: "#F4F4F4" }}>
       <MainLayout>
         <div style={{ paddingTop: "100px" }} className={styles.kyrgyzstan}>
           <div>
@@ -17,7 +17,7 @@ export default function News() {
                 proin tristique <br /> proin feugiat est ornare{" "}
               </p>
             </div>
-            <div>
+            <div className={styles.but_article}>
               <button>More Articles</button>
             </div>
           </div>

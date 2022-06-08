@@ -85,6 +85,15 @@
   align-items: center;
 }
 
+@media only screen and (max-width: 1000px) {
+  .footer_main {
+    display: none;
+  }
+  .phone_footer {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 850px) {
   .form {
     width: 80vw;
@@ -95,8 +104,5 @@
 @media only screen and (max-width: 750px) {
   .confirm_inp {
     width: 80vw;
-  }
-  .confirm_but {
-    /* position: relative; */
   }
 }
