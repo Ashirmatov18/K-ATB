@@ -43,7 +43,7 @@ export default function Paginanation(props) {
             email,
             phone_number,
           }) => (
-            <div className={styles.persons}>
+            <div className={styles.persons} key={id}>
               <div
                 style={{ backgroundImage: `url(${image})` }}
                 className={styles.first_per}
