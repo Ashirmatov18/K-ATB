@@ -47,9 +47,6 @@
 }
 
 .modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 999;
 }
 
@@ -68,7 +65,7 @@
 }
 
 .main_carousel {
-  width: 1240px;
+  width: 100%;
   height: 658px;
   border-radius: 20px;
 }
@@ -88,4 +85,12 @@
 .control {
   display: flex;
   align-items: center;
+}
+
+@media only screen and (max-width: 530px) {
+  .mini_carousel {
+    justify-content: space-between;
+    margin-right: 20px;
+    width: 100px;
+  }
 }

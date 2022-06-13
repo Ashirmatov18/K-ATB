@@ -71,15 +71,6 @@
   border-radius: 10px;
 }
 
-.persons_sec {
-  width: 386px;
-  height: 560px;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  margin-bottom: 55px;
-}
-
 .first_per {
   background-image: url("../public/images/hotel.jpg");
   width: 386.14px;
@@ -175,6 +166,7 @@
   margin-top: 55px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .but_filter {
@@ -183,4 +175,36 @@
   background: #f2f2f2;
   border-radius: 5px;
   border: none;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1200px) {
+  .persons:nth-child(3n + 2) {
+    transform: unset !important;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .person_cards {
+    justify-content: center;
+    margin-bottom: 30px !important;
+    margin-top: 250px;
+  }
+
+  .about_title {
+    font-size: 50px;
+  }
+  .but_group {
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main_search {
+    margin-top: 450px !important;
+  }
+  .but_filter {
+    width: 106px;
+  }
 }

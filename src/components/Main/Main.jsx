@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../../styles/Main.module.css";
 import MainLayout from "../ui/MainLayout";
 import { ReadMore } from "./MainIcons";

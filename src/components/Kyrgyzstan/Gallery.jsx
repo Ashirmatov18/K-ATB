@@ -1,14 +1,6 @@
 import React, { useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
 import styles from "../../../styles/gallery.module.css";
-import Image from "next/image";
-import fff from "../../../public/images/fff.jpg";
-import first from "../../../public/images/first.jpg";
-import sec from "../../../public/images/sec.jpg";
-import third from "../../../public/images/third.jpg";
-import firstCar from "../../../public/images/cars.jpg";
-import secondCar from "../../../public/images/scar.jpg";
 import { Left, Right } from "../Main/MainIcons";
 import MainLayout from "../ui/MainLayout";
 

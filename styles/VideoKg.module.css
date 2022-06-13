@@ -27,3 +27,15 @@
   top: 25%;
   z-index: 9999;
 }
+
+@media only screen and (max-width: 1015px) {
+  .text_video {
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .text_video {
+    display: none;
+  }
+}

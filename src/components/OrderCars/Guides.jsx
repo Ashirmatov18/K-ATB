@@ -10,12 +10,17 @@ import {
 import React from "react";
 import styles from "../../../styles/ordercars.module.css";
 import MainLayout from "../ui/MainLayout";
-// import { useState } from "react";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Paginanation from "../Paginanation";
+import { useRouter } from "next/router";
+
 // import { Left, Right } from "../Main/MainIcons";
 // import { Exit } from "../Navbar/NavbarIcons";
 
 export default function Guides() {
-  // const [modal, setModal] = useState(false);
+  const [modal, setModal] = useState(false);
 
   // const imgs = [
   //   { id: 0, value: "https://wallpaperaccess.com/full/2637581.jpg" },
@@ -39,6 +44,22 @@ export default function Guides() {
   //     setWordData(0);
   //   }
   // };
+  const router = useRouter();
+  const { id } = router.query;
+
+  const getInfo = async () => {
+    const { data } = await axios.get(`http://3.90.235.96/api/v1/guides/`);
+    console.log(data.results);
+    return data.results;
+  };
+
+  getInfo();
+  const [state, setState] = useState([]);
+
+  useEffect(() => {
+    getInfo().then(setState);
+    setModal(!modal);
+  }, []);
 
   return (
     <div className={styles.guides}>
@@ -47,8 +68,9 @@ export default function Guides() {
           <span>ГИДЫ</span>
         </div>
       </div>
+
       <MainLayout>
-        <div style={{ paddingTop: "150px" }} className={styles.kyrgyzstan}>
+        <div className={styles.kyrgyzstan}>
           <div>
             <div className={styles.search_explore}>
               <span>Explore our world with us</span>
@@ -72,304 +94,11 @@ export default function Guides() {
             </div>
           </div>
         </div>
-
-        <div className={styles.person_cards}>
-          <div>
-            <div className={styles.persons}>
-              <div className={styles.first_per}></div>
-              <div
-                className={styles.person_info}
-                // onClick={() => {
-                //   setModal(true);
-                // }}
-              >
-                <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Олжобай Ташполотов
-                </h2>
-                <div>
-                  <span className={styles.line}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                  </span>
-                </div>
-                <LineHeight
-                  style={{ marginTop: "20px", marginBottom: "20px" }}
-                />
-                <div className={styles.per_social}>
-                  <div className={styles.per_mobile}>
-                    <Mobile />
-                    <span
-                      style={{
-                        marginLeft: "10px",
-                        color: "#A4A8B4",
-                        fontSize: "17px",
-                      }}
-                    >
-                      +996 444 444
-                    </span>
-                  </div>
-                  <div>
-                    <Facebook className={styles.social_media} />
-                    <Insta className={styles.social_media} />
-                    <Whats />
-                  </div>
-                </div>
-                <div className={styles.email}>
-                  <Email />
-                  <span
-                    style={{
-                      marginLeft: "10px",
-                      color: "#A4A8B4",
-                      fontSize: "17px",
-                    }}
-                  >
-                    tashpolotov@gmail.com
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className={styles.persons}>
-              <div className={styles.first_per}></div>
-              <div className={styles.person_info}>
-                <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Олжобай Ташполотов
-                </h2>
-                <div>
-                  <span className={styles.line}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                  </span>
-                </div>
-                <LineHeight
-                  style={{ marginTop: "20px", marginBottom: "20px" }}
-                />
-                <div className={styles.per_social}>
-                  <div className={styles.per_mobile}>
-                    <Mobile />
-                    <span
-                      style={{
-                        marginLeft: "10px",
-                        color: "#A4A8B4",
-                        fontSize: "17px",
-                      }}
-                    >
-                      +996 444 444
-                    </span>
-                  </div>
-                  <div>
-                    <Facebook className={styles.social_media} />
-                    <Insta className={styles.social_media} />
-                    <Whats />
-                  </div>
-                </div>
-                <div className={styles.email}>
-                  <Email />
-                  <span
-                    style={{
-                      marginLeft: "10px",
-                      color: "#A4A8B4",
-                      fontSize: "17px",
-                    }}
-                  >
-                    tashpolotov@gmail.com
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className={styles.persons_sec}>
-              <div className={styles.first_per}></div>
-              <div className={styles.person_info}>
-                <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Олжобай Ташполотов
-                </h2>
-                <div>
-                  <span className={styles.line}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                  </span>
-                </div>
-                <LineHeight
-                  style={{ marginTop: "20px", marginBottom: "20px" }}
-                />
-                <div className={styles.per_social}>
-                  <div className={styles.per_mobile}>
-                    <Mobile />
-                    <span
-                      style={{
-                        marginLeft: "10px",
-                        color: "#A4A8B4",
-                        fontSize: "17px",
-                      }}
-                    >
-                      +996 444 444
-                    </span>
-                  </div>
-                  <div>
-                    <Facebook className={styles.social_media} />
-                    <Insta className={styles.social_media} />
-                    <Whats />
-                  </div>
-                </div>
-                <div className={styles.email}>
-                  <Email />
-                  <span
-                    style={{
-                      marginLeft: "10px",
-                      color: "#A4A8B4",
-                      fontSize: "17px",
-                    }}
-                  >
-                    tashpolotov@gmail.com
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className={styles.persons_sec}>
-              <div className={styles.first_per}></div>
-              <div className={styles.person_info}>
-                <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Олжобай Ташполотов
-                </h2>
-                <div>
-                  <span className={styles.line}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                  </span>
-                </div>
-                <LineHeight
-                  style={{ marginTop: "20px", marginBottom: "20px" }}
-                />
-                <div className={styles.per_social}>
-                  <div className={styles.per_mobile}>
-                    <Mobile />
-                    <span
-                      style={{
-                        marginLeft: "10px",
-                        color: "#A4A8B4",
-                        fontSize: "17px",
-                      }}
-                    >
-                      +996 444 444
-                    </span>
-                  </div>
-                  <div>
-                    <Facebook className={styles.social_media} />
-                    <Insta className={styles.social_media} />
-                    <Whats />
-                  </div>
-                </div>
-                <div className={styles.email}>
-                  <Email />
-                  <span
-                    style={{
-                      marginLeft: "10px",
-                      color: "#A4A8B4",
-                      fontSize: "17px",
-                    }}
-                  >
-                    tashpolotov@gmail.com
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className={styles.persons}>
-              <div className={styles.first_per}></div>
-              <div className={styles.person_info}>
-                <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Олжобай Ташполотов
-                </h2>
-                <div>
-                  <span className={styles.line}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                  </span>
-                </div>
-                <LineHeight
-                  style={{ marginTop: "20px", marginBottom: "20px" }}
-                />
-                <div className={styles.per_social}>
-                  <div className={styles.per_mobile}>
-                    <Mobile />
-                    <span
-                      style={{
-                        marginLeft: "10px",
-                        color: "#A4A8B4",
-                        fontSize: "17px",
-                      }}
-                    >
-                      +996 444 444
-                    </span>
-                  </div>
-                  <div>
-                    <Facebook className={styles.social_media} />
-                    <Insta className={styles.social_media} />
-                    <Whats />
-                  </div>
-                </div>
-                <div className={styles.email}>
-                  <Email />
-                  <span
-                    style={{
-                      marginLeft: "10px",
-                      color: "#A4A8B4",
-                      fontSize: "17px",
-                    }}
-                  >
-                    tashpolotov@gmail.com
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className={styles.persons}>
-              <div className={styles.first_per}></div>
-              <div className={styles.person_info}>
-                <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Олжобай Ташполотов
-                </h2>
-                <div>
-                  <span className={styles.line}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                  </span>
-                </div>
-                <LineHeight
-                  style={{ marginTop: "20px", marginBottom: "20px" }}
-                />
-                <div className={styles.per_social}>
-                  <div className={styles.per_mobile}>
-                    <Mobile />
-                    <span
-                      style={{
-                        marginLeft: "10px",
-                        color: "#A4A8B4",
-                        fontSize: "17px",
-                      }}
-                    >
-                      +996 444 444
-                    </span>
-                  </div>
-                  <div>
-                    <Facebook className={styles.social_media} />
-                    <Insta className={styles.social_media} />
-                    <Whats />
-                  </div>
-                </div>
-                <div className={styles.email}>
-                  <Email />
-                  <span
-                    style={{
-                      marginLeft: "10px",
-                      color: "#A4A8B4",
-                      fontSize: "17px",
-                    }}
-                  >
-                    tashpolotov@gmail.com
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div onClick={() => setModal(true)} className={styles.person_cards}>
+          <Paginanation data={state} />
         </div>
       </MainLayout>
+
       {/* {modal && (
         <div className={styles.modal}>
           <div className={styles.main}>

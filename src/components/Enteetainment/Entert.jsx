@@ -174,23 +174,42 @@ export default function Entert() {
               </div>
             </div>
           </div>
-        </div>
-        <div className={styles.last_card}>
-          <div className={styles.persons_fourth}>
-            <div className={styles.fou_per}></div>
-            <div className={styles.person_info}>
-              <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                Ministry of Foreign Affairs
-              </h2>
-              <div>
-                <span className={styles.line}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                </span>
-              </div>
-              <LineHeight style={{ marginTop: "20px", marginBottom: "20px" }} />
-              <div className={styles.per_social}>
-                <div className={styles.per_mobile}>
-                  <Mobile />
+          <div className={styles.last_card}>
+            <div className={styles.persons_fourth}>
+              <div className={styles.fou_per}></div>
+              <div className={styles.person_info}>
+                <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
+                  Ministry of Foreign Affairs
+                </h2>
+                <div>
+                  <span className={styles.line}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+                  </span>
+                </div>
+                <LineHeight
+                  style={{ marginTop: "20px", marginBottom: "20px" }}
+                />
+                <div className={styles.per_social}>
+                  <div className={styles.per_mobile}>
+                    <Mobile />
+                    <span
+                      style={{
+                        marginLeft: "10px",
+                        color: "#A4A8B4",
+                        fontSize: "17px",
+                      }}
+                    >
+                      +996 444 444
+                    </span>
+                  </div>
+                  <div>
+                    <Facebook className={styles.social_media} />
+                    <Insta className={styles.social_media} />
+                    <Whats />
+                  </div>
+                </div>
+                <div className={styles.email}>
+                  <Email />
                   <span
                     style={{
                       marginLeft: "10px",
@@ -198,26 +217,9 @@ export default function Entert() {
                       fontSize: "17px",
                     }}
                   >
-                    +996 444 444
+                    tashpolotov@gmail.com
                   </span>
                 </div>
-                <div>
-                  <Facebook className={styles.social_media} />
-                  <Insta className={styles.social_media} />
-                  <Whats />
-                </div>
-              </div>
-              <div className={styles.email}>
-                <Email />
-                <span
-                  style={{
-                    marginLeft: "10px",
-                    color: "#A4A8B4",
-                    fontSize: "17px",
-                  }}
-                >
-                  tashpolotov@gmail.com
-                </span>
               </div>
             </div>
           </div>

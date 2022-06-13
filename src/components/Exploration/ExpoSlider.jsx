@@ -18,6 +18,7 @@ export default function ExpoSlider() {
     nextArrow: <Right />,
     prevArrow: <Left />,
   };
+
   return (
     <div className={styles.content}>
       <MainLayout>
@@ -35,12 +36,10 @@ export default function ExpoSlider() {
       </MainLayout>
 
       <Slider ref={setSliderRef} {...sliderSettings}>
-        {/* <div className={styles.gallery_car}> */}
         <div className={styles.first}></div>
         <div className={styles.second}></div>
         <div className={styles.third}></div>
         <div className={styles.second}></div>
-        {/* </div> */}
       </Slider>
     </div>
   );

@@ -10,12 +10,26 @@ import {
 import React from "react";
 import styles from "../../../styles/cars.module.css";
 import MainLayout from "../ui/MainLayout";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Left, Right } from "../Main/MainIcons";
 import { Exit } from "../Navbar/NavbarIcons";
+import { Pagination } from "@mui/material";
+import axios from "axios";
 
 export default function OrderCars() {
   const [modal, setModal] = useState(false);
+  const getInfo = async () => {
+    const { data } = await axios.get(`http://3.90.235.96/api/v1/car-rentals/`);
+    console.log(data.results);
+    return data.results;
+  };
+
+  getInfo();
+  const [state, setState] = useState([]);
+
+  useEffect(() => {
+    getInfo().then(setState);
+  }, []);
 
   const imgs = [
     { id: 0, value: "https://wallpaperaccess.com/full/2637581.jpg" },
@@ -31,32 +45,29 @@ export default function OrderCars() {
     setWordData(wordSlider);
   };
 
-  // const next = (index) => {
-  //   const currentImageIndex = imgs[0];
-  //   if (currentImageIndex !== imgs.length) {
-  //     setWordData(currentImageIndex + 1);
-  //   } else if (wordData === imgs.length) {
-  //     setWordData(0);
-  //   }
-  // };
-
   return (
     <div className={styles.guides}>
       <div className={styles.main_guides}>
-        <div className={styles.main_search}>
-          <input type="text" className={styles.search} placeholder="Поиск" />
-          <Search className={styles.search_icon} />
-        </div>
         <div className={styles.about_title}>
           <span>АРЕНДА МАШИН</span>
         </div>
       </div>
       <MainLayout>
-        <div style={{ paddingTop: "150px" }} className={styles.kyrgyzstan}>
+        <div className={styles.kyrgyzstan}>
           <div>
-            <span>Explore our world with us</span>
+            <div className={styles.search_explore}>
+              <span>Explore our world with us</span>
+              <div className={styles.main_search}>
+                <input
+                  type="text"
+                  className={styles.search}
+                  placeholder="Поиск"
+                />
+                <Search className={styles.search_icon} />
+              </div>
+            </div>
             <div>
-              <p>
+              <p style={{ paddingTop: "20px" }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
                 ligula rhoncus, ut erat dictumst. Vitae non et <br />{" "}
                 scelerisque libero. Odio auctor ut tortor bibendum. Sapien nisl,
@@ -66,302 +77,8 @@ export default function OrderCars() {
             </div>
           </div>
         </div>
-
         <div className={styles.person_cards}>
-          <div>
-            <div className={styles.persons}>
-              <div className={styles.first_per}></div>
-              <div
-                className={styles.person_info}
-                onClick={() => {
-                  setModal(true);
-                }}
-              >
-                <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Toyota Alphard
-                </h2>
-                <div>
-                  <span className={styles.line}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                  </span>
-                </div>
-                <LineHeight
-                  style={{ marginTop: "20px", marginBottom: "20px" }}
-                />
-                <div className={styles.per_social}>
-                  <div className={styles.per_mobile}>
-                    <Mobile />
-                    <span
-                      style={{
-                        marginLeft: "10px",
-                        color: "#A4A8B4",
-                        fontSize: "17px",
-                      }}
-                    >
-                      +996 444 444
-                    </span>
-                  </div>
-                  <div>
-                    <Facebook className={styles.social_media} />
-                    <Insta className={styles.social_media} />
-                    <Whats />
-                  </div>
-                </div>
-                <div className={styles.email}>
-                  <Email />
-                  <span
-                    style={{
-                      marginLeft: "10px",
-                      color: "#A4A8B4",
-                      fontSize: "17px",
-                    }}
-                  >
-                    tashpolotov@gmail.com
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className={styles.persons}>
-              <div className={styles.first_per}></div>
-              <div className={styles.person_info}>
-                <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Toyota Alphard
-                </h2>
-                <div>
-                  <span className={styles.line}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                  </span>
-                </div>
-                <LineHeight
-                  style={{ marginTop: "20px", marginBottom: "20px" }}
-                />
-                <div className={styles.per_social}>
-                  <div className={styles.per_mobile}>
-                    <Mobile />
-                    <span
-                      style={{
-                        marginLeft: "10px",
-                        color: "#A4A8B4",
-                        fontSize: "17px",
-                      }}
-                    >
-                      +996 444 444
-                    </span>
-                  </div>
-                  <div>
-                    <Facebook className={styles.social_media} />
-                    <Insta className={styles.social_media} />
-                    <Whats />
-                  </div>
-                </div>
-                <div className={styles.email}>
-                  <Email />
-                  <span
-                    style={{
-                      marginLeft: "10px",
-                      color: "#A4A8B4",
-                      fontSize: "17px",
-                    }}
-                  >
-                    tashpolotov@gmail.com
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className={styles.persons_sec}>
-              <div className={styles.first_per}></div>
-              <div className={styles.person_info}>
-                <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Toyota Alphard
-                </h2>
-                <div>
-                  <span className={styles.line}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                  </span>
-                </div>
-                <LineHeight
-                  style={{ marginTop: "20px", marginBottom: "20px" }}
-                />
-                <div className={styles.per_social}>
-                  <div className={styles.per_mobile}>
-                    <Mobile />
-                    <span
-                      style={{
-                        marginLeft: "10px",
-                        color: "#A4A8B4",
-                        fontSize: "17px",
-                      }}
-                    >
-                      +996 444 444
-                    </span>
-                  </div>
-                  <div>
-                    <Facebook className={styles.social_media} />
-                    <Insta className={styles.social_media} />
-                    <Whats />
-                  </div>
-                </div>
-                <div className={styles.email}>
-                  <Email />
-                  <span
-                    style={{
-                      marginLeft: "10px",
-                      color: "#A4A8B4",
-                      fontSize: "17px",
-                    }}
-                  >
-                    tashpolotov@gmail.com
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className={styles.persons_sec}>
-              <div className={styles.first_per}></div>
-              <div className={styles.person_info}>
-                <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Toyota Alphard
-                </h2>
-                <div>
-                  <span className={styles.line}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                  </span>
-                </div>
-                <LineHeight
-                  style={{ marginTop: "20px", marginBottom: "20px" }}
-                />
-                <div className={styles.per_social}>
-                  <div className={styles.per_mobile}>
-                    <Mobile />
-                    <span
-                      style={{
-                        marginLeft: "10px",
-                        color: "#A4A8B4",
-                        fontSize: "17px",
-                      }}
-                    >
-                      +996 444 444
-                    </span>
-                  </div>
-                  <div>
-                    <Facebook className={styles.social_media} />
-                    <Insta className={styles.social_media} />
-                    <Whats />
-                  </div>
-                </div>
-                <div className={styles.email}>
-                  <Email />
-                  <span
-                    style={{
-                      marginLeft: "10px",
-                      color: "#A4A8B4",
-                      fontSize: "17px",
-                    }}
-                  >
-                    tashpolotov@gmail.com
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className={styles.persons}>
-              <div className={styles.first_per}></div>
-              <div className={styles.person_info}>
-                <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Toyota Alphard
-                </h2>
-                <div>
-                  <span className={styles.line}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                  </span>
-                </div>
-                <LineHeight
-                  style={{ marginTop: "20px", marginBottom: "20px" }}
-                />
-                <div className={styles.per_social}>
-                  <div className={styles.per_mobile}>
-                    <Mobile />
-                    <span
-                      style={{
-                        marginLeft: "10px",
-                        color: "#A4A8B4",
-                        fontSize: "17px",
-                      }}
-                    >
-                      +996 444 444
-                    </span>
-                  </div>
-                  <div>
-                    <Facebook className={styles.social_media} />
-                    <Insta className={styles.social_media} />
-                    <Whats />
-                  </div>
-                </div>
-                <div className={styles.email}>
-                  <Email />
-                  <span
-                    style={{
-                      marginLeft: "10px",
-                      color: "#A4A8B4",
-                      fontSize: "17px",
-                    }}
-                  >
-                    tashpolotov@gmail.com
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className={styles.persons}>
-              <div className={styles.first_per}></div>
-              <div className={styles.person_info}>
-                <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Toyota Alphard
-                </h2>
-                <div>
-                  <span className={styles.line}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                  </span>
-                </div>
-                <LineHeight
-                  style={{ marginTop: "20px", marginBottom: "20px" }}
-                />
-                <div className={styles.per_social}>
-                  <div className={styles.per_mobile}>
-                    <Mobile />
-                    <span
-                      style={{
-                        marginLeft: "10px",
-                        color: "#A4A8B4",
-                        fontSize: "17px",
-                      }}
-                    >
-                      +996 444 444
-                    </span>
-                  </div>
-                  <div>
-                    <Facebook className={styles.social_media} />
-                    <Insta className={styles.social_media} />
-                    <Whats />
-                  </div>
-                </div>
-                <div className={styles.email}>
-                  <Email />
-                  <span
-                    style={{
-                      marginLeft: "10px",
-                      color: "#A4A8B4",
-                      fontSize: "17px",
-                    }}
-                  >
-                    tashpolotov@gmail.com
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <Pagination data={state} />
         </div>
       </MainLayout>
       {modal && (

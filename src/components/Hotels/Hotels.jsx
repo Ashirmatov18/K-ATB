@@ -10,12 +10,27 @@ import {
 import React from "react";
 import styles from "../../../styles/hotels.module.css";
 import MainLayout from "../ui/MainLayout";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Left, Right } from "../Main/MainIcons";
 import { Exit } from "../Navbar/NavbarIcons";
+import axios from "axios";
+import Paginanation from "../Paginanation";
 
 export default function Hotels() {
   const [modal, setModal] = useState(false);
+  const getHotel = async () => {
+    const { data } = await axios.get(
+      `http://3.90.235.96/api/v1/travel-companies/`
+    );
+    console.log(data.results);
+    return data.results;
+  };
+
+  getHotel();
+  const [hotel, setHotel] = useState([]);
+  useEffect(() => {
+    getHotel().then(setHotel);
+  }, []);
 
   const imgs = [
     { id: 0, value: "https://wallpaperaccess.com/full/2637581.jpg" },
@@ -43,10 +58,6 @@ export default function Hotels() {
   return (
     <div className={styles.guides}>
       <div className={styles.main_guides}>
-        <div className={styles.main_search}>
-          <input type="text" className={styles.search} placeholder="Поиск" />
-          <Search className={styles.search_icon} />
-        </div>
         <div className={styles.about_title}>
           <span>ОТЕЛИ</span>
         </div>
@@ -74,300 +85,7 @@ export default function Hotels() {
           <button className={styles.but_filter}>Юрты</button>
         </div>
         <div className={styles.person_cards}>
-          <div>
-            <div className={styles.persons}>
-              <div className={styles.first_per}></div>
-              <div
-                className={styles.person_info}
-                onClick={() => {
-                  setModal(true);
-                }}
-              >
-                <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Jannat Resort
-                </h2>
-                <div>
-                  <span className={styles.line}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                  </span>
-                </div>
-                <LineHeight
-                  style={{ marginTop: "20px", marginBottom: "20px" }}
-                />
-                <div className={styles.per_social}>
-                  <div className={styles.per_mobile}>
-                    <Mobile />
-                    <span
-                      style={{
-                        marginLeft: "10px",
-                        color: "#A4A8B4",
-                        fontSize: "17px",
-                      }}
-                    >
-                      +996 444 444
-                    </span>
-                  </div>
-                  <div>
-                    <Facebook className={styles.social_media} />
-                    <Insta className={styles.social_media} />
-                    <Whats />
-                  </div>
-                </div>
-                <div className={styles.email}>
-                  <Email />
-                  <span
-                    style={{
-                      marginLeft: "10px",
-                      color: "#A4A8B4",
-                      fontSize: "17px",
-                    }}
-                  >
-                    tashpolotov@gmail.com
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className={styles.persons}>
-              <div className={styles.first_per}></div>
-              <div className={styles.person_info}>
-                <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Jannat Resort
-                </h2>
-                <div>
-                  <span className={styles.line}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                  </span>
-                </div>
-                <LineHeight
-                  style={{ marginTop: "20px", marginBottom: "20px" }}
-                />
-                <div className={styles.per_social}>
-                  <div className={styles.per_mobile}>
-                    <Mobile />
-                    <span
-                      style={{
-                        marginLeft: "10px",
-                        color: "#A4A8B4",
-                        fontSize: "17px",
-                      }}
-                    >
-                      +996 444 444
-                    </span>
-                  </div>
-                  <div>
-                    <Facebook className={styles.social_media} />
-                    <Insta className={styles.social_media} />
-                    <Whats />
-                  </div>
-                </div>
-                <div className={styles.email}>
-                  <Email />
-                  <span
-                    style={{
-                      marginLeft: "10px",
-                      color: "#A4A8B4",
-                      fontSize: "17px",
-                    }}
-                  >
-                    tashpolotov@gmail.com
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className={styles.persons_sec}>
-              <div className={styles.first_per}></div>
-              <div className={styles.person_info}>
-                <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Jannat Resort
-                </h2>
-                <div>
-                  <span className={styles.line}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                  </span>
-                </div>
-                <LineHeight
-                  style={{ marginTop: "20px", marginBottom: "20px" }}
-                />
-                <div className={styles.per_social}>
-                  <div className={styles.per_mobile}>
-                    <Mobile />
-                    <span
-                      style={{
-                        marginLeft: "10px",
-                        color: "#A4A8B4",
-                        fontSize: "17px",
-                      }}
-                    >
-                      +996 444 444
-                    </span>
-                  </div>
-                  <div>
-                    <Facebook className={styles.social_media} />
-                    <Insta className={styles.social_media} />
-                    <Whats />
-                  </div>
-                </div>
-                <div className={styles.email}>
-                  <Email />
-                  <span
-                    style={{
-                      marginLeft: "10px",
-                      color: "#A4A8B4",
-                      fontSize: "17px",
-                    }}
-                  >
-                    tashpolotov@gmail.com
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className={styles.persons_sec}>
-              <div className={styles.first_per}></div>
-              <div className={styles.person_info}>
-                <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Jannat Resort
-                </h2>
-                <div>
-                  <span className={styles.line}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                  </span>
-                </div>
-                <LineHeight
-                  style={{ marginTop: "20px", marginBottom: "20px" }}
-                />
-                <div className={styles.per_social}>
-                  <div className={styles.per_mobile}>
-                    <Mobile />
-                    <span
-                      style={{
-                        marginLeft: "10px",
-                        color: "#A4A8B4",
-                        fontSize: "17px",
-                      }}
-                    >
-                      +996 444 444
-                    </span>
-                  </div>
-                  <div>
-                    <Facebook className={styles.social_media} />
-                    <Insta className={styles.social_media} />
-                    <Whats />
-                  </div>
-                </div>
-                <div className={styles.email}>
-                  <Email />
-                  <span
-                    style={{
-                      marginLeft: "10px",
-                      color: "#A4A8B4",
-                      fontSize: "17px",
-                    }}
-                  >
-                    tashpolotov@gmail.com
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className={styles.persons}>
-              <div className={styles.first_per}></div>
-              <div className={styles.person_info}>
-                <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Jannat Resort
-                </h2>
-                <div>
-                  <span className={styles.line}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                  </span>
-                </div>
-                <LineHeight
-                  style={{ marginTop: "20px", marginBottom: "20px" }}
-                />
-                <div className={styles.per_social}>
-                  <div className={styles.per_mobile}>
-                    <Mobile />
-                    <span
-                      style={{
-                        marginLeft: "10px",
-                        color: "#A4A8B4",
-                        fontSize: "17px",
-                      }}
-                    >
-                      +996 444 444
-                    </span>
-                  </div>
-                  <div>
-                    <Facebook className={styles.social_media} />
-                    <Insta className={styles.social_media} />
-                    <Whats />
-                  </div>
-                </div>
-                <div className={styles.email}>
-                  <Email />
-                  <span
-                    style={{
-                      marginLeft: "10px",
-                      color: "#A4A8B4",
-                      fontSize: "17px",
-                    }}
-                  >
-                    tashpolotov@gmail.com
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className={styles.persons}>
-              <div className={styles.first_per}></div>
-              <div className={styles.person_info}>
-                <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  Jannat Resort
-                </h2>
-                <div>
-                  <span className={styles.line}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                  </span>
-                </div>
-                <LineHeight
-                  style={{ marginTop: "20px", marginBottom: "20px" }}
-                />
-                <div className={styles.per_social}>
-                  <div className={styles.per_mobile}>
-                    <Mobile />
-                    <span
-                      style={{
-                        marginLeft: "10px",
-                        color: "#A4A8B4",
-                        fontSize: "17px",
-                      }}
-                    >
-                      +996 444 444
-                    </span>
-                  </div>
-                  <div>
-                    <Facebook className={styles.social_media} />
-                    <Insta className={styles.social_media} />
-                    <Whats />
-                  </div>
-                </div>
-                <div className={styles.email}>
-                  <Email />
-                  <span
-                    style={{
-                      marginLeft: "10px",
-                      color: "#A4A8B4",
-                      fontSize: "17px",
-                    }}
-                  >
-                    tashpolotov@gmail.com
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <Paginanation data={hotel} />
         </div>
       </MainLayout>
       {modal && (

@@ -15,35 +15,11 @@
   max-width: 1280px;
 }
 
-.search {
-  width: 326.26px;
-  height: 36.26px;
-  background: #323232;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding-left: 20px;
-  color: #828282;
-  border: none;
-  position: relative;
-}
-
-.search_icon {
-  position: absolute;
-  right: 34px;
-  margin-top: 7px;
-}
-
-.main_search {
-  display: flex;
-  justify-content: end;
-  padding: 0 20px;
-  padding-top: 20px !important;
-}
-
 .person_cards {
   display: flex;
   justify-content: space-between;
   margin-top: 150px;
+  flex-wrap: wrap;
   margin-bottom: 100px;
 }
 
@@ -72,9 +48,7 @@
   border: 1px solid #e0e0e0;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  position: absolute;
-  margin-left: 430px;
-  margin-top: -80px;
+  margin-left: 431px;
 }
 
 .first_per {
@@ -132,5 +106,20 @@
 
 .last_card {
   position: relative;
-  margin-bottom: 730px;
+  margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 1250px) {
+  .persons_fourth {
+    margin-left: 0;
+  }
+  .persons {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .person_cards {
+    justify-content: center;
+  }
 }

@@ -15,10 +15,6 @@ export default function Partners() {
   return (
     <div>
       <div className={styles.main_guides}>
-        <div className={styles.main_search}>
-          <input type="text" className={styles.search} placeholder="Поиск" />
-          <Search className={styles.search_icon} />
-        </div>
         <div className={styles.about_title}>
           <span>ПАРТНЕРЫ</span>
         </div>

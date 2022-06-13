@@ -17,7 +17,7 @@
 
 .search {
   width: 326.26px;
-  height: 36.26px;
+  height: 45px;
   background: #323232;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -25,12 +25,13 @@
   color: #828282;
   border: none;
   position: relative;
+  font-size: 15px;
 }
 
 .search_icon {
   position: absolute;
-  right: 34px;
-  margin-top: 7px;
+  right: 175px;
+  margin-top: 10px;
 }
 
 .main_search {
@@ -38,6 +39,11 @@
   justify-content: end;
   padding: 0 20px;
   padding-top: 20px !important;
+}
+
+.search_explore {
+  display: flex;
+  justify-content: space-between;
 }
 
 .kyrgyzstan {
@@ -169,4 +175,62 @@
 .next_prev {
   margin-right: 15px;
   margin-left: 10px;
+}
+
+@media only screen and (max-width: 1470px) {
+  .search_icon {
+    right: 130px;
+  }
+}
+
+@media only screen and (max-width: 1320px) {
+  .search_icon {
+    right: 70px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .persons:nth-child(3n + 2) {
+    transform: unset !important;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .main_search {
+    position: absolute;
+    margin-top: 300px !important;
+  }
+  .person_cards {
+    margin-top: 350px;
+  }
+  .search {
+    width: 70vw;
+    height: 55px;
+    background-color: #f2f2f2;
+    font-size: 20px;
+    left: 10vw;
+  }
+
+  .search_icon {
+    margin-top: 15px;
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .person_cards {
+    justify-content: center;
+    margin-bottom: 30px !important;
+    margin-top: 250px;
+  }
+
+  .about_title {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main_search {
+    margin-top: 450px !important;
+  }
 }
