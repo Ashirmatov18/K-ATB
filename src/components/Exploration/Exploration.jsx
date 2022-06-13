@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import MainLayout from "../ui/MainLayout";
 import styles from "../../../styles/Exploration.module.css";
 import { ReadMore } from "../Main/MainIcons";
 import ExpoSlider from "./ExpoSlider";
+import { useSpring, animated } from "@react-spring/web";
+import { Link } from "@mui/material";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Exploration() {
+  const [state, toggle] = useState(true);
+  const { x } = useSpring({
+    from: { x: 0 },
+    x: state ? 1 : 0,
+    config: { duration: 1000 },
+  });
+
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   // const logo = [
   //   {
   //     img: "first",
@@ -40,9 +56,25 @@ export default function Exploration() {
                 </p>
               </div>
             </div>
-            <div className={styles.click}>
+            {/* <div className={styles.click}>
               <button>Click me</button>
-            </div>
+            </div> */}
+            <Link href="/kyrgyzstan" style={{ textDecoration: "none" }}>
+              <div className={styles.click} onClick={() => toggle(!state)}>
+                <animated.div
+                  className={styles.click_but}
+                  style={{
+                    opacity: x.to({ range: [0, 1], output: [0.3, 1] }),
+                    scale: x.to({
+                      range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
+                      output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1],
+                    }),
+                  }}
+                >
+                  Click Me
+                </animated.div>
+              </div>
+            </Link>
           </div>
         </MainLayout>
 
@@ -56,7 +88,7 @@ export default function Exploration() {
 
       <MainLayout>
         <div style={{ paddingTop: "100px" }} className={styles.kyrgyzstan}>
-          <div>
+          <div data-aos="fade-right">
             <h1>ГИДЫ</h1>
             <span>Explore our world with us</span>
             <div>
@@ -66,14 +98,16 @@ export default function Exploration() {
               </p>
             </div>
           </div>
-          <div className={styles.read_more}>
-            <p>Read more</p>
-            <div className={styles.arrow}>
-              <ReadMore />
+          <Link href="/guides" style={{ textDecoration: "none" }}>
+            <div className={styles.read_more}>
+              <p>Read more</p>
+              <div className={styles.arrow}>
+                <ReadMore />
+              </div>
             </div>
-          </div>
+          </Link>
 
-          <div className={styles.residents}>
+          <div className={styles.residents} data-aos="fade-left">
             <div>
               <div className={styles.first_res}></div>
               <div className={styles.res_name}>
@@ -117,7 +151,11 @@ export default function Exploration() {
           </div>
         </div>
 
-        <div style={{ paddingTop: "100px" }} className={styles.kyrgyzstan}>
+        <div
+          style={{ paddingTop: "100px" }}
+          className={styles.kyrgyzstan}
+          data-aos="fade-right"
+        >
           <div>
             <h1>ТУРФИРМЫ</h1>
             <span>Explore our world with us</span>
@@ -128,13 +166,15 @@ export default function Exploration() {
               </p>
             </div>
           </div>
-          <div className={styles.read_more}>
-            <p>Read more</p>
-            <div className={styles.arrow}>
-              <ReadMore />
+          <Link href="/tours" style={{ textDecoration: "none" }}>
+            <div className={styles.read_more}>
+              <p>Read more</p>
+              <div className={styles.arrow}>
+                <ReadMore />
+              </div>
             </div>
-          </div>
-          <div className={styles.residents}>
+          </Link>
+          <div className={styles.residents} data-aos="fade-left">
             <div>
               <div className={styles.first_logo}>
                 {" "}
