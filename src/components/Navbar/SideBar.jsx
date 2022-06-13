@@ -7,7 +7,7 @@ export default function SideBar() {
   return (
     <div>
       <Menu right>
-        <Link href="/">
+        <Link href="/" style={{ textDecoration: "none", color: "white" }}>
           <div className="bottom_line">
             <p className="menu-item" href="/">
               Главная
@@ -16,7 +16,7 @@ export default function SideBar() {
           </div>
         </Link>
 
-        <Link href="/about">
+        <Link href="/about" style={{ textDecoration: "none", color: "white" }}>
           <div className="bottom_line">
             <p className="menu-item" href="/salads">
               О нас
@@ -25,7 +25,10 @@ export default function SideBar() {
           </div>
         </Link>
 
-        <Link href="/kyrgyzstan">
+        <Link
+          href="/kyrgyzstan"
+          style={{ textDecoration: "none", color: "white" }}
+        >
           <div className="bottom_line">
             <p className="menu-item" href="/pizzas">
               Кыргызстан
@@ -34,7 +37,7 @@ export default function SideBar() {
           </div>
         </Link>
 
-        <Link href="/tours">
+        <Link href="/tours" style={{ textDecoration: "none", color: "white" }}>
           <div className="bottom_line">
             <p className="menu-item" href="/desserts">
               Гиды и тур.фирмы
@@ -43,7 +46,7 @@ export default function SideBar() {
           </div>
         </Link>
 
-        <Link href="/guides">
+        <Link href="/guides" style={{ textDecoration: "none", color: "white" }}>
           <div className="bottom_line">
             <p className="menu-item" href="/desserts">
               Услуги
@@ -52,7 +55,7 @@ export default function SideBar() {
           </div>
         </Link>
 
-        <Link href="/hotels">
+        <Link href="/hotels" style={{ textDecoration: "none", color: "white" }}>
           <div className="bottom_line">
             <p className="menu-item" href="/desserts">
               Отели
@@ -61,7 +64,7 @@ export default function SideBar() {
           </div>
         </Link>
 
-        <Link href="/cafe">
+        <Link href="/cafe" style={{ textDecoration: "none", color: "white" }}>
           <div className="bottom_line">
             <p className="menu-item" href="/desserts">
               Кафе-рестораны
@@ -70,7 +73,7 @@ export default function SideBar() {
           </div>
         </Link>
 
-        <Link href="/enter">
+        <Link href="/enter" style={{ textDecoration: "none", color: "white" }}>
           {" "}
           <div className="bottom_line">
             <p className="menu-item" href="/desserts">
@@ -80,7 +83,10 @@ export default function SideBar() {
           </div>
         </Link>
 
-        <Link href="/partners">
+        <Link
+          href="/partners"
+          style={{ textDecoration: "none", color: "white" }}
+        >
           <div className="bottom_line">
             <p className="menu-item" href="/desserts">
               Партнеры
@@ -88,7 +94,7 @@ export default function SideBar() {
             <SideIcon />
           </div>
         </Link>
-        <Link href="/news">
+        <Link href="/news" style={{ textDecoration: "none", color: "white" }}>
           <div className="bottom_line">
             <p className="menu-item" href="/desserts">
               Новости
