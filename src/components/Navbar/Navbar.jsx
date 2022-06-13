@@ -75,7 +75,7 @@ export default function Navbar() {
               <li>Кыргызстан</li>
             </Link>
             <Link
-              href="/tours"
+              href="/guides"
               style={{ textDecoration: "none", color: "white" }}
             >
               <li>Гиды и тур.фирмы</li>
