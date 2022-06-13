@@ -54,7 +54,9 @@ export default function Navbar() {
     <div className={styles.app_main}>
       <div className={styles.navbar_pos}>
         <div className={styles.logo}>
-          <MainLogo />
+          <Link href="/">
+            <MainLogo />
+          </Link>
         </div>
         <div className={styles.nav_info}>
           <ul>
@@ -68,6 +70,7 @@ export default function Navbar() {
             >
               <li>О нас</li>
             </Link>
+
             <Link
               href="/kyrgyzstan"
               style={{ textDecoration: "none", color: "white" }}
@@ -78,7 +81,14 @@ export default function Navbar() {
               href="/guides"
               style={{ textDecoration: "none", color: "white" }}
             >
-              <li>Гиды и тур.фирмы</li>
+              <li>Гиды</li>
+            </Link>
+            <Link
+              href="/tours"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              {" "}
+              <li>Тур.фирмы</li>{" "}
             </Link>
             <Link
               href="/news"

@@ -9,18 +9,19 @@ export default function Main() {
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => setOffsetY(window.pageYOffset);
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   return (
     <>
       <div className={styles.mount}>
         <MainLayout>
           <div className={styles.information}>
-            <div style={{ transform: `translateY(${offsetY * 0.2}px)` }}>
+            {/* style={{ transform: `translateY(${offsetY * 0.2}px)` }} */}
+            <div>
               <h1>
                 Explore our <br /> world with us
               </h1>
@@ -31,7 +32,7 @@ export default function Main() {
             </div>
             <div
               className={styles.button_click}
-              style={{ transform: `translateY(${offsetY * 0.2}px)` }}
+              // style={{ transform: `translateY(${offsetY * 0.2}px)` }}
             >
               <button>Click me</button>
             </div>
@@ -43,7 +44,7 @@ export default function Main() {
       </div>
       <MainLayout>
         <div className={styles.about}>
-          <div style={{ transform: `translateY(${offsetY * 0.1}px)` }}>
+          <div>
             <h1 className={styles.about_us}>О НАС</h1>
             <div>
               <h1 className={styles.explore}>

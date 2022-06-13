@@ -14,10 +14,23 @@ export default function ExpoSlider() {
     arrows: false,
     slidesToShow: 3,
     slidesToScroll: 1,
-    infinite: false,
+    speed: 2000,
+    infinite: true,
+    // lazyLoad: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+
     nextArrow: <Right />,
     prevArrow: <Left />,
     responsive: [
+      // {
+      //   breakpoint: 850,
+      //   settings: {
+      //     slidesToShow: 2,
+      //     slidesToScroll: 2,
+      //     // initialSlide: 2,
+      //   },
+      // },
       {
         breakpoint: 850,
         settings: {
@@ -31,6 +44,14 @@ export default function ExpoSlider() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: false,
         },
       },
     ],

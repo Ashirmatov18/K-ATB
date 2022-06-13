@@ -10,16 +10,16 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 export default function Exploration() {
-  const [state, toggle] = useState(true);
-  const { x } = useSpring({
-    from: { x: 0 },
-    x: state ? 1 : 0,
-    config: { duration: 1000 },
-  });
+  // const [state, toggle] = useState(true);
+  // const { x } = useSpring({
+  //   from: { x: 0 },
+  //   x: state ? 1 : 0,
+  //   config: { duration: 1000 },
+  // });
 
-  useEffect(() => {
-    Aos.init({ duration: 1000 });
-  }, []);
+  // useEffect(() => {
+  //   Aos.init({ duration: 1000 });
+  // }, []);
 
   // const logo = [
   //   {
@@ -60,7 +60,7 @@ export default function Exploration() {
               <button>Click me</button>
             </div> */}
             <Link href="/kyrgyzstan" style={{ textDecoration: "none" }}>
-              <div className={styles.click} onClick={() => toggle(!state)}>
+              {/* <div className={styles.click} onClick={() => toggle(!state)}>
                 <animated.div
                   className={styles.click_but}
                   style={{
@@ -73,7 +73,8 @@ export default function Exploration() {
                 >
                   Click Me
                 </animated.div>
-              </div>
+              </div> */}
+              <button>Click me</button>
             </Link>
           </div>
         </MainLayout>
@@ -88,7 +89,8 @@ export default function Exploration() {
 
       <MainLayout>
         <div style={{ paddingTop: "100px" }} className={styles.kyrgyzstan}>
-          <div data-aos="fade-right">
+          {/* data-aos="fade-right" */}
+          <div>
             <h1>ГИДЫ</h1>
             <span>Explore our world with us</span>
             <div>
@@ -107,7 +109,8 @@ export default function Exploration() {
             </div>
           </Link>
 
-          <div className={styles.residents} data-aos="fade-left">
+          <div className={styles.residents}>
+            {/* data-aos="fade-left" */}
             <div>
               <div className={styles.first_res}></div>
               <div className={styles.res_name}>
@@ -154,7 +157,7 @@ export default function Exploration() {
         <div
           style={{ paddingTop: "100px" }}
           className={styles.kyrgyzstan}
-          data-aos="fade-right"
+          // data-aos="fade-right"
         >
           <div>
             <h1>ТУРФИРМЫ</h1>
@@ -174,7 +177,8 @@ export default function Exploration() {
               </div>
             </div>
           </Link>
-          <div className={styles.residents} data-aos="fade-left">
+          {/* data-aos="fade-left" */}
+          <div className={styles.residents}>
             <div>
               <div className={styles.first_logo}>
                 {" "}

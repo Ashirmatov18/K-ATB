@@ -16,9 +16,6 @@ import Link from "next/link";
 import Paginanation from "../Paginanation";
 import { useRouter } from "next/router";
 
-// import { Left, Right } from "../Main/MainIcons";
-// import { Exit } from "../Navbar/NavbarIcons";
-
 export default function Guides() {
   const [modal, setModal] = useState(false);
 
@@ -98,37 +95,6 @@ export default function Guides() {
           <Paginanation data={state} />
         </div>
       </MainLayout>
-
-      {/* {modal && (
-        <div className={styles.modal}>
-          <div className={styles.main}>
-            <div className={styles.controllers}>
-              <div>
-                <Left className={styles.next_prev} />
-                <Right />
-              </div> */}
-      {/* <div>
-                <Exit onClick={() => setModal(false)} />
-              </div> */}
-      {/* </div>
-            <img src={wordData.value} className={styles.main_carousel} />
-            <div className={styles.flex_row}>
-              {imgs.map((data, i) => (
-                <div className={styles.thumbnail} key={i}>
-                  <img
-                    // className={wordData.id == i ? "clicked" : ""}
-                    className={styles.mini_carousel}
-                    src={data.value}
-                    // onClick={() => handleClick(i)}
-                    height="70"
-                    width="100"
-                  />
-                </div>
-              ))} */}
-      {/* </div>
-          </div>
-        </div>
-      )} */}
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import styles from "../../styles/ordercars.module.css";
+import Modal from "./Modal";
 import {
   Email,
   Facebook,
@@ -30,8 +31,29 @@ export default function Paginanation(props) {
     setItemOffset(newOffset);
   };
 
+  const [modal, setModal] = useState(false);
+  const [tempData, setTempData] = useState([]);
+
+  const getDataInfo = (title, id) => {
+    let tempData = [title, id];
+    setTempData((item) => [1, ...tempData]);
+
+    return setModal(true);
+  };
+
+  // const filterResult = (f) => {
+  //   const result = data.filter((curDate) => {
+  //     console.log(curDate.id);
+  //     return curDate.id == f;
+  //   });
+  //   setCurrentItems(result);
+  // };
+
   return (
     <>
+      {/* <button onClick={() => filterResult("1")}>1</button>
+      <button onClick={() => filterResult("2")}>2</button>
+      <button>3</button> */}
       {!!data?.length &&
         currentItems.map(
           ({
@@ -49,7 +71,10 @@ export default function Paginanation(props) {
                 className={styles.first_per}
               ></div>
               <div className={styles.person_info}>
-                <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
+                <h2
+                  style={{ color: "#2F2F2F", fontSize: "24px" }}
+                  onClick={() => getDataInfo({ title }, { id })}
+                >
                   {title} {last_name}
                 </h2>
                 <span className={styles.line}>{description}</span>
@@ -92,6 +117,8 @@ export default function Paginanation(props) {
             </div>
           )
         )}
+      {modal === true ? <Modal title={tempData[1]} id={tempData[2]} /> : ""}
+
       <ReactPaginate
         breakLabel="..."
         nextLabel="Next"

@@ -19,7 +19,7 @@ export default function VideoKg() {
           url="https://www.youtube.com/watch?v=gr6I7SQB3aM"
           className={styles.video_player}
           width="100%"
-          playing={true}
+          playing={false}
         />
       </div>
     </div>

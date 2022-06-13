@@ -86,4 +86,7 @@
   .about_stat {
     justify-content: center;
   }
+  .expo h1 {
+    padding-top: 30px !important;
+  }
 }

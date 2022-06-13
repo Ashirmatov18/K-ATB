@@ -39,7 +39,7 @@ export default function About() {
           <div className={styles.about_img}></div>
         </div>
 
-        <div>
+        <div className={styles.expo}>
           <h1
             style={{
               color: "#333333",

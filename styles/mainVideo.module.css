@@ -1,5 +1,4 @@
 .video {
-  background-color: #000;
   width: 330px;
   height: 210px;
   z-index: 999;
@@ -36,5 +35,11 @@
   .video_player {
     width: 200px !important;
     height: 140px !important;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .video {
+    margin-left: 80px;
   }
 }
