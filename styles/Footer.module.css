@@ -85,12 +85,22 @@
   align-items: center;
 }
 
+.footer_adaptive {
+  display: none;
+}
+
 @media only screen and (max-width: 1000px) {
   .footer_main {
     display: none;
   }
   .phone_footer {
     display: none;
+  }
+  .footer_adaptive {
+    display: block;
+  }
+  .footer_info {
+    height: auto;
   }
 }
 

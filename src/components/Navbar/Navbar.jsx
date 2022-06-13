@@ -5,6 +5,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import SideBar from "./SideBar";
+import { Link } from "@mui/material";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -57,11 +58,34 @@ export default function Navbar() {
         </div>
         <div className={styles.nav_info}>
           <ul>
-            <li>Главная</li>
-            <li>О нас</li>
-            <li>Кыргызстан</li>
-            <li>Гиды и тур.фирмы</li>
-            <li>Новости</li>
+            <Link href="/" style={{ textDecoration: "none", color: "white" }}>
+              {" "}
+              <li>Главная</li>{" "}
+            </Link>
+            <Link
+              href="/about"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              <li>О нас</li>
+            </Link>
+            <Link
+              href="/kyrgyzstan"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              <li>Кыргызстан</li>
+            </Link>
+            <Link
+              href="/tours"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              <li>Гиды и тур.фирмы</li>
+            </Link>
+            <Link
+              href="/news"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              <li>Новости</li>
+            </Link>
           </ul>
         </div>
         <div className={styles.nav_add}>

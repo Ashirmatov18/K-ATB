@@ -9,10 +9,6 @@ export default function MainNews() {
   return (
     <div className={styles.guides}>
       <div className={styles.main_guides}>
-        <div className={styles.main_search}>
-          <input type="text" className={styles.search} placeholder="Поиск" />
-          <Search className={styles.search_icon} />
-        </div>
         <div className={styles.about_title}>
           <span>НОВОСТИ</span>
         </div>

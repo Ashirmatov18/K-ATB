@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../../../styles/Footer.module.css";
 import MainLayout from "../ui/MainLayout";
 import { LogoFooter } from "./FooterSvg";
+import { Link } from "@mui/material";
 
 export default function Footer() {
   return (
@@ -54,7 +55,6 @@ export default function Footer() {
               <li>Новости</li>
             </ul>
           </div>
-
           <div className={styles.footer_last}>
             <div>
               <LogoFooter />
@@ -65,6 +65,114 @@ export default function Footer() {
             <div className={styles.phone_footer} style={{ fontSize: "20px" }}>
               <p>+996 123 456</p>
             </div>
+          </div>
+          <div className={styles.footer_adaptive}>
+            <Link style={{ textDecoration: "none", color: "white" }} href="/">
+              <div className="bottom_line">
+                <p className="menu-item" href="/">
+                  Главная
+                </p>
+              </div>
+            </Link>
+
+            <Link
+              style={{ textDecoration: "none", color: "white" }}
+              href="/about"
+            >
+              <div className="bottom_line">
+                <p className="menu-item" href="/salads">
+                  О нас
+                </p>
+              </div>
+            </Link>
+
+            <Link
+              style={{ textDecoration: "none", color: "white" }}
+              href="/kyrgyzstan"
+            >
+              <div className="bottom_line">
+                <p className="menu-item" href="/pizzas">
+                  Кыргызстан
+                </p>
+              </div>
+            </Link>
+
+            <Link
+              style={{ textDecoration: "none", color: "white" }}
+              href="/tours"
+            >
+              <div className="bottom_line">
+                <p className="menu-item" href="/desserts">
+                  Гиды и тур.фирмы
+                </p>
+              </div>
+            </Link>
+
+            <Link
+              style={{ textDecoration: "none", color: "white" }}
+              href="/guides"
+            >
+              <div className="bottom_line">
+                <p className="menu-item" href="/desserts">
+                  Услуги
+                </p>
+              </div>
+            </Link>
+
+            <Link
+              style={{ textDecoration: "none", color: "white" }}
+              href="/hotels"
+            >
+              <div className="bottom_line">
+                <p className="menu-item" href="/desserts">
+                  Отели
+                </p>
+              </div>
+            </Link>
+
+            <Link
+              style={{ textDecoration: "none", color: "white" }}
+              href="/cafe"
+            >
+              <div className="bottom_line">
+                <p className="menu-item" href="/desserts">
+                  Кафе-рестораны
+                </p>
+              </div>
+            </Link>
+
+            <Link
+              style={{ textDecoration: "none", color: "white" }}
+              href="/enter"
+            >
+              {" "}
+              <div className="bottom_line">
+                <p className="menu-item" href="/desserts">
+                  Развлечения
+                </p>
+              </div>
+            </Link>
+
+            <Link
+              style={{ textDecoration: "none", color: "white" }}
+              href="/partners"
+            >
+              <div className="bottom_line">
+                <p className="menu-item" href="/desserts">
+                  Партнеры
+                </p>
+              </div>
+            </Link>
+            <Link
+              style={{ textDecoration: "none", color: "white" }}
+              href="/news"
+            >
+              <div className="bottom_line">
+                <p className="menu-item" href="/desserts">
+                  Новости
+                </p>
+              </div>
+            </Link>
           </div>
         </MainLayout>
       </footer>

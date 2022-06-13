@@ -94,12 +94,19 @@ export default function Paginanation(props) {
         )}
       <ReactPaginate
         breakLabel="..."
-        nextLabel="next >"
+        nextLabel="Next"
         onPageChange={handlePageClick}
         pageRangeDisplayed={3}
         pageCount={pageCount}
-        previousLabel="< previous"
+        previousLabel="Prev"
         renderOnZeroPageCount={null}
+        className="paginate"
+        containerClassName="main_paginate"
+        activeClassName="active"
+        nextClassName="next"
+        previousClassName="prev"
+        disabledClassName="prev_next_disabled"
+        activeLinkClassName="prev_next_active"
       />
     </>
   );

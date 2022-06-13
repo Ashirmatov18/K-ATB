@@ -10,12 +10,29 @@ export default function SimpleSlider() {
   const [sliderRef, setSliderRef] = useState(null);
 
   const sliderSettings = {
+    className: "slide",
     arrows: false,
     slidesToShow: 3,
     slidesToScroll: 1,
     infinite: false,
     nextArrow: <RightSlider />,
     prevArrow: <LeftSlider />,
+    responsive: [
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <div className={styles.content}>

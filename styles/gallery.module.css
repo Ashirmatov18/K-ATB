@@ -1,6 +1,3 @@
-/* .carousel .slider-wrapper {
-  width: 50%;
-} */
 .gallery {
   display: flex;
   justify-content: space-between;
@@ -41,8 +38,6 @@
 
 .sii {
   background-image: url("../public/images/first.jpg");
-  /* width: 147.15px;
-  height: 155px; */
   background-size: cover;
 }
 

@@ -27,8 +27,14 @@
   }
 } */
 
-/* @media only screen and (max-width: 1171px) {
+@media only screen and (max-width: 600px) {
   .video {
-    margin-left: 770px;
+    margin-left: 150px;
+    width: 200px !important;
+    height: 140px;
   }
-} */
+  .video_player {
+    width: 200px !important;
+    height: 140px !important;
+  }
+}

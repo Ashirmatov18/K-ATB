@@ -24,7 +24,9 @@ export default function Main() {
               <button>Click me</button>
             </div>
           </div>
-          <SimpleSlider />
+          <div className={styles.sli}>
+            <SimpleSlider />
+          </div>
         </MainLayout>
       </div>
       <MainLayout>
