@@ -45,7 +45,7 @@ export default function Guides() {
   const { id } = router.query;
 
   const getInfo = async () => {
-    const { data } = await axios.get(`http://3.90.235.96/api/v1/guides/`);
+    const { data } = await axios.get(`http://35.88.109.74/api/v1/guides/`);
     console.log(data.results);
     return data.results;
   };

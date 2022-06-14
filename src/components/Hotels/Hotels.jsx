@@ -1,58 +1,47 @@
-import {
-  Email,
-  Facebook,
-  Insta,
-  LineHeight,
-  Mobile,
-  Search,
-  Whats,
-} from "../OrderCars/OrderCarsSvg";
 import React from "react";
 import styles from "../../../styles/hotels.module.css";
 import MainLayout from "../ui/MainLayout";
 import { useState, useEffect } from "react";
-import { Left, Right } from "../Main/MainIcons";
-import { Exit } from "../Navbar/NavbarIcons";
 import axios from "axios";
 import Paginanation from "../Paginanation";
 
 export default function Hotels() {
-  const [modal, setModal] = useState(false);
+  // const [modal, setModal] = useState(false);
+
   const getHotel = async () => {
-    const { data } = await axios.get(
-      `http://3.90.235.96/api/v1/travel-companies/`
-    );
-    console.log(data.results);
+    const { data } = await axios.get(`http://35.88.109.74/api/v1/houses/`);
     return data.results;
   };
 
-  getHotel();
   const [hotel, setHotel] = useState([]);
+  const [filteredHotels, setFilteredHotels] = useState(hotel);
+
   useEffect(() => {
-    getHotel().then(setHotel);
+    getHotel().then((data) => {
+      setHotel(data);
+      setFilteredHotels(data);
+    });
   }, []);
 
-  const imgs = [
-    { id: 0, value: "https://wallpaperaccess.com/full/2637581.jpg" },
-    { id: 1, value: "https://source.unsplash.com/user/c_v_r/1900x800" },
-    { id: 2, value: "https://source.unsplash.com/user/c_v_r/100x100" },
-  ];
-
-  const [wordData, setWordData] = useState(imgs[0]);
-  const [slideIndex, setSlideIndex] = useState(1);
-
-  const handleClick = (index) => {
-    const wordSlider = imgs[index];
-    setWordData(wordSlider);
+  const filterResult = (f) => {
+    const result = hotel.filter((curDate) => {
+      return curDate.translations.ru.type_of_house == f;
+    });
+    setFilteredHotels(result);
   };
 
-  // const next = (index) => {
-  //   const currentImageIndex = imgs[0];
-  //   if (currentImageIndex !== imgs.length) {
-  //     setWordData(currentImageIndex + 1);
-  //   } else if (wordData === imgs.length) {
-  //     setWordData(0);
-  //   }
+  // const imgs = [
+  //   { id: 0, value: "https://wallpaperaccess.com/full/2637581.jpg" },
+  //   { id: 1, value: "https://source.unsplash.com/user/c_v_r/1900x800" },
+  //   { id: 2, value: "https://source.unsplash.com/user/c_v_r/100x100" },
+  // ];
+
+  // const [wordData, setWordData] = useState(imgs[0]);
+  // const [slideIndex, setSlideIndex] = useState(1);
+
+  // const handleClick = (index) => {
+  //   const wordSlider = imgs[index];
+  //   setWordData(wordSlider);
   // };
 
   return (
@@ -78,17 +67,33 @@ export default function Hotels() {
           </div>
         </div>
         <div className={styles.but_group}>
-          <button className={styles.but_filter}>Все</button>
-          <button className={styles.but_filter}>Отели</button>
+          <button
+            onClick={() => setFilteredHotels(hotel)}
+            className={styles.but_filter}
+          >
+            Все
+          </button>
+          <button
+            onClick={() => filterResult("Отели")}
+            className={styles.but_filter}
+          >
+            Отели
+          </button>
           <button className={styles.but_filter}>Гостиницы</button>
           <button className={styles.but_filter}>Гостевые дома</button>
-          <button className={styles.but_filter}>Юрты</button>
+          <button
+            onClick={() => filterResult("Юрты")}
+            className={styles.but_filter}
+          >
+            Юрты
+          </button>
         </div>
         <div className={styles.person_cards}>
-          <Paginanation data={hotel} />
+          {/* {filt.length > 0 && <Paginanation data={filt} />} */}
+          <Paginanation data={filteredHotels} />
         </div>
       </MainLayout>
-      {modal && (
+      {/* {modal && (
         <div className={styles.modal}>
           <div className={styles.main}>
             <div className={styles.controllers}>
@@ -117,7 +122,7 @@ export default function Hotels() {
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

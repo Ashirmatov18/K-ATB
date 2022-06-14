@@ -31,29 +31,19 @@ export default function Paginanation(props) {
     setItemOffset(newOffset);
   };
 
-  const [modal, setModal] = useState(false);
   const [tempData, setTempData] = useState([]);
 
-  const getDataInfo = (title, id) => {
-    let tempData = [title, id];
+  const [modal, setModal] = useState(false);
+
+  const getDataInfo = (title, id, image) => {
+    let tempData = [title, id, image];
     setTempData((item) => [1, ...tempData]);
 
     return setModal(true);
   };
 
-  // const filterResult = (f) => {
-  //   const result = data.filter((curDate) => {
-  //     console.log(curDate.id);
-  //     return curDate.id == f;
-  //   });
-  //   setCurrentItems(result);
-  // };
-
   return (
     <>
-      {/* <button onClick={() => filterResult("1")}>1</button>
-      <button onClick={() => filterResult("2")}>2</button>
-      <button>3</button> */}
       {!!data?.length &&
         currentItems.map(
           ({
@@ -64,17 +54,19 @@ export default function Paginanation(props) {
             last_name,
             email,
             phone_number,
+            translations,
           }) => (
-            <div className={styles.persons} key={id}>
+            <div
+              onClick={() => getDataInfo({ title }, { id }, { image })}
+              className={styles.persons}
+              key={id}
+            >
               <div
                 style={{ backgroundImage: `url(${image})` }}
                 className={styles.first_per}
               ></div>
               <div className={styles.person_info}>
-                <h2
-                  style={{ color: "#2F2F2F", fontSize: "24px" }}
-                  onClick={() => getDataInfo({ title }, { id })}
-                >
+                <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
                   {title} {last_name}
                 </h2>
                 <span className={styles.line}>{description}</span>
@@ -117,7 +109,17 @@ export default function Paginanation(props) {
             </div>
           )
         )}
-      {modal === true ? <Modal title={tempData[1]} id={tempData[2]} /> : ""}
+
+      {modal === true ? (
+        <Modal
+          title={tempData[1]}
+          id={tempData[2]}
+          image={tempData[3]}
+          hide={() => setModal(false)}
+        />
+      ) : (
+        ""
+      )}
 
       <ReactPaginate
         breakLabel="..."

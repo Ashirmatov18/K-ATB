@@ -19,7 +19,7 @@ import Paginanation from "../Paginanation";
 export default function Cafe() {
   // const [modal, setModal] = useState(false);
   const getCafe = async () => {
-    const { data } = await axios.get(`http://3.90.235.96/api/v1/restaurants/`);
+    const { data } = await axios.get(`http://35.88.109.74/api/v1/restaurants/`);
     return data.results;
   };
 

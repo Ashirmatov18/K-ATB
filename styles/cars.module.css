@@ -63,6 +63,7 @@
 .person_cards {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 150px;
   margin-bottom: 100px;
 }
@@ -141,7 +142,17 @@
 .main {
   text-align: center;
   margin-top: 30px;
+  width: 80vw;
 }
+
+.info_bt {
+  margin-top: 250px;
+}
+
+.title_bt h1 {
+  font-size: 50px !important;
+}
+
 .flex_row {
   justify-content: left;
   display: flex;
@@ -170,6 +181,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
+  align-items: center
 }
 
 .next_prev {
