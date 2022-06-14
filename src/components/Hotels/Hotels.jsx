@@ -79,8 +79,18 @@ export default function Hotels() {
           >
             Отели
           </button>
-          <button className={styles.but_filter}>Гостиницы</button>
-          <button className={styles.but_filter}>Гостевые дома</button>
+          <button
+            className={styles.but_filter}
+            onClick={() => filterResult("Гостиницы")}
+          >
+            Гостиницы
+          </button>
+          <button
+            className={styles.but_filter}
+            onClick={() => filterResult("Гостевые дома")}
+          >
+            Гостевые дома
+          </button>
           <button
             onClick={() => filterResult("Юрты")}
             className={styles.but_filter}

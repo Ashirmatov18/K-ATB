@@ -73,6 +73,7 @@ export default function Paginanation(props) {
 
                 <LineHeight
                   style={{ marginTop: "20px", marginBottom: "20px" }}
+                  className={styles.line_pers}
                 />
                 <div className={styles.per_social}>
                   <div className={styles.per_mobile}>

@@ -185,3 +185,45 @@
     width: auto;
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .persons {
+    width: 90vw !important;
+    margin-top: 40px;
+    height: 600px;
+  }
+  .first_per {
+    width: 70vw !important;
+    border-radius: 10px;
+    margin-left: 50px;
+  }
+  .line_pers {
+    width: 80vw !important;
+  }
+  .sec_per {
+    width: 70vw !important;
+    border-radius: 10px;
+    border-radius: 10px;
+    margin-left: 50px;
+  }
+  .th_per {
+    width: 70vw !important;
+    border-radius: 10px;
+    border-radius: 10px;
+    margin-left: 50px;
+  }
+  .fou_per {
+    width: 70vw !important;
+    border-radius: 10px;
+    border-radius: 10px;
+    margin-left: 50px;
+  }
+  .persons_sec {
+    width: 90vw !important;
+    margin-top: 30px;
+  }
+  .persons_fourth {
+    width: 90vw !important;
+    margin-top: 30px;
+  }
+}

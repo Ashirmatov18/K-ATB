@@ -29,6 +29,23 @@ export default function Cafe() {
     getCafe().then(setRestaraunt);
   }, []);
 
+  const [hotel, setHotel] = useState([]);
+  const [filteredHotels, setFilteredHotels] = useState(hotel);
+
+  useEffect(() => {
+    getCafe().then((data) => {
+      setHotel(data);
+      setFilteredHotels(data);
+    });
+  }, []);
+
+  const filterResult = (f) => {
+    const result = hotel.filter((curDate) => {
+      return curDate.translations.ru.type_of_house == f;
+    });
+    setFilteredHotels(result);
+  };
+
   // const imgs = [
   //   { id: 0, value: "https://wallpaperaccess.com/full/2637581.jpg" },
   //   { id: 1, value: "https://source.unsplash.com/user/c_v_r/1900x800" },
@@ -79,15 +96,40 @@ export default function Cafe() {
           </div>
         </div>
         <div className={styles.but_group}>
-          <button className={styles.but_filter}>Все</button>
-          <button className={styles.but_filter}>Рестораны</button>
-          <button className={styles.but_filter}>Кофейни</button>
-          <button className={styles.but_filter}>Кафетерии</button>
-          <button className={styles.but_filter}>Пекарни</button>
+          <button
+            onClick={() => setFilteredHotels(hotel)}
+            className={styles.but_filter}
+          >
+            Все
+          </button>
+          <button
+            className={styles.but_filter}
+            onClick={() => filterResult("Рестораны")}
+          >
+            Рестораны
+          </button>
+          <button
+            className={styles.but_filter}
+            onClick={() => filterResult("Кофейни")}
+          >
+            Кофейни
+          </button>
+          <button
+            className={styles.but_filter}
+            onClick={() => filterResult("Кафетерии")}
+          >
+            Кафетерии
+          </button>
+          <button
+            className={styles.but_filter}
+            onClick={() => filterResult("Пекарни")}
+          >
+            Пекарни
+          </button>
         </div>
         <div className={styles.person_cards}>
           {" "}
-          <Paginanation data={restaraunt} />
+          <Paginanation data={filteredHotels} />
         </div>
       </MainLayout>
       {/* {modal && (

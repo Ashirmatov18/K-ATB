@@ -123,3 +123,37 @@
     justify-content: center;
   }
 }
+
+@media only screen and (max-width: 390px) {
+  .persons {
+    width: 90vw !important;
+    margin-top: 40px;
+  }
+  .first_per {
+    width: 90vw !important;
+    border-radius: 10px;
+  }
+  .line_pers {
+    width: 80vw !important;
+  }
+  .sec_per {
+    width: 90vw !important;
+    border-radius: 10px;
+  }
+  .th_per {
+    width: 90vw !important;
+    border-radius: 10px;
+  }
+  .fou_per {
+    width: 90vw !important;
+    border-radius: 10px;
+  }
+  .persons_sec {
+    width: 90vw !important;
+    margin-top: 30px;
+  }
+  .persons_fourth {
+    width: 90vw !important;
+    margin-top: 30px;
+  }
+}

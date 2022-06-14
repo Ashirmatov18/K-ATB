@@ -63,22 +63,13 @@
 }
 
 .persons {
-  width: 386px;
+  width: 386.14px;
   height: 560px;
   margin-bottom: 15px;
   margin-top: 50px;
   border: 1px solid #e0e0e0;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-}
-
-.persons_sec {
-  width: 386px;
-  height: 560px;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  margin-bottom: 55px;
 }
 
 .first_per {
@@ -211,10 +202,13 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .main_search {
+  /* .main_search {
     margin-top: 450px !important;
-  }
+  } */
   .but_filter {
     width: 106px;
+  }
+  .main_guides {
+    height: 400px;
   }
 }

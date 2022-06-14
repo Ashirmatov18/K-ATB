@@ -181,7 +181,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
-  align-items: center
+  align-items: center;
 }
 
 .next_prev {
@@ -234,6 +234,7 @@
     justify-content: center;
     margin-bottom: 30px !important;
     margin-top: 250px;
+    border-radius: 10px;
   }
 
   .about_title {
@@ -244,5 +245,12 @@
 @media only screen and (max-width: 600px) {
   .main_search {
     margin-top: 450px !important;
+    left: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .main_search {
+    margin-top: 550px !important;
   }
 }

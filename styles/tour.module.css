@@ -218,5 +218,11 @@
 @media only screen and (max-width: 600px) {
   .main_search {
     margin-top: 450px !important;
+    left: 0 !important;
+  }
+}
+@media only screen and (max-width: 470px) {
+  .main_search {
+    margin-top: 550px !important;
   }
 }
