@@ -46,7 +46,10 @@ export default function SideBar() {
           </div>
         </Link>
 
-        <Link href="/guides" style={{ textDecoration: "none", color: "white" }}>
+        <Link
+          href="/ordercar"
+          style={{ textDecoration: "none", color: "white" }}
+        >
           <div className="bottom_line">
             <p className="menu-item" href="/desserts">
               Услуги
