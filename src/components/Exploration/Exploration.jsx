@@ -17,9 +17,9 @@ export default function Exploration() {
   //   config: { duration: 1000 },
   // });
 
-  // useEffect(() => {
-  //   Aos.init({ duration: 1000 });
-  // }, []);
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
 
   // const logo = [
   //   {
@@ -109,8 +109,7 @@ export default function Exploration() {
             </div>
           </Link>
 
-          <div className={styles.residents}>
-            {/* data-aos="fade-left" */}
+          <div className={styles.residents} data-aos="fade-left">
             <div>
               <div className={styles.first_res}></div>
               <div className={styles.res_name}>
@@ -157,7 +156,7 @@ export default function Exploration() {
         <div
           style={{ paddingTop: "100px" }}
           className={styles.kyrgyzstan}
-          // data-aos="fade-right"
+          data-aos="fade-right"
         >
           <div>
             <h1>ТУРФИРМЫ</h1>

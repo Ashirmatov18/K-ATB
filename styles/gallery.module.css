@@ -9,31 +9,31 @@
 
 .f {
   background-image: url("../public/images/fff.jpg");
-  width: 147.15px;
-  height: 155px;
+  width: 165px;
+  height: 135px;
 }
 .s {
   background-image: url("../public/images/fff.jpg");
-  width: 147.15px;
-  height: 155px;
+  width: 165px;
+  height: 135px;
 }
 
 .t {
   background-image: url("../public/images/first.jpg");
-  width: 147.15px;
-  height: 155px;
+  width: 165px;
+  height: 135px;
 }
 
 .foo {
   background-image: url("../public/images/first.jpg");
-  width: 147.15px;
-  height: 155px;
+  width: 165px;
+  height: 135px;
 }
 
 .fii {
   background-image: url("../public/images/first.jpg");
-  width: 147.15px;
-  height: 155px;
+  width: 165px;
+  height: 135px;
 }
 
 .sii {
@@ -48,6 +48,7 @@
 .main {
   text-align: center;
   margin-top: 30px;
+  cursor: pointer;
 }
 .flex_row {
   justify-content: left;
@@ -66,8 +67,8 @@
 }
 
 .mini_carousel {
-  width: 147.15px;
-  height: 155px;
+  width: 165px;
+  height: 135px;
   margin-right: 20px;
   border-radius: 10px;
   border-top-right-radius: 10px;

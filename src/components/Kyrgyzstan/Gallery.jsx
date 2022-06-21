@@ -6,9 +6,21 @@ import MainLayout from "../ui/MainLayout";
 
 export default function Gallery() {
   const imgs = [
-    { id: 0, value: "https://wallpaperaccess.com/full/2637581.jpg" },
-    { id: 1, value: "https://source.unsplash.com/user/c_v_r/1900x800" },
-    { id: 2, value: "https://source.unsplash.com/user/c_v_r/100x100" },
+    {
+      id: 0,
+      value:
+        "https://images.unsplash.com/photo-1615549781356-fa31834e3c34?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1460&q=80",
+    },
+    {
+      id: 1,
+      value:
+        "https://images.unsplash.com/photo-1546587348-d12660c30c50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80",
+    },
+    {
+      id: 2,
+      value:
+        "https://images.unsplash.com/photo-1475319122043-5ca9eeceefaf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    },
   ];
 
   const [wordData, setWordData] = useState(imgs[0]);

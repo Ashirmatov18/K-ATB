@@ -4,7 +4,7 @@
 }
 
 .footer_img {
-  background-image: url("https://i2.wp.com/opendata.smc.edu.ng/wp-content/uploads/2017/05/154113716_Main-Image-720px-high-x-1440px-wide.jpg?resize=1250%2C625&ssl=1");
+  background-image: url("../public/images/horses_grazing_in_a_field-wallpaper-1600x900.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -87,6 +87,11 @@
 
 .footer_adaptive {
   display: none;
+}
+
+.footer_main ul li:hover {
+  color: #a80f02;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 1000px) {

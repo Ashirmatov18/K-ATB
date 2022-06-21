@@ -42,12 +42,14 @@ export default function Footer() {
               <div>
                 <li>Гиды и тур.фирмы</li>
                 <li className={styles.post_li}>Гиды</li>
-                <li style={{ color: "#BDBDBD" }}>Турфирмы</li>
+                <li style={{ color: "#BDBDBD", paddingTop: "10px" }}>
+                  Турфирмы
+                </li>
               </div>
               <div>
                 <li>Услуги</li>
                 <li className={styles.post_li}>Аренда машин</li>
-                <li style={{ color: "#BDBDBD" }}>Другие</li>
+                <li style={{ color: "#BDBDBD", paddingTop: "10px" }}>Другие</li>
               </div>
               <li>Кафе-рестораны</li>
               <li>Развлечения</li>
