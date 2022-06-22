@@ -91,16 +91,16 @@
 
 @media only screen and (max-width: 945px) {
   .issyk_kul {
-    width: 90vw;
+    width: 95vw;
   }
   .ala_osh {
     flex-direction: column;
     margin-top: -630px;
-    margin-left: 54vw;
-    width: 35vw;
+    margin-left: 42vw;
+    width: 53vw;
   }
   .bishkek {
-    width: 45vw;
+    width: 40vw;
     border-radius: 10px;
   }
   .ala_archa {
@@ -115,5 +115,48 @@
   }
   .about_sea {
     border-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .bishkek {
+    height: 400px;
+  }
+
+  .ala_archa {
+    height: 190px;
+  }
+
+  .osh {
+    height: 190px;
+  }
+  .ala_osh {
+    margin-top: -400px;
+  }
+
+  .about_sea {
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .bishkek {
+    height: 260px;
+  }
+
+  .ala_archa {
+    height: 120px;
+  }
+
+  .osh {
+    height: 120px;
+  }
+  .ala_osh {
+    margin-top: -260px;
+    width: 48vw;
+  }
+  .issyk_kul {
+    height: 170px !important;
+    width: 90vw;
   }
 }

@@ -109,7 +109,7 @@
 }
 
 .third_image {
-  background-image: url("../public/images/waterf.jpg");
+  background-image: url("../public/images/horses.jpg");
   width: 190px !important;
   height: 295px !important;
   background-repeat: no-repeat;
@@ -213,5 +213,25 @@
   }
   .about {
     padding-top: 500px;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .content {
+    margin-top: 250px;
+  }
+  .first_image {
+    height: 170px !important;
+    padding-right: 20px !important;
+  }
+  /* .first_img {
+    width: 350px !important;
+  } */
+  .second_image {
+    height: 170px !important;
+    margin-right: 10px !important;
+  }
+  .third_image {
+    height: 170px !important;
   }
 }

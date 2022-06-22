@@ -46,7 +46,6 @@ export default function Guides() {
 
   const getInfo = async () => {
     const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/guides/`);
-    console.log(data.results);
     return data.results;
   };
 

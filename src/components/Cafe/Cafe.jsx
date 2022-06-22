@@ -19,7 +19,9 @@ import Paginanation from "../Paginanation";
 export default function Cafe() {
   // const [modal, setModal] = useState(false);
   const getCafe = async () => {
-    const { data } = await axios.get(`http://35.88.109.74/api/v1/restaurants/`);
+    const { data } = await axios.get(
+      `https://admin.tabiyat.kg/api/v1/restaurants/`
+    );
     return data.results;
   };
 

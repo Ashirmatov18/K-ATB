@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import ReactPaginate from "react-paginate";
 import styles from "../../styles/ordercars.module.css";
 import Modal from "./Modal";
@@ -12,12 +12,33 @@ import {
   Whats,
 } from "./OrderCars/OrderCarsSvg";
 
-export default function Paginanation(props) {
+export default function ModalsPag(props) {
   const { data } = props;
   const [currentItems, setCurrentItems] = useState([]);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
   const itemsPerPage = 9;
+
+  // console.log(data[0].translations.ru);
+  // let useClickOutside = (handler) => {
+  //   let domNode = useRef();
+
+  //   useEffect(() => {
+  //     let maybeHandler = (event) => {
+  //       if (!domNode.current.contains(event.target)) {
+  //         handler();
+  //       }
+  //     };
+
+  //     document.addEventListener("mousedown", maybeHandler);
+
+  //     return () => {
+  //       document.removeEventListener("mousedown", maybeHandler);
+  //     };
+  //   });
+
+  //   return domNode;
+  // };
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
@@ -42,6 +63,10 @@ export default function Paginanation(props) {
     return setModal(true);
   };
 
+  const desc = (translation) => {
+    const des = currentItems[0].translations.ru;
+  };
+
   return (
     <>
       {!!data?.length &&
@@ -54,6 +79,7 @@ export default function Paginanation(props) {
             last_name,
             email,
             phone_number,
+            translations,
           }) => (
             <div
               onClick={() => getDataInfo({ title }, { id }, { image })}
@@ -69,7 +95,6 @@ export default function Paginanation(props) {
                   {title} {last_name}
                 </h2>
                 <span className={styles.line}>
-                  {" "}
                   {translations.ru.description}
                 </span>
 
@@ -113,7 +138,7 @@ export default function Paginanation(props) {
           )
         )}
 
-      {/* {modal === true ? (
+      {modal === true ? (
         <Modal
           title={tempData[1]}
           id={tempData[2]}
@@ -122,7 +147,7 @@ export default function Paginanation(props) {
         />
       ) : (
         ""
-      )} */}
+      )}
 
       <ReactPaginate
         breakLabel="..."

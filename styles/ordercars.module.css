@@ -140,8 +140,8 @@
   background-color: rgba(207, 201, 201, 0.893);
   display: flex;
   justify-content: center;
-  align-items: center;
   z-index: 999;
+  padding-top: 500px;
 }
 
 .guides {

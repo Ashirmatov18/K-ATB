@@ -7,12 +7,15 @@ import { Left, Right } from "../Main/MainIcons";
 import { Exit } from "../Navbar/NavbarIcons";
 import axios from "axios";
 import Paginanation from "../Paginanation";
+import ModalsPag from "../ModalsPag";
 
 export default function OrderCars() {
   const [modal, setModal] = useState(false);
 
   const getInfo = async () => {
-    const { data } = await axios.get(`http://35.88.109.74/api/v1/car-rentals/`);
+    const { data } = await axios.get(
+      `https://admin.tabiyat.kg/api/v1/car-rentals/`
+    );
     return data.results;
   };
 
@@ -71,7 +74,7 @@ export default function OrderCars() {
           </div>
         </div>
         <div className={styles.person_cards}>
-          <Paginanation
+          <ModalsPag
             data={state}
             //
           />

@@ -9,7 +9,7 @@ import axios from "axios";
 export default function MainTour() {
   const getTour = async () => {
     const { data } = await axios.get(
-      `http://3.90.235.96/api/v1/travel-companies/`
+      `https://admin.tabiyat.kg/api/v1/travel-companies/`
     );
     console.log(data.results);
     return data.results;

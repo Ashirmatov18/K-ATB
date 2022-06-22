@@ -4,12 +4,13 @@ import MainLayout from "../ui/MainLayout";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Paginanation from "../Paginanation";
+import ModalsPag from "../ModalsPag";
 
 export default function Hotels() {
   // const [modal, setModal] = useState(false);
 
   const getHotel = async () => {
-    const { data } = await axios.get(`http://35.88.109.74/api/v1/houses/`);
+    const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/houses/`);
     return data.results;
   };
 
@@ -100,7 +101,7 @@ export default function Hotels() {
         </div>
         <div className={styles.person_cards}>
           {/* {filt.length > 0 && <Paginanation data={filt} />} */}
-          <Paginanation data={filteredHotels} />
+          <ModalsPag data={filteredHotels} />
         </div>
       </MainLayout>
       {/* {modal && (

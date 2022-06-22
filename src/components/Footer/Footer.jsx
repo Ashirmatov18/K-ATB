@@ -36,25 +36,78 @@ export default function Footer() {
         <MainLayout>
           <div className={styles.footer_main}>
             <ul>
-              <li>Главная</li>
-              <li>О нас</li>
-              <li>Кыргызстан</li>
+              <Link href="/" style={{ textDecoration: "none", color: "white" }}>
+                <li>Главная</li>
+              </Link>
+              <Link
+                href="/about"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                <li>О нас</li>
+              </Link>
+              <Link
+                href="/kyrgyzstan"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                <li>Кыргызстан</li>
+              </Link>
               <div>
-                <li>Гиды и тур.фирмы</li>
-                <li className={styles.post_li}>Гиды</li>
-                <li style={{ color: "#BDBDBD", paddingTop: "10px" }}>
-                  Турфирмы
-                </li>
+                <Link
+                  href="/guides"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <li>Гиды и тур.фирмы</li>
+                </Link>
+                <Link
+                  href="/guides"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <li className={styles.post_li}>Гиды</li>
+                </Link>
+
+                <Link
+                  href="/tours"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <li style={{ color: "#BDBDBD", paddingTop: "10px" }}>
+                    Турфирмы
+                  </li>
+                </Link>
               </div>
               <div>
                 <li>Услуги</li>
-                <li className={styles.post_li}>Аренда машин</li>
+                <Link
+                  href="/ordercar"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <li className={styles.post_li}>Аренда машин</li>
+                </Link>
                 <li style={{ color: "#BDBDBD", paddingTop: "10px" }}>Другие</li>
               </div>
-              <li>Кафе-рестораны</li>
-              <li>Развлечения</li>
-              <li>Партнеры</li>
-              <li>Новости</li>
+              <Link
+                href="/cafe"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                <li>Кафе-рестораны</li>
+              </Link>
+              <Link
+                href="/entert"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                <li>Развлечения</li>
+              </Link>
+              <Link
+                href="/partners"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                <li>Партнеры</li>
+              </Link>
+              <Link
+                href="/news"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                <li>Новости</li>
+              </Link>
             </ul>
           </div>
           <div className={styles.footer_last}>
