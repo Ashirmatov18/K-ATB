@@ -178,6 +178,12 @@
   border: none;
   margin-bottom: 20px;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.but_filter:hover {
+  color: white;
+  background-color: #d4d1d1;
 }
 
 @media only screen and (max-width: 1200px) {

@@ -54,6 +54,7 @@ export default function Paginanation(props) {
             last_name,
             email,
             phone_number,
+            translations,
           }) => (
             <div
               onClick={() => getDataInfo({ title }, { id }, { image })}

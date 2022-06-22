@@ -181,6 +181,11 @@
   cursor: pointer;
 }
 
+.but_filter:hover {
+  color: white;
+  background-color: #d4d1d1;
+}
+
 @media only screen and (max-width: 1200px) {
   .persons:nth-child(3n + 2) {
     transform: unset !important;
