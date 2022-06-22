@@ -45,7 +45,7 @@ export default function Guides() {
   const { id } = router.query;
 
   const getInfo = async () => {
-    const { data } = await axios.get(`http://35.88.109.74/api/v1/guides/`);
+    const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/guides/`);
     console.log(data.results);
     return data.results;
   };

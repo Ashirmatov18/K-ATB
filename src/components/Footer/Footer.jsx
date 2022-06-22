@@ -68,7 +68,8 @@ export default function Footer() {
               <p>+996 123 456</p>
             </div>
           </div>
-          <div className={styles.footer_adaptive}>
+
+          {/* <div className={styles.footer_adaptive}>
             <Link style={{ textDecoration: "none", color: "white" }} href="/">
               <div className="bottom_line">
                 <p className="menu-item" href="/">
@@ -175,7 +176,7 @@ export default function Footer() {
                 </p>
               </div>
             </Link>
-          </div>
+          </div> */}
         </MainLayout>
       </footer>
     </div>

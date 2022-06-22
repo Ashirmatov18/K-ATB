@@ -5,46 +5,56 @@ import { ReadMore } from "./MainIcons";
 import SimpleSlider from "./SimpleSlider";
 import MainVideo from "./MainVideo";
 import { Link } from "@mui/material";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import axios from "axios";
+
 export default function Main() {
-  const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => setOffsetY(window.pageYOffset);
+  const [state, setState] = useState([]);
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
+  const getInfo = async () => {
+    const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/`);
+    console.log(data[0].translations.ru);
+    return data[0].translations.ru;
+  };
 
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
+  getInfo();
+
+  useEffect(() => {
+    getInfo().then((data) => setState([data]));
+    Aos.init({ duration: 1000 });
+  }, []);
 
   return (
     <>
       <div className={styles.mount}>
         <MainLayout>
           <div className={styles.information}>
-            {/* style={{ transform: `translateY(${offsetY * 0.2}px)` }} */}
+            {/* {!!state?.length && */}
+            {/* // state.map(({ description, title }) => ( */}
             <div>
               <h1>
                 Explore our <br /> world with us
+                {/* {title} */}
               </h1>
               <span>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />{" "}
                 Auctor proin tristique proin feugiat est ornare montes,
               </span>
             </div>
-            <div
-              className={styles.button_click}
-              // style={{ transform: `translateY(${offsetY * 0.2}px)` }}
-            >
+            {/* ))} */}
+            <div className={styles.button_click}>
               <button>Click me</button>
             </div>
           </div>
-          <div className={styles.sli}>
+          <div className={styles.sli} data-aos="fade-down">
             <SimpleSlider />
           </div>
         </MainLayout>
       </div>
       <MainLayout>
         <div className={styles.about}>
-          <div>
+          <div data-aos="fade-down">
             <h1 className={styles.about_us}>О НАС</h1>
             <div>
               <h1 className={styles.explore}>
@@ -71,7 +81,7 @@ export default function Main() {
               </Link>
             </div>
           </div>
-          <div className={styles.about_second}>
+          <div className={styles.about_second} data-aos="fade-up">
             <div>
               <MainVideo />
             </div>

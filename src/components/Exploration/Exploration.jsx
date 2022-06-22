@@ -3,7 +3,6 @@ import MainLayout from "../ui/MainLayout";
 import styles from "../../../styles/Exploration.module.css";
 import { ReadMore } from "../Main/MainIcons";
 import ExpoSlider from "./ExpoSlider";
-import { useSpring, animated } from "@react-spring/web";
 import { Link } from "@mui/material";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -109,7 +108,7 @@ export default function Exploration() {
             </div>
           </Link>
 
-          <div className={styles.residents} data-aos="fade-left">
+          <div className={styles.residents} data-aos="fade-up">
             <div>
               <div className={styles.first_res}></div>
               <div className={styles.res_name}>
@@ -156,7 +155,7 @@ export default function Exploration() {
         <div
           style={{ paddingTop: "100px" }}
           className={styles.kyrgyzstan}
-          data-aos="fade-right"
+          data-aos="fade-down"
         >
           <div>
             <h1>ТУРФИРМЫ</h1>
