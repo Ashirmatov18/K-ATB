@@ -12,6 +12,7 @@ import "aos/dist/aos.css";
 
 export default function OrderCars() {
   const [modal, setModal] = useState(false);
+  const [searchItem, setSearchItem] = useState("");
 
   const getInfo = async () => {
     const { data } = await axios.get(
@@ -54,7 +55,7 @@ export default function OrderCars() {
         </div>
       </div>
       <MainLayout>
-        <div className={styles.kyrgyzstan} data-aos="fade-up">
+        <div className={styles.kyrgyzstan}>
           <div>
             <div className={styles.search_explore}>
               <span>Explore our world with us</span>
@@ -63,11 +64,14 @@ export default function OrderCars() {
                   type="text"
                   className={styles.search}
                   placeholder="Поиск"
+                  onChange={(e) => {
+                    setSearchItem(e.target.value);
+                  }}
                 />
                 <Search className={styles.search_icon} />
               </div>
             </div>
-            <div>
+            <div data-aos="fade-up">
               <p style={{ paddingTop: "20px" }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
                 ligula rhoncus, ut erat dictumst. Vitae non et <br />{" "}
@@ -81,6 +85,7 @@ export default function OrderCars() {
         <div data-aos="fade-up" className={styles.person_cards}>
           <ModalsPag
             data={state}
+            searchItem={searchItem}
             //
           />
         </div>

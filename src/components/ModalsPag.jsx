@@ -70,41 +70,69 @@ export default function ModalsPag(props) {
   return (
     <>
       {!!data?.length &&
-        currentItems.map(
-          ({
-            id,
-            description,
-            image,
-            title,
-            last_name,
-            email,
-            phone_number,
-            translations,
-          }) => (
-            <div
-              onClick={() => getDataInfo({ title }, { id }, { image })}
-              className={styles.persons}
-              key={id}
-            >
+        currentItems
+          .filter((val) => {
+            if (props.searchItem === "") {
+              return val;
+            } else if (
+              val.title.toLowerCase().includes(props.searchItem.toLowerCase())
+            ) {
+              return val;
+            }
+          })
+          .map(
+            ({
+              id,
+              description,
+              image,
+              title,
+              last_name,
+              email,
+              phone_number,
+              translations,
+            }) => (
               <div
-                style={{ backgroundImage: `url(${image})` }}
-                className={styles.first_per}
-              ></div>
-              <div className={styles.person_info}>
-                <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                  {title} {last_name}
-                </h2>
-                <span className={styles.line}>
-                  {translations.ru.description}
-                </span>
+                onClick={() => getDataInfo({ title }, { id }, { image })}
+                className={styles.persons}
+                key={id}
+              >
+                <div
+                  style={{ backgroundImage: `url(${image})` }}
+                  className={styles.first_per}
+                ></div>
+                <div className={styles.person_info}>
+                  <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
+                    {title} {last_name}
+                  </h2>
+                  <span className={styles.line}>
+                    {translations.ru.description}
+                  </span>
 
-                <LineHeight
-                  style={{ marginTop: "20px", marginBottom: "20px" }}
-                  className={styles.line_pers}
-                />
-                <div className={styles.per_social}>
-                  <div className={styles.per_mobile}>
-                    <Mobile />
+                  <LineHeight
+                    style={{ marginTop: "20px", marginBottom: "20px" }}
+                    className={styles.line_pers}
+                  />
+                  <div className={styles.per_social}>
+                    <div className={styles.per_mobile}>
+                      <Mobile />
+                      <span
+                        style={{
+                          marginLeft: "10px",
+                          color: "#A4A8B4",
+                          fontSize: "17px",
+                        }}
+                      >
+                        {phone_number}
+                      </span>
+                    </div>
+                    <div>
+                      <Facebook className={styles.social_media} />
+                      <Insta className={styles.social_media} />
+                      <Whats />
+                    </div>
+                  </div>
+                  <div className={styles.email}>
+                    <Email />
                     <span
                       style={{
                         marginLeft: "10px",
@@ -112,31 +140,13 @@ export default function ModalsPag(props) {
                         fontSize: "17px",
                       }}
                     >
-                      {phone_number}
+                      {email}
                     </span>
                   </div>
-                  <div>
-                    <Facebook className={styles.social_media} />
-                    <Insta className={styles.social_media} />
-                    <Whats />
-                  </div>
-                </div>
-                <div className={styles.email}>
-                  <Email />
-                  <span
-                    style={{
-                      marginLeft: "10px",
-                      color: "#A4A8B4",
-                      fontSize: "17px",
-                    }}
-                  >
-                    {email}
-                  </span>
                 </div>
               </div>
-            </div>
-          )
-        )}
+            )
+          )}
 
       {modal === true ? (
         <Modal

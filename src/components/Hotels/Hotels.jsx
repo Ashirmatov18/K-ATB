@@ -9,6 +9,7 @@ import "aos/dist/aos.css";
 
 export default function Hotels() {
   // const [modal, setModal] = useState(false);
+  const [searchItem, setSearchItem] = useState("");
 
   const getHotel = async () => {
     const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/houses/`);
@@ -106,7 +107,7 @@ export default function Hotels() {
         </div>
         <div data-aos="fade-up" className={styles.person_cards}>
           {/* {filt.length > 0 && <Paginanation data={filt} />} */}
-          <ModalsPag data={filteredHotels} />
+          <ModalsPag data={filteredHotels} searchItem={searchItem} />
         </div>
       </MainLayout>
       {/* {modal && (

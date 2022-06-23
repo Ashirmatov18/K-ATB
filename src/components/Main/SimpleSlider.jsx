@@ -36,7 +36,7 @@ export default function SimpleSlider() {
   };
   return (
     <div className={styles.content}>
-      <div className={styles.slider_whole_but}>
+      <div style={{ cursor: "pointer" }} className={styles.slider_whole_but}>
         <LeftSlider
           className={styles.slider_left}
           onClick={sliderRef?.slickPrev}

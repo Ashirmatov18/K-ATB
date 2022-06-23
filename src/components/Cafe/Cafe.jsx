@@ -54,6 +54,8 @@ export default function Cafe() {
     setFilteredHotels(result);
   };
 
+  const [searchItem, setSearchItem] = useState("");
+
   // const imgs = [
   //   { id: 0, value: "https://wallpaperaccess.com/full/2637581.jpg" },
   //   { id: 1, value: "https://source.unsplash.com/user/c_v_r/1900x800" },
@@ -137,7 +139,7 @@ export default function Cafe() {
         </div>
         <div data-aos="fade-down" className={styles.person_cards}>
           {" "}
-          <Paginanation data={filteredHotels} />
+          <Paginanation data={filteredHotels} searchItem={searchItem} />
         </div>
       </MainLayout>
       {/* {modal && (

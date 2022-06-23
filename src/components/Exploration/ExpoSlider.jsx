@@ -60,7 +60,7 @@ export default function ExpoSlider() {
   return (
     <div className={styles.content}>
       <MainLayout>
-        <div className={styles.slider_whole_but}>
+        <div style={{ cursor: "pointer" }} className={styles.slider_whole_but}>
           <Left
             style={{ color: "black" }}
             className={styles.slider_left}

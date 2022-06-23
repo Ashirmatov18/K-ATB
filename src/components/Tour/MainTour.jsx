@@ -9,6 +9,8 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 export default function MainTour() {
+  const [searchItem, setSearchItem] = useState("");
+
   const getTour = async () => {
     const { data } = await axios.get(
       `https://admin.tabiyat.kg/api/v1/travel-companies/`
@@ -44,6 +46,9 @@ export default function MainTour() {
                   type="text"
                   className={styles.search}
                   placeholder="Поиск"
+                  onChange={(e) => {
+                    setSearchItem(e.target.value);
+                  }}
                 />
                 <Search className={styles.search_icon} />
               </div>
@@ -61,7 +66,11 @@ export default function MainTour() {
         </div>
 
         <div className={styles.person_cards}>
-          <Paginanation data-aos="fade-down" data={tour} />
+          <Paginanation
+            data-aos="fade-down"
+            data={tour}
+            searchItem={searchItem}
+          />
         </div>
       </MainLayout>
     </div>

@@ -20,6 +20,7 @@ import "aos/dist/aos.css";
 
 export default function Guides() {
   const [modal, setModal] = useState(false);
+  const [searchItem, setSearchItem] = useState("");
 
   // const imgs = [
   //   { id: 0, value: "https://wallpaperaccess.com/full/2637581.jpg" },
@@ -72,7 +73,7 @@ export default function Guides() {
       </div>
 
       <MainLayout>
-        <div className={styles.kyrgyzstan} data-aos="fade-down">
+        <div className={styles.kyrgyzstan}>
           <div>
             <div className={styles.search_explore}>
               <span>Explore our world with us</span>
@@ -81,11 +82,14 @@ export default function Guides() {
                   type="text"
                   className={styles.search}
                   placeholder="Поиск"
+                  onChange={(e) => {
+                    setSearchItem(e.target.value);
+                  }}
                 />
                 <Search className={styles.search_icon} />
               </div>
             </div>
-            <div>
+            <div data-aos="fade-down">
               <p style={{ paddingTop: "20px" }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
                 ligula rhoncus, ut erat dictumst. Vitae non et <br />{" "}
@@ -101,7 +105,7 @@ export default function Guides() {
           className={styles.person_cards}
           data-aos="fade-up"
         >
-          <Paginanation data={state} />
+          <Paginanation data={state} searchItem={searchItem} />
         </div>
       </MainLayout>
     </div>
