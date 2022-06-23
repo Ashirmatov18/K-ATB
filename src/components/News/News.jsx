@@ -29,7 +29,7 @@ export default function News() {
                 proin tristique <br /> proin feugiat est ornare{" "}
               </p>
             </div>
-            <Link href="/news" style={{ textDecoration: "none" }}>
+            <Link href="news" style={{ textDecoration: "none" }}>
               <div className={styles.but_article}>
                 <button>More Articles</button>
               </div>

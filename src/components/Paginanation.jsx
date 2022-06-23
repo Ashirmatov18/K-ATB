@@ -20,7 +20,7 @@ export default function Paginanation(props) {
   // const [searchItem, setSearchItem] = useState("");
   const itemsPerPage = 9;
 
-  // console.log(props.searchItem, "ss");
+  console.log(data, "ss");
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;

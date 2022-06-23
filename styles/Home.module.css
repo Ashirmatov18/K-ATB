@@ -2,6 +2,20 @@
   padding: 0 2rem;
 }
 
+.up {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  z-index: 999;
+  color: red;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 550px;
+  position: fixed;
+  right: 20px;
+  cursor: pointer;
+}
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;

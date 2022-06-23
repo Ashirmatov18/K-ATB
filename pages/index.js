@@ -1,3 +1,4 @@
+import { Link } from "@mui/material";
 import Head from "next/head";
 import Exploration from "../src/components/Exploration/Exploration";
 import Footer from "../src/components/Footer/Footer";
@@ -6,6 +7,7 @@ import Navbar from "../src/components/Navbar/Navbar";
 import News from "../src/components/News/News";
 import MainLayout from "../src/components/ui/MainLayout";
 import styles from "../styles/Home.module.css";
+import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
 
 export default function Home() {
   return (
@@ -16,6 +18,9 @@ export default function Home() {
       </Head>
       <main>
         <Navbar />
+        <Link href="/">
+          <ArrowCircleUpIcon className={styles.up}>Up</ArrowCircleUpIcon>
+        </Link>
         <Main />
         <Exploration />
         <News />
