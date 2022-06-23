@@ -5,6 +5,8 @@ import MainLayout from "../ui/MainLayout";
 import { useState, useEffect } from "react";
 import Paginanation from "../Paginanation";
 import axios from "axios";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function MainTour() {
   const getTour = async () => {
@@ -21,10 +23,14 @@ export default function MainTour() {
     getTour().then(setTour);
   }, []);
 
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <div className={styles.guides}>
       <div className={styles.main_guides}>
-        <div className={styles.about_title}>
+        <div data-aos="fade-down" className={styles.about_title}>
           <span>Турфирмы</span>
         </div>
       </div>
@@ -42,7 +48,7 @@ export default function MainTour() {
                 <Search className={styles.search_icon} />
               </div>
             </div>
-            <div>
+            <div data-aos="fade-up">
               <p style={{ paddingTop: "20px" }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
                 ligula rhoncus, ut erat dictumst. Vitae non et <br />{" "}
@@ -55,7 +61,7 @@ export default function MainTour() {
         </div>
 
         <div className={styles.person_cards}>
-          <Paginanation data={tour} />
+          <Paginanation data-aos="fade-down" data={tour} />
         </div>
       </MainLayout>
     </div>

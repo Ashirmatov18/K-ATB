@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../../../styles/enter.module.css";
 import {
   Email,
@@ -11,18 +11,24 @@ import {
 } from "../OrderCars/OrderCarsSvg";
 import MainLayout from "../ui/MainLayout";
 import Footer from "../Footer/Footer";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Entert() {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <div>
       <div className={styles.main_guides}>
-        <div className={styles.about_title}>
+        <div data-aos="fade-down" className={styles.about_title}>
           <span>РАЗВЛЕЧЕНИЯ</span>
         </div>
       </div>
 
       <MainLayout>
-        <div className={styles.person_cards}>
+        <div className={styles.person_cards} data-aos="fade-up">
           <div>
             <div className={styles.persons}>
               <div className={styles.first_per}></div>

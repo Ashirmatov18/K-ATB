@@ -15,6 +15,8 @@ import { Left, Right } from "../Main/MainIcons";
 import { Exit } from "../Navbar/NavbarIcons";
 import axios from "axios";
 import Paginanation from "../Paginanation";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Cafe() {
   // const [modal, setModal] = useState(false);
@@ -39,6 +41,10 @@ export default function Cafe() {
       setHotel(data);
       setFilteredHotels(data);
     });
+  }, []);
+
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
   }, []);
 
   const filterResult = (f) => {
@@ -78,13 +84,13 @@ export default function Cafe() {
           <input type="text" className={styles.search} placeholder="Поиск" />
           <Search className={styles.search_icon} />
         </div>
-        <div className={styles.about_title}>
-          <span>КАФЕ И РЕСТОРАНЫ</span>
+        <div data-aos="fade-down" className={styles.about_title}>
+          <span> КАФЕ И РЕСТОРАНЫ</span>
         </div>
       </div>
       <MainLayout>
         <div style={{ paddingTop: "150px" }} className={styles.kyrgyzstan}>
-          <div>
+          <div data-aos="fade-up">
             <span>Explore our world with us</span>
             <div>
               <p>
@@ -97,7 +103,7 @@ export default function Cafe() {
             </div>
           </div>
         </div>
-        <div className={styles.but_group}>
+        <div className={styles.but_group} data-aos="fade-up">
           <button
             onClick={() => setFilteredHotels(hotel)}
             className={styles.but_filter}
@@ -129,7 +135,7 @@ export default function Cafe() {
             Пекарни
           </button>
         </div>
-        <div className={styles.person_cards}>
+        <div data-aos="fade-down" className={styles.person_cards}>
           {" "}
           <Paginanation data={filteredHotels} />
         </div>

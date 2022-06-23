@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../../../styles/partners.module.css";
 import {
   Email,
@@ -10,17 +10,26 @@ import {
   Whats,
 } from "../OrderCars/OrderCarsSvg";
 import MainLayout from "../ui/MainLayout";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Partners() {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <div>
       <div className={styles.main_guides}>
-        <div className={styles.about_title}>
+        <div data-aos="fade-down" className={styles.about_title}>
           <span>ПАРТНЕРЫ</span>
         </div>
       </div>
       <MainLayout>
-        <div style={{ paddingTop: "150px" }} className={styles.kyrgyzstan}>
+        <div
+          style={{ paddingTop: "150px" }}
+          className={styles.kyrgyzstan}
+          data-aos="fade-up"
+        >
           <div>
             <span>Explore our world with us</span>
             <div>
@@ -34,7 +43,7 @@ export default function Partners() {
             </div>
           </div>
         </div>
-        <div className={styles.person_cards}>
+        <div className={styles.person_cards} data-aos="fade-down">
           <div>
             <div className={styles.persons}>
               <div className={styles.ex}>

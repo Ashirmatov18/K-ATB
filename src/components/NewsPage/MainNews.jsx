@@ -1,21 +1,27 @@
 import { Search } from "../OrderCars/OrderCarsSvg";
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../../../styles/newsPage.module.css";
 import MainLayout from "../ui/MainLayout";
 import { ReadMore } from "../Main/MainIcons";
 import Link from "next/link";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function MainNews() {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <div className={styles.guides}>
       <div className={styles.main_guides}>
-        <div className={styles.about_title}>
+        <div className={styles.about_title} data-aos="fade-down">
           <span>НОВОСТИ</span>
         </div>
       </div>
       <MainLayout>
         <div style={{ paddingTop: "150px" }} className={styles.kyrgyzstan}>
-          <div>
+          <div data-aos="fade-up">
             <span>Explore our world with us</span>
             <div>
               <p>
@@ -29,7 +35,7 @@ export default function MainNews() {
           </div>
         </div>
         <div className={styles.adv}>
-          <div className={styles.info_detail}>
+          <div className={styles.info_detail} data-aos="fade-up">
             <div className={styles.picture_first}></div>
             <div className={styles.pic_info}>
               <h1>Lorem ipsum dolor </h1>
@@ -48,7 +54,7 @@ export default function MainNews() {
             </div>
           </div>
 
-          <div className={styles.info_detail}>
+          <div className={styles.info_detail} data-aos="fade-down">
             <div className={styles.picture_sec}></div>
             <div className={styles.pic_info}>
               <h1>Lorem ipsum dolor </h1>
@@ -69,7 +75,7 @@ export default function MainNews() {
             </div>
           </div>
 
-          <div className={styles.info_detail}>
+          <div className={styles.info_detail} data-aos="fade-up">
             <div className={styles.picture_third}></div>
             <div className={styles.pic_info}>
               <h1>Lorem ipsum dolor </h1>
@@ -88,7 +94,7 @@ export default function MainNews() {
             </div>
           </div>
 
-          <div className={styles.info_detail}>
+          <div className={styles.info_detail} data-aos="fade-down">
             <div className={styles.picture_fourth}></div>
             <div className={styles.pic_info}>
               <h1>Lorem ipsum dolor </h1>

@@ -101,7 +101,7 @@ export default function Exploration() {
           </div>
           <Link href="/guides" style={{ textDecoration: "none" }}>
             <div className={styles.read_more}>
-              <p>Read more</p>
+              <p className={styles.p_read}>Read more</p>
               <div className={styles.arrow}>
                 <ReadMore />
               </div>

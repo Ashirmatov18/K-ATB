@@ -6,8 +6,9 @@ import { useState, useEffect } from "react";
 import { Left, Right } from "../Main/MainIcons";
 import { Exit } from "../Navbar/NavbarIcons";
 import axios from "axios";
-import Paginanation from "../Paginanation";
 import ModalsPag from "../ModalsPag";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function OrderCars() {
   const [modal, setModal] = useState(false);
@@ -23,6 +24,10 @@ export default function OrderCars() {
 
   useEffect(() => {
     getInfo().then(setState);
+  }, []);
+
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
   }, []);
 
   // console.log(state[0].title);
@@ -44,12 +49,12 @@ export default function OrderCars() {
   return (
     <div className={styles.guides}>
       <div className={styles.main_guides}>
-        <div className={styles.about_title}>
+        <div data-aos="fade-down" className={styles.about_title}>
           <span>АРЕНДА МАШИН</span>
         </div>
       </div>
       <MainLayout>
-        <div className={styles.kyrgyzstan}>
+        <div className={styles.kyrgyzstan} data-aos="fade-up">
           <div>
             <div className={styles.search_explore}>
               <span>Explore our world with us</span>
@@ -73,7 +78,7 @@ export default function OrderCars() {
             </div>
           </div>
         </div>
-        <div className={styles.person_cards}>
+        <div data-aos="fade-up" className={styles.person_cards}>
           <ModalsPag
             data={state}
             //

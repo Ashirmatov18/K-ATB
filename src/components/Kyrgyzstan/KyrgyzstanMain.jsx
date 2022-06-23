@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MainLayout from "../ui/MainLayout";
 import VideoKg from "./VideoKg";
 import styles from "../../../styles/Kyrgyzstan.module.css";
 import Gallery from "./Gallery";
 import News from "../News/News";
 import Footer from "../Footer/Footer";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function KyrgyzstanMain() {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <div>
       <VideoKg />
@@ -14,11 +19,13 @@ export default function KyrgyzstanMain() {
         <div className={styles.about_main_info}>
           <div className={styles.info_explore}>
             <h1
+              data-aos="fade-down"
               style={{ color: "#333333", fontWeight: "500", fontSize: "50px" }}
             >
               Explore our world with us
             </h1>
             <span
+              data-aos="fade-down"
               style={{ color: "#2F2F2F", fontSize: "32px", fontWeight: "500" }}
             >
               Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit.
@@ -33,14 +40,17 @@ export default function KyrgyzstanMain() {
               faucibus sit cras iaculis
             </span>
           </div>
-          <div className={styles.about_sea}></div>
+          <div className={styles.about_sea} data-aos="fade-up"></div>
         </div>
 
-        <div className={styles.info_img}>
+        <div className={styles.info_img} data-aos="fade-down">
           <h1 style={{ color: "#333333", fontWeight: "500", fontSize: "50px" }}>
             Explore our world with us
           </h1>
-          <span style={{ color: "#2F2F2F", fontSize: "24px" }}>
+          <span
+            style={{ color: "#2F2F2F", fontSize: "24px" }}
+            data-aos="fade-down"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis ligula
             rhoncus, ut erat dictumst. Vitae non et <br /> scelerisque libero.
             Odio auctor ut tortor bibendum. Lorem ipsum dolor sit amet,
@@ -53,7 +63,7 @@ export default function KyrgyzstanMain() {
             tortor bibendum. <br /> Sapien nisl, turpis quam convallis morbi
             vel. Elit faucibus sit cras iaculis
           </span>
-          <div className={styles.options}>
+          <div className={styles.options} data-aos="fade-up">
             <div className={styles.bishkek}>
               <h1 className={styles.title}>Bishkek</h1>
             </div>

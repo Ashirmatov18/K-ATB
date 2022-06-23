@@ -3,8 +3,9 @@ import styles from "../../../styles/hotels.module.css";
 import MainLayout from "../ui/MainLayout";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Paginanation from "../Paginanation";
 import ModalsPag from "../ModalsPag";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Hotels() {
   // const [modal, setModal] = useState(false);
@@ -22,6 +23,10 @@ export default function Hotels() {
       setHotel(data);
       setFilteredHotels(data);
     });
+  }, []);
+
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
   }, []);
 
   const filterResult = (f) => {
@@ -48,13 +53,13 @@ export default function Hotels() {
   return (
     <div className={styles.guides}>
       <div className={styles.main_guides}>
-        <div className={styles.about_title}>
+        <div data-aos="fade-down" className={styles.about_title}>
           <span>ОТЕЛИ</span>
         </div>
       </div>
       <MainLayout>
         <div style={{ paddingTop: "150px" }} className={styles.kyrgyzstan}>
-          <div>
+          <div data-aos="fade-up">
             <span>Explore our world with us</span>
             <div>
               <p>
@@ -67,7 +72,7 @@ export default function Hotels() {
             </div>
           </div>
         </div>
-        <div className={styles.but_group}>
+        <div data-aos="fade-down" className={styles.but_group}>
           <button
             onClick={() => setFilteredHotels(hotel)}
             className={styles.but_filter}
@@ -99,7 +104,7 @@ export default function Hotels() {
             Юрты
           </button>
         </div>
-        <div className={styles.person_cards}>
+        <div data-aos="fade-up" className={styles.person_cards}>
           {/* {filt.length > 0 && <Paginanation data={filt} />} */}
           <ModalsPag data={filteredHotels} />
         </div>

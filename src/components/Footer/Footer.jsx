@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../../../styles/Footer.module.css";
 import MainLayout from "../ui/MainLayout";
 import { LogoFooter } from "./FooterSvg";
 import { Link } from "@mui/material";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Footer() {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <div>
       <div className={styles.footer_img} style={{ color: "#fff" }}>
         <MainLayout>
-          <div className={styles.horse_section}>
+          <div className={styles.horse_section} data-aos="fade-down">
             <h1>
               Subscribe To Get The Latest News <br /> About Us
             </h1>
@@ -34,7 +39,7 @@ export default function Footer() {
       </div>
       <footer className={styles.footer_info}>
         <MainLayout>
-          <div className={styles.footer_main}>
+          <div className={styles.footer_main} data-aos="fade-up">
             <ul>
               <Link href="/" style={{ textDecoration: "none", color: "white" }}>
                 <li>Главная</li>

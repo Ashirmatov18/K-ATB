@@ -1,21 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../../../styles/about.module.css";
 import MainLayout from "../ui/MainLayout";
 import News from "../News/News";
 import Footer from "../Footer/Footer";
 import ExpoSlider from "../Exploration/ExpoSlider";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function About() {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <div className={styles.about_main}>
       <div className={styles.about_us}>
-        <div className={styles.about_title}>
+        <div data-aos="fade-down" className={styles.about_title}>
           <span>О нас</span>
         </div>
       </div>
       <MainLayout>
         <div className={styles.about_main_info}>
-          <div className={styles.info_explore}>
+          <div className={styles.info_explore} data-aos="fade-up">
             <h1
               style={{ color: "#333333", fontWeight: "500", fontSize: "50px" }}
             >
@@ -36,10 +42,10 @@ export default function About() {
               faucibus sit cras iaculis
             </span>
           </div>
-          <div className={styles.about_img}></div>
+          <div className={styles.about_img} data-aos="fade-down"></div>
         </div>
 
-        <div className={styles.expo}>
+        <div className={styles.expo} data-aos="fade-down">
           <h1
             style={{
               color: "#333333",

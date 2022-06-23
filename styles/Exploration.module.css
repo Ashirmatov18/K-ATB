@@ -211,7 +211,55 @@
     margin-right: 0 !important;
   }
   .kyrgyzstan button {
-    width: 80vw;
+    width: 90vw;
     height: 60px;
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .kyrgyzstan span {
+    font-size: 42px;
+    font-weight: bold;
+  }
+
+  .kyrgyzstan p {
+    font-size: 18px;
+  }
+
+  .p_read {
+    font-size: 24px !important;
+  }
+
+  .first_res {
+    width: 150px;
+    height: 150px;
+  }
+  .second_res {
+    width: 150px;
+    height: 150px;
+  }
+  .third_res {
+    width: 150px;
+    height: 150px;
+  }
+  .fourth_res {
+    width: 150px;
+    height: 150px;
+  }
+  .fifth_res {
+    width: 150px;
+    height: 150px;
+  }
+
+  .first_logo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .logo {
+    left: -23px;
+    top: 24px;
+    font-size: 30px !important;
   }
 }

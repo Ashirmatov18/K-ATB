@@ -15,6 +15,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Paginanation from "../Paginanation";
 import { useRouter } from "next/router";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Guides() {
   const [modal, setModal] = useState(false);
@@ -57,6 +59,10 @@ export default function Guides() {
     setModal(!modal);
   }, []);
 
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <div className={styles.guides}>
       <div className={styles.main_guides}>
@@ -66,7 +72,7 @@ export default function Guides() {
       </div>
 
       <MainLayout>
-        <div className={styles.kyrgyzstan}>
+        <div className={styles.kyrgyzstan} data-aos="fade-down">
           <div>
             <div className={styles.search_explore}>
               <span>Explore our world with us</span>
@@ -90,7 +96,11 @@ export default function Guides() {
             </div>
           </div>
         </div>
-        <div onClick={() => setModal(true)} className={styles.person_cards}>
+        <div
+          onClick={() => setModal(true)}
+          className={styles.person_cards}
+          data-aos="fade-up"
+        >
           <Paginanation data={state} />
         </div>
       </MainLayout>
