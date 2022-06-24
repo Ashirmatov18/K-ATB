@@ -140,6 +140,21 @@
   font-weight: bold;
 }
 
+.first_image:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.second_image:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.third_image:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
 @media only screen and (max-width: 1175px) {
   .content {
     margin-left: 0;
