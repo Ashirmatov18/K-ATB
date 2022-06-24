@@ -22,16 +22,18 @@ export default function News() {
         >
           <div>
             <h1>НОВОСТИ</h1>
-            <span>Explore our world with us</span>
+            <span>Наши новости</span>
             <div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                proin tristique <br /> proin feugiat est ornare{" "}
+                Мы оказываем полный спектр услуг по установке, настройке, <br />
+                обновлению, обучению и сопровождению программных продуктов{" "}
+                <br />
+                1С Предприятие.
               </p>
             </div>
             <Link href="news" style={{ textDecoration: "none" }}>
               <div className={styles.but_article}>
-                <button>More Articles</button>
+                <button>Нажми меня</button>
               </div>
             </Link>
           </div>
@@ -40,15 +42,16 @@ export default function News() {
           <div className={styles.info_detail}>
             <div className={styles.picture_first}></div>
             <div className={styles.pic_info}>
-              <h1>Lorem ipsum dolor </h1>
+              <h1>Новости </h1>
               <p>
-                Lorem ipsum dolor sit amet, <br /> consectetur adipiscing elit.{" "}
+                Мы оказываем полный спектр <br /> услуг по установке, настройке,{" "}
                 <br />
-                Condimentum phasellus venenatis <br /> ornare mi et. Id
-                porttitor diam eget <br /> cursus nisi, vestibulum
+                обновлению, обучению и сопровождению <br /> программных
+                продуктов <br />
+                1С Предприятие.
               </p>
               <div className={styles.read_more}>
-                <p>Read more</p>
+                <p>Подробнее</p>
                 <div className={styles.arrow}>
                   <ReadMore />
                 </div>
@@ -59,15 +62,16 @@ export default function News() {
           <div className={styles.info_detail}>
             <div className={styles.picture_sec}></div>
             <div className={styles.pic_info}>
-              <h1>Lorem ipsum dolor </h1>
+              <h1>Новости </h1>
               <p>
-                Lorem ipsum dolor sit amet, <br /> consectetur adipiscing elit.{" "}
+                Мы оказываем полный спектр <br /> услуг по установке, настройке,{" "}
                 <br />
-                Condimentum phasellus venenatis <br /> ornare mi et. Id
-                porttitor diam eget <br /> cursus nisi, vestibulum
+                обновлению, обучению и сопровождению <br /> программных
+                продуктов <br />
+                1С Предприятие.
               </p>
               <div className={styles.read_more}>
-                <p>Read more</p>
+                <p>Подробнее</p>
                 <div className={styles.arrow}>
                   <ReadMore />
                 </div>
@@ -78,15 +82,16 @@ export default function News() {
           <div className={styles.info_detail}>
             <div className={styles.picture_third}></div>
             <div className={styles.pic_info}>
-              <h1>Lorem ipsum dolor </h1>
+              <h1>Новости </h1>
               <p>
-                Lorem ipsum dolor sit amet, <br /> consectetur adipiscing elit.{" "}
+                Мы оказываем полный спектр <br /> услуг по установке, настройке,{" "}
                 <br />
-                Condimentum phasellus venenatis <br /> ornare mi et. Id
-                porttitor diam eget <br /> cursus nisi, vestibulum
+                обновлению, обучению и сопровождению <br /> программных
+                продуктов <br />
+                1С Предприятие.
               </p>
               <div className={styles.read_more}>
-                <p>Read more</p>
+                <p>Подробнее</p>
                 <div className={styles.arrow}>
                   <ReadMore />
                 </div>
@@ -97,15 +102,16 @@ export default function News() {
           <div className={styles.info_detail}>
             <div className={styles.picture_fourth}></div>
             <div className={styles.pic_info}>
-              <h1>Lorem ipsum dolor </h1>
+              <h1>Новости </h1>
               <p>
-                Lorem ipsum dolor sit amet, <br /> consectetur adipiscing elit.{" "}
+                Мы оказываем полный спектр <br /> услуг по установке, настройке,{" "}
                 <br />
-                Condimentum phasellus venenatis <br /> ornare mi et. Id
-                porttitor diam eget <br /> cursus nisi, vestibulum
+                обновлению, обучению и сопровождению <br /> программных
+                продуктов <br />
+                1С Предприятие.
               </p>
               <div className={styles.read_more}>
-                <p>Read more</p>
+                <p>Подробнее</p>
                 <div className={styles.arrow}>
                   <ReadMore />
                 </div>

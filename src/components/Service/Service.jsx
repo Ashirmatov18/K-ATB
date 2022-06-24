@@ -1,4 +1,4 @@
-import { Search } from "./OrderCarsSvg";
+import { Search } from "../OrderCars/OrderCarsSvg";
 import React from "react";
 import styles from "../../../styles/cars.module.css";
 import MainLayout from "../ui/MainLayout";
@@ -10,7 +10,7 @@ import ModalsPag from "../ModalsPag";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-export default function OrderCars() {
+export default function Service() {
   const [modal, setModal] = useState(false);
   const [searchItem, setSearchItem] = useState("");
 
@@ -51,14 +51,14 @@ export default function OrderCars() {
     <div className={styles.guides}>
       <div className={styles.main_guides}>
         <div data-aos="fade-down" className={styles.about_title}>
-          <span>АРЕНДА МАШИН</span>
+          <span>Сервисы</span>
         </div>
       </div>
       <MainLayout>
         <div className={styles.kyrgyzstan}>
           <div>
             <div className={styles.search_explore}>
-              <span>Аренда наших машин</span>
+              <span>Наши Сервисы</span>
               <div className={styles.main_search}>
                 <input
                   type="text"
@@ -73,10 +73,9 @@ export default function OrderCars() {
             </div>
             <div data-aos="fade-up">
               <p style={{ paddingTop: "20px" }}>
-                Никогда не садитесь за руль в Кыргызстане, если не уверены в
-                себе. Потомки кочевников лихачат круче, чем это делают в Грузии
-                а вы же наверняка слышали про грузинских водителей. Есть
-                легенда, согласно которой
+                Мы оказываем полный спектр услуг по установке, настройке,
+                обновлению, обучению <br /> и сопровождению программных
+                продуктов 1С:Предприятие.
               </p>
             </div>
           </div>

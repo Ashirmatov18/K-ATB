@@ -233,6 +233,32 @@
   padding-left: 40px;
 }
 
+.picture_first:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.picture_sec:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.picture_fourth:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.picture_third:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.read_more:hover {
+  color: rgb(0, 0, 0) !important;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 630px) {
   .info_detail {
     flex-wrap: wrap;

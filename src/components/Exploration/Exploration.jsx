@@ -47,11 +47,14 @@ export default function Exploration() {
           <div className={styles.kyrgyzstan}>
             <div>
               <h1>KYRGYZSTAN</h1>
-              <span>Explore our world with us</span>
+              <span>Подробнее о нас</span>
               <div>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Auctor proin tristique <br /> proin feugiat est ornare{" "}
+                  Мы оказываем полный спектр услуг по установке, настройке,{" "}
+                  <br />
+                  обновлению, обучению и сопровождению программных продуктов{" "}
+                  <br />
+                  1С Предприятие.
                 </p>
               </div>
             </div>
@@ -91,17 +94,19 @@ export default function Exploration() {
           {/* data-aos="fade-right" */}
           <div>
             <h1>ГИДЫ</h1>
-            <span>Explore our world with us</span>
+            <span>Наши Гиды</span>
             <div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                proin tristique <br /> proin feugiat est ornare{" "}
+                Мы оказываем полный спектр услуг по установке, настройке, <br />
+                обновлению, обучению и сопровождению программных продуктов{" "}
+                <br />
+                1С Предприятие.
               </p>
             </div>
           </div>
           <Link href="/guides" style={{ textDecoration: "none" }}>
             <div className={styles.read_more}>
-              <p className={styles.p_read}>Read more</p>
+              <p className={styles.p_read}>Подробнее</p>
               <div className={styles.arrow}>
                 <ReadMore />
               </div>
@@ -159,17 +164,19 @@ export default function Exploration() {
         >
           <div>
             <h1>ТУРФИРМЫ</h1>
-            <span>Explore our world with us</span>
+            <span>Подробнее о Турфирмах</span>
             <div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                proin tristique <br /> proin feugiat est ornare{" "}
+                Мы оказываем полный спектр услуг по установке, настройке, <br />
+                обновлению, обучению и сопровождению программных продуктов{" "}
+                <br />
+                1С Предприятие.
               </p>
             </div>
           </div>
           <Link href="/tours" style={{ textDecoration: "none" }}>
             <div className={styles.read_more}>
-              <p>Read more</p>
+              <p>Подробнее</p>
               <div className={styles.arrow}>
                 <ReadMore />
               </div>

@@ -94,6 +94,34 @@
   cursor: pointer;
 }
 
+.confirm_but:hover {
+  background-color: #70120a;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.f:hover {
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.i:hover {
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.w:hover {
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.phone_footer:hover {
+  cursor: pointer;
+  color: #a80f02;
+}
+
 @media only screen and (max-width: 1000px) {
   .footer_main {
     display: none;

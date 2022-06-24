@@ -121,6 +121,11 @@ a {
   color: #a80f02 !important;
   font-weight: bold;
 }
+
+.second_menu {
+  z-index: 1000000 !important;
+}
+
 @media only screen and (max-width: 1320px) {
   .bm-burger-button {
     right: 10px;

@@ -93,14 +93,13 @@ export default function Cafe() {
       <MainLayout>
         <div style={{ paddingTop: "150px" }} className={styles.kyrgyzstan}>
           <div data-aos="fade-up">
-            <span>Explore our world with us</span>
+            <span>Лучшие кафе и рестораны</span>
             <div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
-                ligula rhoncus, ut erat dictumst. Vitae non et <br />{" "}
-                scelerisque libero. Odio auctor ut tortor bibendum. Sapien nisl,
-                turpis quam convallis morbi vel. Elit faucibus sit <br /> cras
-                iaculis
+                Никогда не садитесь за руль в Кыргызстане, если не уверены в
+                себе. Потомки кочевников лихачат круче, чем это делают в Грузии
+                а вы же наверняка слышали про грузинских водителей. Есть
+                легенда, согласно которой
               </p>
             </div>
           </div>

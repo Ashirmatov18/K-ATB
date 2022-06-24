@@ -25,21 +25,21 @@ export default function About() {
             <h1
               style={{ color: "#333333", fontWeight: "500", fontSize: "50px" }}
             >
-              Explore our world with us
+              Настоящая Киргизия
             </h1>
             <span
               style={{ color: "#2F2F2F", fontSize: "32px", fontWeight: "500" }}
             >
-              Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit.
-              Auctor proin tristique <br /> proin feugiat{" "}
+              Швейцарская организация культурного развития Helvetas спонсировала
+              несколько подобных проектов, в том числе «Жизнь Шепарда» и «Туризм
+              на базе общин»
             </span>
             <span style={{ color: "#2F2F2F", fontSize: "24px" }}>
-              <br /> <br /> <br /> Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. <br /> Quis ligula rhoncus, ut erat dictumst.
-              Vitae non et <br />
-              scelerisque libero. Odio auctor ut tortor bibendum. <br />
-              <br /> Sapien nisl, turpis quam convallis morbi vel. Elit <br />{" "}
-              faucibus sit cras iaculis
+              <br /> <br /> <br /> Приезжающих туристов привлекает красота
+              окружающей среды. В 2010 году Кыргызстан присоединился к
+              региональной инициативе (The Region Initiative (TRI)), которая
+              является трехрегиональным объединением организаций, связанных с
+              туризмом
             </span>
           </div>
           <div className={styles.about_img} data-aos="fade-down"></div>
@@ -54,12 +54,12 @@ export default function About() {
               paddingTop: "150px",
             }}
           >
-            Explore our world with us
+            Бишкек
           </h1>
           <span style={{ color: "#2F2F2F", fontSize: "24px" }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis ligula
-            rhoncus, ut erat dictumst. Vitae non et <br /> scelerisque libero.
-            Odio auctor ut tortor bibendum.{" "}
+            это как будто ты оказался в частном секторе в районе Цнянского
+            водохранилища, но с видом на снежные пики Тянь-Шаня.Первоначальное
+            название города Пишпек
           </span>
 
           <div className={styles.about_stat}>
@@ -94,20 +94,15 @@ export default function About() {
               paddingTop: "20px",
             }}
           >
-            Explore our world with us
+            Первоначальное название
           </h1>
           <span style={{ color: "#2F2F2F", fontSize: "24px" }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis ligula
-            rhoncus, ut erat dictumst. Vitae non et <br /> scelerisque libero.
-            Odio auctor ut tortor bibendum. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Quis <br /> ligula rhoncus, ut erat
-            dictumst. Vitae non et scelerisque libero. Odio auctor ut tortor
-            bibendum. <br /> <br /> <br /> Sapien nisl, turpis quam convallis
-            morbi vel. Elit faucibus sit cras iaculis <br /> <br /> <br /> Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit. Quis ligula
-            rhoncus, ut erat dictumst. Vitae non et <br /> scelerisque libero.
-            Odio auctor ut tortor bibendum. <br /> Sapien nisl, turpis quam
-            convallis morbi vel. Elit faucibus sit cras iaculis
+            города Пишпек возникло из-за того, что русский офицер плохо услышал
+            кыргызское «Бишкек». В свою очередь, кыргызы в советское время
+            называли свой город не Фрунзе, а Пурунзе. Вокруг Белого дома в
+            Бишкеке после революции 2020 года осталась лишь одна часть забора.
+            Она используется как мемориальная доска в память о погибших в ходе
+            столкновений 2010 года.
           </span>
         </div>
       </MainLayout>

@@ -191,6 +191,11 @@
   margin-left: 10px;
 }
 
+.persons:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 1470px) {
   .search_icon {
     right: 130px;

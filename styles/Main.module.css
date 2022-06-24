@@ -12,7 +12,7 @@
 
 .information {
   color: white;
-  margin-top: 150px;
+  margin-top: 190px;
 }
 
 .information h1 {
@@ -32,6 +32,7 @@
   border: none;
   border-radius: 10px;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .button_click {
@@ -127,6 +128,16 @@
 }
 .slider_left {
   margin-right: 20px;
+}
+
+.information button:hover {
+  background-color: #70120a;
+  font-size: 18px;
+}
+
+.read_more:hover {
+  color: rgb(0, 0, 0) !important;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 1175px) {

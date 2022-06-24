@@ -30,6 +30,7 @@
 
 .info_explore {
   margin-top: 250px;
+  width: 43vw;
 }
 
 .about_stat {
@@ -68,6 +69,11 @@
   background-color: #fff;
   width: 100%;
   height: 100px;
+}
+
+.stat_info:hover {
+  background-color: #989797;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 1015px) {

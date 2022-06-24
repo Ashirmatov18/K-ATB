@@ -5,6 +5,7 @@ import { LogoFooter } from "./FooterSvg";
 import { Link } from "@mui/material";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Facebook, Insta, Whats } from "../OrderCars/OrderCarsSvg";
 
 export default function Footer() {
   useEffect(() => {
@@ -15,13 +16,13 @@ export default function Footer() {
       <div className={styles.footer_img} style={{ color: "#fff" }}>
         <MainLayout>
           <div className={styles.horse_section} data-aos="fade-down">
-            <h1>
-              Subscribe To Get The Latest News <br /> About Us
-            </h1>
+            <h1>Подпишись, чтобы узнать новости</h1>
             <div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                proin tristique <br /> proin feugiat est ornare{" "}
+                В отличие от обычной купли-продажи, подписка предлагает
+                периодическую <br /> (ежедневную, еженедельную, двухнедельную,
+                ежемесячную, полугодовую, <br /> годовую/годовую или сезонную)
+                оплату
               </p>
             </div>
             <form className={styles.form} action="">
@@ -32,7 +33,7 @@ export default function Footer() {
                 id=""
                 placeholder="E-mail"
               />
-              <button className={styles.confirm_but}>Send</button>
+              <button className={styles.confirm_but}>Оправить</button>
             </form>
           </div>
         </MainLayout>
@@ -124,6 +125,31 @@ export default function Footer() {
             </div>
             <div className={styles.phone_footer} style={{ fontSize: "20px" }}>
               <p>+996 123 456</p>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-around",
+                width: "15vw",
+              }}
+            >
+              <Link href="https://www.facebook.com/Tabiyatkg-105609372166838/">
+                <div className={styles.f}>
+                  <Facebook />
+                </div>
+              </Link>
+
+              <Link href="https://www.facebook.com/Tabiyatkg-105609372166838/">
+                <div className={styles.i}>
+                  <Insta />
+                </div>
+              </Link>
+
+              <Link href="https://vt.tiktok.com/ZSd3GcwJt/">
+                <div className={styles.w}>
+                  <Whats />
+                </div>
+              </Link>
             </div>
           </div>
 

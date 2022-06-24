@@ -31,20 +31,20 @@ export default function Main() {
         <MainLayout>
           <div className={styles.information}>
             {/* {!!state?.length && */}
-            {/* // state.map(({ description, title }) => ( */}
+            {/* state.map(({(description, title)}) => ( */}
             <div>
               <h1>
-                Explore our <br /> world with us
+                ДОБРО <br /> ПОЖАЛОВАТЬ
                 {/* {title} */}
               </h1>
               <span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />{" "}
-                Auctor proin tristique proin feugiat est ornare montes,
+                Профессионализм наших сотрудников, высокое <br /> качество
+                оказания услуг помогают компании находить
               </span>
             </div>
             {/* ))} */}
             <div className={styles.button_click}>
-              <button>Click me</button>
+              <button>Нажми</button>
             </div>
           </div>
           <div className={styles.sli} data-aos="fade-down">
@@ -58,19 +58,19 @@ export default function Main() {
             <h1 className={styles.about_us}>О НАС</h1>
             <div>
               <h1 className={styles.explore}>
-                Explore our world with <br />
-                us
+                Информация о <br />
+                нас
               </h1>
               <div className={styles.about_info}>
                 <span>
-                  Lorem ipsum dolor sit amet, consectetur <br /> adipiscing
-                  elit. Auctor proin <br /> tristique proin feugiat est ornare
-                  montes, arcu, ut. Mauris nam tellus
+                  Мы оказываем полный спектр услуг по установке, настройке,
+                  обновлению, обучению и сопровождению программных продуктов
+                  1С:Предприятие.
                 </span>
               </div>
               <Link href="/about" style={{ textDecoration: "none" }}>
                 <div className={styles.read_more}>
-                  <span>Read more</span>
+                  <span>Подробнее</span>
                   <div
                     className={styles.pic_vid}
                     styles={{ paddingTop: "10px" }}
