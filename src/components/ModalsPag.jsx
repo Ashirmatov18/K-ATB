@@ -11,6 +11,7 @@ import {
   Search,
   Whats,
 } from "./OrderCars/OrderCarsSvg";
+import { useClickOutside } from "./hooks/useClickOutside";
 
 export default function ModalsPag(props) {
   const { data } = props;
@@ -18,27 +19,6 @@ export default function ModalsPag(props) {
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
   const itemsPerPage = 9;
-
-  // console.log(data[0].translations.ru);
-  // let useClickOutside = (handler) => {
-  //   let domNode = useRef();
-
-  //   useEffect(() => {
-  //     let maybeHandler = (event) => {
-  //       if (!domNode.current.contains(event.target)) {
-  //         handler();
-  //       }
-  //     };
-
-  //     document.addEventListener("mousedown", maybeHandler);
-
-  //     return () => {
-  //       document.removeEventListener("mousedown", maybeHandler);
-  //     };
-  //   });
-
-  //   return domNode;
-  // };
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
@@ -56,16 +36,16 @@ export default function ModalsPag(props) {
 
   const [modal, setModal] = useState(false);
 
-  const getDataInfo = (title, id, image) => {
-    let tempData = [title, id, image];
+  const getDataInfo = (title, id, image, translations) => {
+    let tempData = [title, id, image, translations];
     setTempData((item) => [1, ...tempData]);
 
     return setModal(true);
   };
 
-  const desc = (translation) => {
-    const des = currentItems[0].translations.ru;
-  };
+  let domNode = useClickOutside(() => {
+    setModal(null);
+  });
 
   return (
     <>
@@ -83,7 +63,6 @@ export default function ModalsPag(props) {
           .map(
             ({
               id,
-              description,
               image,
               title,
               last_name,
@@ -92,7 +71,9 @@ export default function ModalsPag(props) {
               translations,
             }) => (
               <div
-                onClick={() => getDataInfo({ title }, { id }, { image })}
+                onClick={() =>
+                  getDataInfo({ title }, { id }, { image }, { translations })
+                }
                 className={styles.persons}
                 key={id}
               >
@@ -104,9 +85,12 @@ export default function ModalsPag(props) {
                   <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
                     {title} {last_name}
                   </h2>
-                  <span className={styles.line}>
-                    {translations.ru.description}
-                  </span>
+                  <div className={styles.desc_info}>
+                    <span className={styles.line}>
+                      {" "}
+                      {translations.ru.description}
+                    </span>
+                  </div>
 
                   <LineHeight
                     style={{ marginTop: "20px", marginBottom: "20px" }}
@@ -153,7 +137,9 @@ export default function ModalsPag(props) {
           title={tempData[1]}
           id={tempData[2]}
           image={tempData[3]}
+          translations={tempData[4]}
           hide={() => setModal(false)}
+          domNode={domNode}
         />
       ) : (
         ""

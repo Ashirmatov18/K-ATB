@@ -81,7 +81,7 @@ export default function OrderCars() {
             </div>
           </div>
         </div>
-        <div data-aos="fade-up" className={styles.person_cards}>
+        <div className={styles.person_cards}>
           <ModalsPag
             data={state}
             searchItem={searchItem}

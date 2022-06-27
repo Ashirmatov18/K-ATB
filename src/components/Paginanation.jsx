@@ -93,10 +93,12 @@ export default function Paginanation(props) {
                   <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
                     {title} {last_name}
                   </h2>
-                  <span className={styles.line}>
-                    {" "}
-                    {translations.ru.description}
-                  </span>
+                  <div className={styles.desc_info}>
+                    <span className={styles.line}>
+                      {" "}
+                      {translations.ru.description}
+                    </span>
+                  </div>
 
                   <LineHeight
                     style={{ marginTop: "20px", marginBottom: "20px" }}

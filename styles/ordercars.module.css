@@ -62,7 +62,7 @@
 
 .person_cards {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-wrap: wrap;
   margin-top: 150px;
   margin-bottom: 100px;
@@ -81,6 +81,7 @@
   border: 1px solid #e0e0e0;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  margin-left: 20px;
 }
 
 .persons:nth-child(3n + 2) {
@@ -124,6 +125,11 @@
 .email {
   display: flex;
   align-items: center;
+}
+
+.desc_info {
+  height: 30px !important;
+  overflow: hidden;
 }
 
 .line {

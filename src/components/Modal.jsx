@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import styles from "../../styles/cars.module.css";
 import { Left, Right } from "./Main/MainIcons";
 import { Exit } from "./Navbar/NavbarIcons";
 
 export default function Modal(props) {
-  console.log(props, "props");
+  // console.log(props);
+
   return (
     <div>
       <div className={styles.modal}>
@@ -20,11 +21,18 @@ export default function Modal(props) {
             </div>
           </div>
           <div className={styles.info_bt}>
-            <div style={{ fontSize: "55px" }} className={styles.title_bt}>
+            <div
+              style={{ fontSize: "55px" }}
+              className={styles.title_bt}
+              ref={props.domNode}
+            >
               <h1>{props.title.title}</h1>
             </div>
             <div className={styles.img_by}>
               <img src={props.image.image} alt="" />
+            </div>
+            <div className={styles.desc_trans}>
+              <span>{props.translations.translations.ru.description}</span>
             </div>
           </div>
 
