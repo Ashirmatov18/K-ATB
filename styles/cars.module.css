@@ -146,12 +146,12 @@
 }
 
 .img_by img {
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 40vw;
+  background-size: cover;
+  width: auto;
   height: 30vw;
   border-radius: 10px;
   background-position: center;
+  background-attachment: fixed;
 }
 
 .guides {
