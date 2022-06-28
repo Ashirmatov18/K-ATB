@@ -255,6 +255,14 @@
     font-weight: bold;
   }
 
+  .kyrgyzstan {
+    padding-top: 30px !important;
+  }
+
+  .content {
+    padding-top: 40px;
+  }
+
   .kyrgyzstan p {
     font-size: 18px;
   }

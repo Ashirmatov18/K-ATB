@@ -104,7 +104,7 @@ export default function Hotels() {
             Юрты
           </button>
         </div>
-        <div data-aos="fade-up" className={styles.person_cards}>
+        <div className={styles.person_cards}>
           {/* {filt.length > 0 && <Paginanation data={filt} />} */}
           <ModalsPag data={filteredHotels} searchItem={searchItem} />
         </div>

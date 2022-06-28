@@ -12,6 +12,8 @@ import {
   Whats,
 } from "./OrderCars/OrderCarsSvg";
 import { useClickOutside } from "./hooks/useClickOutside";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function ModalsPag(props) {
   const { data } = props;
@@ -26,6 +28,10 @@ export default function ModalsPag(props) {
     setPageCount(Math.ceil(data.length / itemsPerPage));
   }, [itemOffset, itemsPerPage, data]);
 
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % data.length;
 
@@ -36,8 +42,24 @@ export default function ModalsPag(props) {
 
   const [modal, setModal] = useState(false);
 
-  const getDataInfo = (title, id, image, translations) => {
-    let tempData = [title, id, image, translations];
+  const getDataInfo = (
+    title,
+    id,
+    image,
+    translations,
+    email,
+    phone_number,
+    last_name
+  ) => {
+    let tempData = [
+      title,
+      id,
+      image,
+      translations,
+      email,
+      phone_number,
+      last_name,
+    ];
     setTempData((item) => [1, ...tempData]);
 
     return setModal(true);
@@ -72,10 +94,19 @@ export default function ModalsPag(props) {
             }) => (
               <div
                 onClick={() =>
-                  getDataInfo({ title }, { id }, { image }, { translations })
+                  getDataInfo(
+                    { title },
+                    { id },
+                    { image },
+                    { translations },
+                    { email },
+                    { phone_number },
+                    { last_name }
+                  )
                 }
                 className={styles.persons}
                 key={id}
+                data-aos="fade-down"
               >
                 <div
                   style={{ backgroundImage: `url(${image})` }}
@@ -138,6 +169,9 @@ export default function ModalsPag(props) {
           id={tempData[2]}
           image={tempData[3]}
           translations={tempData[4]}
+          email={tempData[5]}
+          phone_number={tempData[6]}
+          last_name={tempData[7]}
           hide={() => setModal(false)}
           domNode={domNode}
         />

@@ -198,7 +198,7 @@
 }
 
 .persons:hover {
-  opacity: 0.8;
+  opacity: 0.5 !important;
   cursor: pointer;
 }
 
@@ -217,6 +217,10 @@
 @media only screen and (max-width: 1200px) {
   .persons:nth-child(3n + 2) {
     transform: unset !important;
+  }
+  .person_cards {
+    display: flex;
+    justify-content: space-around;
   }
 }
 
@@ -271,6 +275,7 @@
   .persons {
     width: 90vw !important;
     margin-top: 40px;
+    margin-left: 0;
   }
   .first_per {
     width: 90vw !important;

@@ -161,7 +161,10 @@ export default function SideBar() {
             </div>
           </Link>
 
-          <Link href="/service">
+          <Link
+            href="/service"
+            style={{ textDecoration: "none", color: "white" }}
+          >
             <div className="bottom_line">
               <p className="menu-item" href="/salads">
                 Другие

@@ -4,7 +4,7 @@ import { Left, Right } from "./Main/MainIcons";
 import { Exit } from "./Navbar/NavbarIcons";
 
 export default function Modal(props) {
-  // console.log(props);
+  console.log(props);
 
   return (
     <div>
@@ -26,13 +26,21 @@ export default function Modal(props) {
               className={styles.title_bt}
               ref={props.domNode}
             >
-              <h1>{props.title.title}</h1>
+              <h1>
+                {props.title.title} {props.last_name.last_name}
+              </h1>
             </div>
             <div className={styles.img_by}>
               <img src={props.image.image} alt="" />
             </div>
             <div className={styles.desc_trans}>
+              <p>ИНФОРМАЦИЯ : </p>
               <span>{props.translations.translations.ru.description}</span>
+            </div>
+            <div className={styles.contact_info}>
+              <div>КОНТАКТЫ : </div>
+              <div>{props.email.email}</div>
+              <div>{props.phone_number.phone_number}</div>
             </div>
           </div>
 

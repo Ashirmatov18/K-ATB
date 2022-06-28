@@ -13,7 +13,7 @@ import MainLayout from "../ui/MainLayout";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Paginanation from "../Paginanation";
+import ModalsPag from "../ModalsPag";
 import { useRouter } from "next/router";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -102,9 +102,9 @@ export default function Guides() {
         <div
           onClick={() => setModal(true)}
           className={styles.person_cards}
-          data-aos="fade-up"
+          // data-aos="fade-up"
         >
-          <Paginanation data={state} searchItem={searchItem} />
+          <ModalsPag data={state} searchItem={searchItem} />
         </div>
       </MainLayout>
     </div>
