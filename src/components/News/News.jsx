@@ -51,7 +51,7 @@ export default function News() {
                 1С Предприятие.
               </p>
               <div className={styles.read_more}>
-                <p>Подробнее</p>
+                <p className={styles.p_read}>Подробнее</p>
                 <div className={styles.arrow}>
                   <ReadMore />
                 </div>
@@ -71,7 +71,7 @@ export default function News() {
                 1С Предприятие.
               </p>
               <div className={styles.read_more}>
-                <p>Подробнее</p>
+                <p className={styles.p_read}>Подробнее</p>
                 <div className={styles.arrow}>
                   <ReadMore />
                 </div>
@@ -91,7 +91,7 @@ export default function News() {
                 1С Предприятие.
               </p>
               <div className={styles.read_more}>
-                <p>Подробнее</p>
+                <p className={styles.p_read}>Подробнее</p>
                 <div className={styles.arrow}>
                   <ReadMore />
                 </div>
@@ -111,7 +111,7 @@ export default function News() {
                 1С Предприятие.
               </p>
               <div className={styles.read_more}>
-                <p>Подробнее</p>
+                <p className={styles.p_read}>Подробнее</p>
                 <div className={styles.arrow}>
                   <ReadMore />
                 </div>

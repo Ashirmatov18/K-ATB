@@ -14,6 +14,8 @@ import {
 import { useClickOutside } from "./hooks/useClickOutside";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Link from "next/link";
+import ModalWindow from "./Modal";
 
 export default function ModalsPag(props) {
   const { data } = props;
@@ -21,6 +23,8 @@ export default function ModalsPag(props) {
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
   const itemsPerPage = 9;
+
+  console.log(data, "ss");
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
@@ -91,24 +95,23 @@ export default function ModalsPag(props) {
               email,
               phone_number,
               translations,
+              whatsapp,
+              facebook,
+              instagram,
             }) => (
-              <div
-                onClick={() =>
-                  getDataInfo(
-                    { title },
-                    { id },
-                    { image },
-                    { translations },
-                    { email },
-                    { phone_number },
-                    { last_name }
-                  )
-                }
-                className={styles.persons}
-                key={id}
-                data-aos="fade-down"
-              >
+              <div className={styles.persons} key={id} data-aos="fade-down">
                 <div
+                  onClick={() =>
+                    getDataInfo(
+                      { title },
+                      { id },
+                      { image },
+                      { translations },
+                      { email },
+                      { phone_number },
+                      { last_name }
+                    )
+                  }
                   style={{ backgroundImage: `url(${image})` }}
                   className={styles.first_per}
                 ></div>
@@ -141,9 +144,16 @@ export default function ModalsPag(props) {
                       </span>
                     </div>
                     <div>
-                      <Facebook className={styles.social_media} />
-                      <Insta className={styles.social_media} />
-                      <Whats />
+                      <Link href={`${facebook}`}>
+                        <Facebook className={styles.social_media} />
+                      </Link>
+                      <Link href={`${instagram}`}>
+                        <Insta className={styles.social_media} />
+                      </Link>
+
+                      <Link href={`${whatsapp}`}>
+                        <Whats className={styles.whatsapp} />
+                      </Link>
                     </div>
                   </div>
                   <div className={styles.email}>
@@ -164,7 +174,7 @@ export default function ModalsPag(props) {
           )}
 
       {modal === true ? (
-        <Modal
+        <ModalWindow
           title={tempData[1]}
           id={tempData[2]}
           image={tempData[3]}
@@ -198,65 +208,3 @@ export default function ModalsPag(props) {
     </>
   );
 }
-
-// {!!state?.length &&
-//     state.map(
-//       ({
-//         id,
-//         description,
-//         image,
-//         title,
-//         last_name,
-//         email,
-//         phone_number,
-//       }) => (
-//         <div className={styles.persons}>
-//           {" "}
-//           <div
-//             style={{ backgroundImage: `url(${image})` }}
-//             className={styles.first_per}
-//           ></div>
-//           <div className={styles.person_info}>
-//             <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-//               {title} {last_name}
-//             </h2>
-//             <span className={styles.line}>{description}</span>
-
-//             <LineHeight
-//               style={{ marginTop: "20px", marginBottom: "20px" }}
-//             />
-//             <div className={styles.per_social}>
-//               <div className={styles.per_mobile}>
-//                 <Mobile />
-//                 <span
-//                   style={{
-//                     marginLeft: "10px",
-//                     color: "#A4A8B4",
-//                     fontSize: "17px",
-//                   }}
-//                 >
-//                   {phone_number}
-//                 </span>
-//               </div>
-//               <div>
-//                 <Facebook className={styles.social_media} />
-//                 <Insta className={styles.social_media} />
-//                 <Whats />
-//               </div>
-//             </div>
-//             <div className={styles.email}>
-//               <Email />
-//               <span
-//                 style={{
-//                   marginLeft: "10px",
-//                   color: "#A4A8B4",
-//                   fontSize: "17px",
-//                 }}
-//               >
-//                 {email}
-//               </span>
-//             </div>
-//           </div>
-//         </div>
-//       )
-//     )}

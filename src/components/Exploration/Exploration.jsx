@@ -41,7 +41,7 @@ export default function Exploration() {
   // ));
 
   return (
-    <div style={{ marginTop: "150px" }}>
+    <div style={{ marginTop: "120px" }}>
       <div className={styles.back_styles}>
         <MainLayout>
           <div className={styles.kyrgyzstan}>
@@ -106,7 +106,7 @@ export default function Exploration() {
           </div>
           <Link href="/guides" style={{ textDecoration: "none" }}>
             <div className={styles.read_more}>
-              <p className={styles.p_read}>Подробнее</p>
+              <p className={styles.p_read}>Все гиды</p>
               <div className={styles.arrow}>
                 <ReadMore />
               </div>
@@ -158,7 +158,7 @@ export default function Exploration() {
         </div>
 
         <div
-          style={{ paddingTop: "100px" }}
+          style={{ paddingTop: "0px" }}
           className={styles.kyrgyzstan}
           data-aos="fade-down"
         >
@@ -176,15 +176,15 @@ export default function Exploration() {
           </div>
           <Link href="/tours" style={{ textDecoration: "none" }}>
             <div className={styles.read_more}>
-              <p>Подробнее</p>
+              <p className={styles.p_read}>Все тур.фирмы</p>
               <div className={styles.arrow}>
                 <ReadMore />
               </div>
             </div>
           </Link>
           {/* data-aos="fade-left" */}
-          <div className={styles.residents}>
-            <div>
+          <div className={styles.wrapper}>
+            <div className={styles.logo_main}>
               <div className={styles.first_logo}>
                 {" "}
                 <p className={styles.logo}>LOGO</p>
@@ -193,7 +193,7 @@ export default function Exploration() {
                 <p>Travel Company</p>
               </div>
             </div>
-            <div>
+            <div className={styles.logo_main}>
               <div className={styles.first_logo}>
                 {" "}
                 <p className={styles.logo}>LOGO</p>
@@ -202,15 +202,8 @@ export default function Exploration() {
                 <p>Travel Company</p>
               </div>
             </div>
-            <div>
-              <div className={styles.first_logo}>
-                <p className={styles.logo}>LOGO</p>
-              </div>
-              <div className={styles.res_name}>
-                <p>Travel Company</p>
-              </div>
-            </div>
-            <div>
+
+            <div className={styles.logo_main}>
               <div className={styles.first_logo}>
                 {" "}
                 <p className={styles.logo}>LOGO</p>
@@ -219,7 +212,24 @@ export default function Exploration() {
                 <p>Travel Company</p>
               </div>
             </div>
-            <div>
+            <div className={styles.logo_main}>
+              <div className={styles.first_logo}>
+                <p className={styles.logo}>LOGO</p>
+              </div>
+              <div className={styles.res_name}>
+                <p>Travel Company</p>
+              </div>
+            </div>
+            <div className={styles.logo_main}>
+              <div className={styles.first_logo}>
+                {" "}
+                <p className={styles.logo}>LOGO</p>
+              </div>
+              <div className={styles.res_name}>
+                <p>Travel Company</p>
+              </div>
+            </div>
+            <div className={styles.logo_main}>
               <div className={styles.first_logo}>
                 {" "}
                 <p className={styles.logo}>LOGO</p>

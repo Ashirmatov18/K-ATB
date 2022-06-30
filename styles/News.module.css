@@ -17,15 +17,88 @@
   font-size: 24px;
 }
 
+.kyrgyzstan button:hover {
+  background-color: #70120a;
+  font-size: 18px;
+  cursor: pointer;
+}
+
 .kyrgyzstan button {
   background-color: #a80f02;
   color: white;
-  font-size: 16px;
   width: 180px;
   height: 45px;
   border: none;
   border-radius: 10px;
-  margin-top: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.35s;
+  z-index: 0;
+  position: relative;
+}
+
+.kyrgyzstan button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.kyrgyzstan button:active {
+  color: #a80f02;
+}
+
+.kyrgyzstan button:active:after {
+  background: transparent;
+}
+
+.kyrgyzstan button:hover:before {
+  opacity: 1;
+}
+
+.kyrgyzstan button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #a80f02;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 .adv {
@@ -48,6 +121,7 @@
   margin-top: 40px;
   font-size: 20px;
   font-weight: 600;
+  position: relative;
 }
 
 .info_detail {
@@ -104,23 +178,60 @@
 }
 
 .picture_first:hover {
-  opacity: 0.5;
+  opacity: 0.8;
   cursor: pointer;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transform: scale(1.05);
 }
 
 .picture_sec:hover {
-  opacity: 0.5;
+  opacity: 0.8;
   cursor: pointer;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transform: scale(1.05);
 }
 
 .picture_fourth:hover {
-  opacity: 0.5;
+  opacity: 0.8;
   cursor: pointer;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transform: scale(1.05);
 }
 
 .picture_third:hover {
-  opacity: 0.5;
+  opacity: 0.8;
   cursor: pointer;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transform: scale(1.05);
+}
+
+.p_read::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #0f2938;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.p_read:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.p_read:hover {
+  color: rgb(0, 0, 0) !important;
+  font-weight: bold;
+  transition: transform 0.85s;
 }
 
 @media only screen and (max-width: 630px) {

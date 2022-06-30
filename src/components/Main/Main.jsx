@@ -54,7 +54,7 @@ export default function Main() {
       </div>
       <MainLayout>
         <div className={styles.about}>
-          <div data-aos="fade-down">
+          <div className={styles.about_title} data-aos="fade-down">
             <h1 className={styles.about_us}>О НАС</h1>
             <div>
               <h1 className={styles.explore}>

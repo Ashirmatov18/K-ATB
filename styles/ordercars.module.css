@@ -106,6 +106,8 @@
   background-position: center;
   width: 100%;
   border-radius: 10px;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+  object-fit: cover;
 }
 
 .person_info {
@@ -125,6 +127,17 @@
 
 .social_media {
   margin-right: 10px;
+  cursor: pointer;
+}
+.social_media:hover {
+  background-color: rgba(0, 0, 0, 0.562);
+  border-radius: 10px;
+}
+
+.whatsapp:hover {
+  background-color: rgba(0, 0, 0, 0.562);
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .email {
@@ -203,9 +216,12 @@
   margin-left: 10px;
 }
 
-.persons:hover {
-  opacity: 0.5 !important;
+.first_per:hover {
+  -webkit-transition: opacity 0.85s, -webkit-transform 0.35s;
+  transition: opacity 0.85s, transform 0.35s;
+  transform: scale(1.005);
   cursor: pointer;
+  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 @media only screen and (max-width: 1470px) {

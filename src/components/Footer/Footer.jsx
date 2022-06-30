@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../../styles/Footer.module.css";
 import MainLayout from "../ui/MainLayout";
 import { LogoFooter } from "./FooterSvg";
@@ -6,11 +6,31 @@ import { Link } from "@mui/material";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Facebook, Insta, Whats } from "../OrderCars/OrderCarsSvg";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
+
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
 
 export default function Footer() {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <div>
       <div className={styles.footer_img} style={{ color: "#fff" }}>
@@ -25,7 +45,7 @@ export default function Footer() {
                 оплату
               </p>
             </div>
-            <form className={styles.form} action="">
+            <div className={styles.form}>
               <input
                 className={styles.confirm_inp}
                 type="text"
@@ -33,8 +53,10 @@ export default function Footer() {
                 id=""
                 placeholder="E-mail"
               />
-              <button className={styles.confirm_but}>Оправить</button>
-            </form>
+              <button onClick={handleOpen} className={styles.confirm_but}>
+                Отправить
+              </button>
+            </div>
           </div>
         </MainLayout>
       </div>
@@ -62,7 +84,7 @@ export default function Footer() {
                   href="/guides"
                   style={{ textDecoration: "none", color: "white" }}
                 >
-                  <li>Гиды и тур.фирмы</li>
+                  <li>Гиды</li>
                 </Link>
                 <Link
                   href="/guides"
@@ -75,7 +97,10 @@ export default function Footer() {
                   href="/tours"
                   style={{ textDecoration: "none", color: "white" }}
                 >
-                  <li style={{ color: "#BDBDBD", paddingTop: "10px" }}>
+                  <li
+                    className={styles.post_li}
+                    style={{ color: "#BDBDBD", paddingTop: "10px" }}
+                  >
                     Турфирмы
                   </li>
                 </Link>
@@ -88,7 +113,12 @@ export default function Footer() {
                 >
                   <li className={styles.post_li}>Аренда машин</li>
                 </Link>
-                <li style={{ color: "#BDBDBD", paddingTop: "10px" }}>Другие</li>
+                <li
+                  className={styles.post_li}
+                  style={{ color: "#BDBDBD", paddingTop: "10px" }}
+                >
+                  Другие
+                </li>
               </div>
               <Link
                 href="/cafe"
@@ -152,116 +182,27 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-
-          {/* <div className={styles.footer_adaptive}>
-            <Link style={{ textDecoration: "none", color: "white" }} href="/">
-              <div className="bottom_line">
-                <p className="menu-item" href="/">
-                  Главная
-                </p>
-              </div>
-            </Link>
-
-            <Link
-              style={{ textDecoration: "none", color: "white" }}
-              href="/about"
-            >
-              <div className="bottom_line">
-                <p className="menu-item" href="/salads">
-                  О нас
-                </p>
-              </div>
-            </Link>
-
-            <Link
-              style={{ textDecoration: "none", color: "white" }}
-              href="/kyrgyzstan"
-            >
-              <div className="bottom_line">
-                <p className="menu-item" href="/pizzas">
-                  Кыргызстан
-                </p>
-              </div>
-            </Link>
-
-            <Link
-              style={{ textDecoration: "none", color: "white" }}
-              href="/tours"
-            >
-              <div className="bottom_line">
-                <p className="menu-item" href="/desserts">
-                  Гиды и тур.фирмы
-                </p>
-              </div>
-            </Link>
-
-            <Link
-              style={{ textDecoration: "none", color: "white" }}
-              href="/guides"
-            >
-              <div className="bottom_line">
-                <p className="menu-item" href="/desserts">
-                  Услуги
-                </p>
-              </div>
-            </Link>
-
-            <Link
-              style={{ textDecoration: "none", color: "white" }}
-              href="/hotels"
-            >
-              <div className="bottom_line">
-                <p className="menu-item" href="/desserts">
-                  Отели
-                </p>
-              </div>
-            </Link>
-
-            <Link
-              style={{ textDecoration: "none", color: "white" }}
-              href="/cafe"
-            >
-              <div className="bottom_line">
-                <p className="menu-item" href="/desserts">
-                  Кафе-рестораны
-                </p>
-              </div>
-            </Link>
-
-            <Link
-              style={{ textDecoration: "none", color: "white" }}
-              href="/enter"
-            >
-              {" "}
-              <div className="bottom_line">
-                <p className="menu-item" href="/desserts">
-                  Развлечения
-                </p>
-              </div>
-            </Link>
-
-            <Link
-              style={{ textDecoration: "none", color: "white" }}
-              href="/partners"
-            >
-              <div className="bottom_line">
-                <p className="menu-item" href="/desserts">
-                  Партнеры
-                </p>
-              </div>
-            </Link>
-            <Link
-              style={{ textDecoration: "none", color: "white" }}
-              href="/news"
-            >
-              <div className="bottom_line">
-                <p className="menu-item" href="/desserts">
-                  Новости
-                </p>
-              </div>
-            </Link>
-          </div> */}
         </MainLayout>
+
+        {/* {modal === true ? (
+          <div className={styles.modal_sended}>
+            <h1>hello</h1>
+          </div>
+        ) : (
+          <></>
+        )} */}
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            <Typography id="modal-modal-title" variant="h6" component="h2">
+              УСПЕШНО ОТПРАЛЕНО!
+            </Typography>
+          </Box>
+        </Modal>
       </footer>
     </div>
   );
