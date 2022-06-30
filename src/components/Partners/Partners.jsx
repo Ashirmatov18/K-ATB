@@ -15,7 +15,7 @@ import "aos/dist/aos.css";
 
 export default function Partners() {
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({ duration: 1000, once: true });
   }, []);
   return (
     <div>
@@ -25,11 +25,7 @@ export default function Partners() {
         </div>
       </div>
       <MainLayout>
-        <div
-          style={{ paddingTop: "150px" }}
-          className={styles.kyrgyzstan}
-          data-aos="fade-up"
-        >
+        <div style={{ paddingTop: "150px" }} className={styles.kyrgyzstan}>
           <div>
             <span>Наши партнеры</span>
             <div>

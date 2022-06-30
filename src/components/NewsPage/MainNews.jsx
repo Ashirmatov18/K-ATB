@@ -9,7 +9,7 @@ import "aos/dist/aos.css";
 
 export default function MainNews() {
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({ duration: 1000, once: true });
   }, []);
 
   return (

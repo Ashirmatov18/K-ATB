@@ -22,7 +22,7 @@ export default function Main() {
 
   useEffect(() => {
     getInfo().then((data) => setState([data]));
-    Aos.init({ duration: 1000 });
+    Aos.init({ duration: 1000, once: true });
   }, []);
 
   return (

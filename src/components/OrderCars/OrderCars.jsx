@@ -28,7 +28,7 @@ export default function OrderCars() {
   }, []);
 
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({ duration: 1000, once: true });
   }, []);
 
   // console.log(state[0].title);

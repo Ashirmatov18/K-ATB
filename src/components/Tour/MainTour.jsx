@@ -26,7 +26,7 @@ export default function MainTour() {
   }, []);
 
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({ duration: 1000, once: true });
   }, []);
 
   return (

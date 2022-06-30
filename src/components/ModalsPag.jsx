@@ -33,7 +33,7 @@ export default function ModalsPag(props) {
   }, [itemOffset, itemsPerPage, data]);
 
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({ duration: 1000, once: true });
   }, []);
 
   const handlePageClick = (event) => {
@@ -156,18 +156,22 @@ export default function ModalsPag(props) {
                       </Link>
                     </div>
                   </div>
-                  <div className={styles.email}>
-                    <Email />
-                    <span
-                      style={{
-                        marginLeft: "10px",
-                        color: "#A4A8B4",
-                        fontSize: "17px",
-                      }}
-                    >
-                      {email}
-                    </span>
-                  </div>
+                  {email ? (
+                    <div className={styles.email}>
+                      <Email />
+                      <span
+                        style={{
+                          marginLeft: "10px",
+                          color: "#A4A8B4",
+                          fontSize: "17px",
+                        }}
+                      >
+                        {email}
+                      </span>
+                    </div>
+                  ) : (
+                    <></>
+                  )}
                 </div>
               </div>
             )

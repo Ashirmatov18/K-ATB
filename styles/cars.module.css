@@ -124,10 +124,10 @@
 
 .modal {
   position: absolute;
-  top: 0px;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  /* right: 0; */
+  /* bottom: 0; */
   background-color: rgba(207, 201, 201, 0.973);
   display: flex;
   justify-content: center;
@@ -135,6 +135,14 @@
   z-index: 999;
   height: 100%;
   width: 100%;
+  box-shadow: #333333;
+  border: 2px solid #000;
+  transform: translate(-50%, -50%);
+  line-height: 45px;
+}
+.info_few {
+  text-align: left;
+  padding-bottom: 30px;
 }
 
 .contact_info {

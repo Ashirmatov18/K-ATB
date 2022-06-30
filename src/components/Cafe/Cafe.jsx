@@ -44,7 +44,7 @@ export default function Cafe() {
   }, []);
 
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({ duration: 1000, once: true });
   }, []);
 
   const filterResult = (f) => {

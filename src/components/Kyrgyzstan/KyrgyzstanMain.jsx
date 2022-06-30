@@ -13,7 +13,7 @@ export default function KyrgyzstanMain() {
   const [modal, setModal] = useState(false);
 
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({ duration: 1000, once: true });
   }, []);
   return (
     <div>
@@ -74,24 +74,34 @@ export default function KyrgyzstanMain() {
           </Link>
 
           <div className={styles.options} data-aos="fade-up">
-            <div className={styles.bishkek}>
-              <h1 className={styles.title}>Bishkek</h1>
-            </div>
+            <Link href="/bishkek">
+              <div className={styles.bishkek}>
+                <h1 className={styles.title}>Bishkek</h1>
+              </div>
+            </Link>
             <div className={styles.others}>
               <div className={styles.ala_osh}>
-                <div className={styles.ala_archa}>
-                  {" "}
-                  <h1 className={styles.title}>Ala-Archa</h1>
-                </div>
-                <div className={styles.osh}>
-                  {" "}
-                  <h1 className={styles.title}>Osh</h1>
-                </div>
+                <Link href="ala-archa">
+                  <div className={styles.ala_archa}>
+                    {" "}
+                    <h1 className={styles.title}>Ala-Archa</h1>
+                  </div>
+                </Link>
+
+                <Link href="/osh">
+                  <div className={styles.osh}>
+                    {" "}
+                    <h1 className={styles.title}>Osh</h1>
+                  </div>
+                </Link>
               </div>
-              <div className={styles.issyk_kul}>
-                {" "}
-                <h1 className={styles.title}>Issyk-Kul</h1>
-              </div>
+
+              <Link href="/issyk-kul">
+                <div className={styles.issyk_kul}>
+                  {" "}
+                  <h1 className={styles.title}>Issyk-Kul</h1>
+                </div>
+              </Link>
             </div>
           </div>
         </div>

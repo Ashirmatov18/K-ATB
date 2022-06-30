@@ -59,6 +59,7 @@
   justify-content: space-between;
   margin-top: 150px;
   margin-bottom: 100px;
+  flex-wrap: wrap;
 }
 
 .persons {
@@ -137,8 +138,21 @@
 
 @media only screen and (max-width: 1440px) {
   .person_cards {
-    flex-direction: column;
-    align-items: center;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    justify-content: space-between;
+  }
+  /* .persons {
+    width: 30vw;
+  } */
+}
+
+@media only screen and (max-width: 1380px) {
+  .person_cards {
+    width: 90vw;
+    justify-content: space-around;
+    /* flex-direction: column; */
+    /* align-items: center; */
   }
 }
 
@@ -165,6 +179,13 @@
   .search_icon {
     margin-top: 15px;
     display: none;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .person_cards {
+    flex-direction: column;
+    align-items: center;
   }
 }
 

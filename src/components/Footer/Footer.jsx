@@ -9,6 +9,7 @@ import { Facebook, Insta, Whats } from "../OrderCars/OrderCarsSvg";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
+import ScrollUpButton from "react-scroll-up-button";
 
 const style = {
   position: "absolute",
@@ -24,7 +25,7 @@ const style = {
 
 export default function Footer() {
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({ duration: 1000, once: true });
   }, []);
 
   const [open, setOpen] = useState(false);
@@ -33,6 +34,7 @@ export default function Footer() {
 
   return (
     <div>
+      <ScrollUpButton />
       <div className={styles.footer_img} style={{ color: "#fff" }}>
         <MainLayout>
           <div className={styles.horse_section} data-aos="fade-down">

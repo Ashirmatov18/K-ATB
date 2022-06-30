@@ -170,23 +170,24 @@
   cursor: pointer;
 }
 
-.f:hover {
-  background-color: white;
-  border-radius: 10px;
-  cursor: pointer;
+.f :hover {
+  filter: brightness(0.5) sepia(1) hue-rotate(-70deg) saturate(5);
 }
 
-.i:hover {
-  background-color: white;
+.i :hover {
+  filter: brightness(0.5) sepia(1) hue-rotate(-70deg) saturate(5);
+}
+
+/* .w svg path:hover {
+  fill: rgb(30, 188, 30) !important;
   border-radius: 10px;
   cursor: pointer;
-}
+} */
 
 .w:hover {
-  background-color: white;
-  border-radius: 10px;
-  cursor: pointer;
+  filter: brightness(0.5) sepia(1) hue-rotate(-70deg) saturate(5);
 }
+
 .phone_footer:hover {
   cursor: pointer;
   color: #a80f02;

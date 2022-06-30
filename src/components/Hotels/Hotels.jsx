@@ -27,7 +27,7 @@ export default function Hotels() {
   }, []);
 
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({ duration: 1000, once: true });
   }, []);
 
   const filterResult = (f) => {

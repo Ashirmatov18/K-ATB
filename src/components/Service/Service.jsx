@@ -28,7 +28,7 @@ export default function Service() {
   }, []);
 
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({ duration: 1000, once: true });
   }, []);
 
   // console.log(state[0].title);
@@ -80,7 +80,7 @@ export default function Service() {
             </div>
           </div>
         </div>
-        <div data-aos="fade-up" className={styles.person_cards}>
+        <div className={styles.person_cards}>
           <ModalsPag
             data={state}
             searchItem={searchItem}
