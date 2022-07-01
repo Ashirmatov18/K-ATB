@@ -160,6 +160,7 @@
   border-radius: 10px;
   background-position: center;
   background-attachment: fixed;
+  margin-top: 20px;
 }
 
 .guides {
@@ -186,8 +187,13 @@
   font-size: 18px;
   width: 60vw;
   margin: 0 auto;
+  padding-bottom: 30px;
   /* white-space: 1px; */
   /* word-break: normal; */
+}
+
+.desc_trans p {
+  font-size: 35px;
 }
 
 .desc_trans pre {

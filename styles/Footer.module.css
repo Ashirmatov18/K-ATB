@@ -242,3 +242,9 @@
     width: 80vw;
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .horse_section h1 {
+    font-size: 25px;
+  }
+}

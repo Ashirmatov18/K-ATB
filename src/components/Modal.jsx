@@ -11,81 +11,97 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "50vw",
+  width: "80vw",
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
   p: 4,
+  marginTop: "100px ",
+  overflow: "scroll",
+  height: "100%",
+  textAlign: "center",
 };
 
 export default function ModalWindow(props) {
   // const [open, setOpen] = useState(false);
   // const handleOpen = () => setOpen(true);
   // const handleClose = () => setOpen(false);
-
-  console.log(props.translations.translations.ru.description);
+  const startPos = { x: 25, y: 25 };
 
   return (
-    <div>
-      <div className={styles.modal}>
-        <div className={styles.main}>
-          <div className={styles.controllers}>
-            <div>
-              <Left className={styles.next_prev} />
-              <Right />
-            </div>
-            <div>
-              {" "}
-              <Exit onClick={props.hide} style={{ cursor: "pointer" }} />
-            </div>
-          </div>
-          <div className={styles.info_bt}>
-            <div
-              style={{ fontSize: "55px" }}
-              className={styles.title_bt}
-              ref={props.domNode}
-            >
-              <h1>
-                {props.title.title} {props.last_name.last_name}
-              </h1>
-            </div>
-            <div className={styles.img_by}>
-              <img src={props.image.image} alt="" />
-            </div>
-            <div className={styles.desc_trans}>
-              <p>ИНФОРМАЦИЯ : </p>
-              <div className={styles.info_few}>
-                <pre>{props.translations.translations.ru.description}</pre>
-              </div>
-            </div>
-            <div className={styles.contact_info}>
-              <div>КОНТАКТЫ : </div>
-              <div>{props.email.email}</div>
-              <div>{props.phone_number.phone_number}</div>
-            </div>
-          </div>
+    // <div>
+    //   <div className={styles.modal}>
+    //     <div className={styles.main}>
+    //       <div className={styles.controllers}>
+    //         <div>
+    //           <Left className={styles.next_prev} />
+    //           <Right />
+    //         </div>
+    //         <div>
+    //           {" "}
+    //           <Exit onClick={props.hide} style={{ cursor: "pointer" }} />
+    //         </div>
+    //       </div>
+    //       <div className={styles.info_bt}>
+    //         <div
+    //           style={{ fontSize: "55px" }}
+    //           className={styles.title_bt}
+    //           ref={props.domNode}
+    //         >
+    //           <h1>
+    //             {props.title.title} {props.last_name.last_name}
+    //           </h1>
+    //         </div>
+    //         <div className={styles.img_by}>
+    //           <img src={props.image.image} alt="" />
+    //         </div>
+    //         <div className={styles.desc_trans}>
+    //           <p>ИНФОРМАЦИЯ : </p>
+    //           <div className={styles.info_few}>
+    //             <pre>{props.translations.translations.ru.description}</pre>
+    //           </div>
+    //         </div>
+    //         <div className={styles.contact_info}>
+    //           <div>КОНТАКТЫ : </div>
+    //           <div>{props.email.email}</div>
+    //           <div>{props.phone_number.phone_number}</div>
+    //         </div>
+    //       </div>
 
-          <div className={styles.flex_row}></div>
-        </div>
-      </div>
-    </div>
-    // <Modal
-    //   open={open}
-    //   aria-labelledby="modal-modal-title"
-    //   aria-describedby="modal-modal-description"
-    // >
-    //   <Box sx={style}>
-    //     <Typography id="modal-modal-title" variant="h3" component="h2">
-    //       {props.title.title}
-    //     </Typography>
-    //     <div className={styles.img_by}>
-    //       <img src={props.image.image} alt="" />
+    //       <div className={styles.flex_row}></div>
     //     </div>
-    //     <Typography id="modal-modal-title" variant="h6" component="h2">
-    //       {props.translations.translations.ru.description}
-    //     </Typography>
-    //   </Box>
-    // </Modal>
+    //   </div>
+    // </div>
+    <Modal
+      open={open}
+      disableScrollLock={false}
+      aria-labelledby="modal-modal-title"
+      aria-describedby="modal-modal-description"
+    >
+      <Box sx={style}>
+        <Typography id="modal-modal-title" variant="h3" component="h2">
+          {props.title.title} {props.last_name.last_name}
+        </Typography>
+        <div className={styles.img_by}>
+          <img src={props.image.image} alt="" />
+        </div>
+        <Typography id="modal-modal-title" variant="h6" component="h2">
+          <div className={styles.contact_info}>
+            <div>КОНТАКТЫ : </div>
+            <div>{props.email.email}</div>
+            <div>{props.phone_number.phone_number}</div>
+          </div>
+        </Typography>
+        <Typography id="modal-modal-title" variant="h6" component="h2">
+          <div className={styles.desc_trans}>
+            <p>ИНФОРМАЦИЯ : </p>
+            <div className={styles.info_few}>
+              <pre>{props.translations.translations.ru.description}</pre>
+            </div>
+          </div>
+        </Typography>
+      </Box>
+    </Modal>
   );
 }
 
