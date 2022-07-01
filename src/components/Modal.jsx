@@ -8,7 +8,7 @@ import Modal from "@mui/material/Modal";
 
 const style = {
   position: "absolute",
-  top: "48%",
+  top: "50%",
   left: "50%",
   // bottom: "100%",
   transform: "translate(-50%, -50%)",
@@ -17,9 +17,10 @@ const style = {
   border: "2px solid #000",
   boxShadow: 24,
   p: 4,
-  paddingTop: "180px ",
+  paddingTop: "50px ",
+  marginTop: "50px",
   overflow: "scroll",
-  height: "100%",
+  height: "80%",
   textAlign: "center",
 };
 
