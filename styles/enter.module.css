@@ -156,4 +156,10 @@
     width: 90vw !important;
     margin-top: 30px;
   }
+  .line_height {
+    width: 50vw !important;
+  }
+  .person_cards {
+    margin-top: 0;
+  }
 }

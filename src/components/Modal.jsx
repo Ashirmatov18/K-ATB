@@ -23,6 +23,8 @@ export default function ModalWindow(props) {
   // const handleOpen = () => setOpen(true);
   // const handleClose = () => setOpen(false);
 
+  console.log(props.translations.translations.ru.description);
+
   return (
     <div>
       <div className={styles.modal}>

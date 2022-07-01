@@ -85,6 +85,10 @@
   }
   .info_explore {
     margin-top: 20px;
+    width: 80vw;
+  }
+  .expo h1 {
+    padding-top: 50px !important;
   }
 }
 
@@ -128,6 +132,13 @@
     margin: 0 auto;
     margin-top: 70px;
     margin-bottom: 70px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .about_text h1 {
+    font-size: 35px !important;
+    font-weight: bold;
   }
 }
 

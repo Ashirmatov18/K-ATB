@@ -5,7 +5,7 @@ export default function IssykKul() {
   return (
     <div
       style={{
-        marginBottom: "150px !important",
+        marginBottom: "150px",
       }}
     >
       <h1 className={styles.bish_title}>Иссык-куль</h1>

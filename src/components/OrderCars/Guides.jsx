@@ -48,7 +48,8 @@ export default function Guides() {
 
   const getInfo = async () => {
     const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/guides/`);
-    return data.results;
+    console.log(data, "ssssss");
+    return data;
   };
 
   getInfo();
@@ -62,6 +63,10 @@ export default function Guides() {
   useEffect(() => {
     Aos.init({ duration: 1000, once: true });
   }, []);
+
+  // const handlePage = (data)=>{
+  //   let currentPage = dat
+  // }
 
   return (
     <div className={styles.guides}>

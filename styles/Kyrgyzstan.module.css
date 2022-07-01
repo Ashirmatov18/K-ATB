@@ -277,6 +277,21 @@
   }
 }
 
+@media only screen and (max-width: 900px) {
+  .bishkeek {
+    width: 80vw;
+  }
+  .is {
+    width: 80vw;
+  }
+  .ala_a {
+    width: 80vw;
+  }
+  .o {
+    width: 80vw;
+  }
+}
+
 @media only screen and (max-width: 590px) {
   .bishkek {
     height: 400px;

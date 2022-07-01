@@ -123,7 +123,7 @@
 .per_social {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .per_mobile {
@@ -154,7 +154,7 @@
 .desc_info {
   height: 50px !important;
   overflow: hidden;
-  padding-top: 5px;
+  /* padding-top: 5px; */
 }
 
 .line {
@@ -314,20 +314,35 @@
 
 @media only screen and (max-width: 600px) {
   .main_search {
-    margin-top: 450px !important;
+    margin-top: 350px !important;
     left: 0 !important;
   }
 }
 
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: 520px) {
   .main_search {
-    margin-top: 550px !important;
+    margin-top: 450px !important;
   }
 }
 
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 470px) {
+  .person_cards {
+    margin-top: 180px !important;
+  }
+
   .persons {
     width: 90vw !important;
+  }
+}
+
+/* @media only screen and (max-width: 470px) {
+  .main_search {
+    margin-top: 550px !important;
+  }
+} */
+
+@media only screen and (max-width: 390px) {
+  .persons {
     margin-top: 40px;
     margin-left: 0;
   }
@@ -336,5 +351,14 @@
   }
   .line_pers {
     width: 80vw !important;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .main_search {
+    margin-top: 500px !important;
+  }
+  .persons {
+    margin-top: 0;
   }
 }

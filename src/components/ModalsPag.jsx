@@ -24,7 +24,7 @@ export default function ModalsPag(props) {
   const [itemOffset, setItemOffset] = useState(0);
   const itemsPerPage = 9;
 
-  console.log(data, "ss");
+  // console.log(data, "ss");
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
@@ -127,7 +127,7 @@ export default function ModalsPag(props) {
                   </div>
 
                   <LineHeight
-                    style={{ marginTop: "20px", marginBottom: "20px" }}
+                    style={{ marginTop: "10px", marginBottom: "15px" }}
                     className={styles.line_pers}
                   />
                   <div className={styles.per_social}>

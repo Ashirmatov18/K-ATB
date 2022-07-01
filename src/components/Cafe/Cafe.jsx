@@ -24,7 +24,7 @@ export default function Cafe() {
     const { data } = await axios.get(
       `https://admin.tabiyat.kg/api/v1/restaurants/`
     );
-    return data.results;
+    return data;
   };
 
   getCafe();

@@ -321,7 +321,7 @@
     margin-top: 180px;
   }
   .mount {
-    height: 700px;
+    height: 100vh;
   }
   .information {
     margin-top: 210px !important;
@@ -340,14 +340,14 @@
     border-radius: 10px;
     background-size: cover;
   }
+  .about {
+    padding-top: 130px;
+  }
 }
 
 @media only screen and (max-width: 520px) {
   .about_info {
     width: auto;
-  }
-  .about {
-    padding-top: 600px;
   }
   /* .content {
     margin-top: 150px;
@@ -360,7 +360,7 @@
     padding-right: 20px !important;
   }
   .about {
-    padding-top: 280px;
+    padding-top: 0;
   }
   /* .first_img {
     width: 350px !important;

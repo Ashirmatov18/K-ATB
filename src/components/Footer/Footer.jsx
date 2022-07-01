@@ -115,12 +115,17 @@ export default function Footer() {
                 >
                   <li className={styles.post_li}>Аренда машин</li>
                 </Link>
-                <li
-                  className={styles.post_li}
-                  style={{ color: "#BDBDBD", paddingTop: "10px" }}
+                <Link
+                  href="/service"
+                  style={{ textDecoration: "none", color: "white" }}
                 >
-                  Другие
-                </li>
+                  <li
+                    className={styles.post_li}
+                    style={{ color: "#BDBDBD", paddingTop: "10px" }}
+                  >
+                    Другие
+                  </li>
+                </Link>
               </div>
               <Link
                 href="/cafe"

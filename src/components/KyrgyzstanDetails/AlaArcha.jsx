@@ -5,7 +5,7 @@ export default function AlaArcha() {
   return (
     <div
       style={{
-        marginBottom: "150px !important",
+        marginBottom: "150px",
       }}
     >
       <h1 className={styles.bish_title}>Ала-арча</h1>

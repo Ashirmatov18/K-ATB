@@ -41,7 +41,7 @@ export default function Exploration() {
   // ));
 
   return (
-    <div style={{ marginTop: "120px" }}>
+    <div className={styles.exploration_main} style={{ marginTop: "120px" }}>
       <div className={styles.back_styles}>
         <MainLayout>
           <div className={styles.kyrgyzstan}>

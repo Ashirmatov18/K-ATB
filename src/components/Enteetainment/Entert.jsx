@@ -42,6 +42,7 @@ export default function Entert() {
                   </span>
                 </div>
                 <LineHeight
+                  className={styles.line_height}
                   style={{ marginTop: "20px", marginBottom: "20px" }}
                 />
                 <div className={styles.per_social}>
@@ -92,6 +93,7 @@ export default function Entert() {
                   </span>
                 </div>
                 <LineHeight
+                  className={styles.line_height}
                   style={{ marginTop: "20px", marginBottom: "20px" }}
                 />
                 <div className={styles.per_social}>
@@ -144,6 +146,7 @@ export default function Entert() {
                   </span>
                 </div>
                 <LineHeight
+                  className={styles.line_height}
                   style={{ marginTop: "20px", marginBottom: "20px" }}
                 />
                 <div className={styles.per_social}>
@@ -193,6 +196,7 @@ export default function Entert() {
                   </span>
                 </div>
                 <LineHeight
+                  className={styles.line_height}
                   style={{ marginTop: "20px", marginBottom: "20px" }}
                 />
                 <div className={styles.per_social}>

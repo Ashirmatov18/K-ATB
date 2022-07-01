@@ -16,7 +16,7 @@ export default function MainTour() {
       `https://admin.tabiyat.kg/api/v1/travel-companies/`
     );
     console.log(data.results);
-    return data.results;
+    return data;
   };
 
   getTour();
