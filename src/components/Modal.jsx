@@ -78,7 +78,7 @@ export default function ModalWindow(props) {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      <Box sx={style}>
+      <Box sx={style} className={styles.box}>
         <Typography id="modal-modal-title" variant="h3" component="h2">
           {props.title.title} {props.last_name.last_name}
         </Typography>

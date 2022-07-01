@@ -153,6 +153,12 @@
   font-weight: bold;
 }
 
+.box::-webkit-scrollbar {
+  width: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: darkgrey;
+}
+
 .img_by img {
   background-size: cover;
   width: auto;
