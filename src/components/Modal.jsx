@@ -55,7 +55,7 @@ export default function ModalWindow(props) {
             <div className={styles.desc_trans}>
               <p>ИНФОРМАЦИЯ : </p>
               <div className={styles.info_few}>
-                <span>{props.translations.translations.ru.description}</span>
+                <pre>{props.translations.translations.ru.description}</pre>
               </div>
             </div>
             <div className={styles.contact_info}>

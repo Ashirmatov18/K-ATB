@@ -183,14 +183,18 @@
 
 .desc_trans {
   margin-top: 40px !important ;
-  font-size: 17px;
+  font-size: 18px;
   width: 60vw;
   margin: 0 auto;
+  /* white-space: 1px; */
+  /* word-break: normal; */
 }
 
-.desc_trans span {
+.desc_trans pre {
   font-weight: bold;
   color: #323232;
+  /* width: 50px !important; */
+  white-space: pre-wrap;
 }
 
 .title_bt h1 {
