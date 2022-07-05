@@ -1,14 +1,26 @@
 import { Search } from "../OrderCars/OrderCarsSvg";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../../styles/newsPage.module.css";
 import MainLayout from "../ui/MainLayout";
 import { ReadMore } from "../Main/MainIcons";
 import Link from "next/link";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import axios from "axios";
 
 export default function MainNews() {
+  const [state, setState] = useState([]);
+
+  const getInfo = async () => {
+    const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/news/`);
+    console.log(data);
+    return data;
+  };
+
+  getInfo();
+
   useEffect(() => {
+    getInfo().then(setState);
     Aos.init({ duration: 1000, once: true });
   }, []);
 
@@ -34,27 +46,29 @@ export default function MainNews() {
           </div>
         </div>
         <div className={styles.adv}>
-          <div className={styles.info_detail} data-aos="fade-up">
-            <div className={styles.picture_first}></div>
-            <div className={styles.pic_info}>
-              <h1>Новости </h1>
-              <p>
-                Мы оказываем полный спектр <br /> услуг по установке, настройке,{" "}
-                <br />
-                обновлению, обучению и сопровождению <br /> программных
-                продуктов <br />
-                1С Предприятие.
-              </p>
-              <div className={styles.read_more}>
-                <p>Подробнее</p>
-                <div className={styles.arrow}>
-                  <ReadMore />
+          {!!state?.length &&
+            state.map(({ image, translations }) => (
+              <div className={styles.info_detail} data-aos="fade-up">
+                <div
+                  style={{ backgroundImage: `url(${image})` }}
+                  className={styles.picture_first}
+                ></div>
+                <div className={styles.pic_info}>
+                  <h1>Новости </h1>
+                  <p className={styles.info_description}>
+                    {translations.ru.description}
+                  </p>
+                  <div className={styles.read_more}>
+                    <p>Подробнее</p>
+                    <div className={styles.arrow}>
+                      <ReadMore />
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            ))}
 
-          <div className={styles.info_detail} data-aos="fade-down">
+          {/* <div className={styles.info_detail} data-aos="fade-down">
             <div className={styles.picture_sec}></div>
             <div className={styles.pic_info}>
               <h1>Новости </h1>
@@ -114,7 +128,7 @@ export default function MainNews() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </MainLayout>
     </div>

@@ -5,10 +5,21 @@ import { ReadMore } from "../Main/MainIcons";
 import { Link } from "@mui/material";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function News() {
+  const [state, setState] = useState([]);
+
+  const getInfo = async () => {
+    const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/news/`);
+    return data;
+  };
+
+  getInfo();
+
   useEffect(() => {
+    getInfo().then(setState);
     Aos.init({ duration: 1000, once: true });
   }, []);
 
@@ -38,7 +49,7 @@ export default function News() {
             </Link>
           </div>
         </div>
-        <div className={styles.adv} data-aos="fade-down">
+        {/* <div className={styles.adv} data-aos="fade-down">
           <div className={styles.info_detail}>
             <div className={styles.picture_first}></div>
             <div className={styles.pic_info}>
@@ -58,66 +69,31 @@ export default function News() {
               </div>
             </div>
           </div>
-
-          <div className={styles.info_detail}>
-            <div className={styles.picture_sec}></div>
-            <div className={styles.pic_info}>
-              <h1>Новости </h1>
-              <p>
-                Мы оказываем полный спектр <br /> услуг по установке, настройке,{" "}
-                <br />
-                обновлению, обучению и сопровождению <br /> программных
-                продуктов <br />
-                1С Предприятие.
-              </p>
-              <div className={styles.read_more}>
-                <p className={styles.p_read}>Подробнее</p>
-                <div className={styles.arrow}>
-                  <ReadMore />
+        </div> */}
+        <div className={styles.adv}>
+          {!!state?.length &&
+            state.map(({ image, translations }) => (
+              <div className={styles.info_detail} data-aos="fade-up">
+                <div
+                  style={{ backgroundImage: `url(${image})` }}
+                  className={styles.picture_first}
+                ></div>
+                <div className={styles.pic_info}>
+                  <h1>Новости </h1>
+                  <p className={styles.info_description}>
+                    {translations.ru.description}
+                  </p>
+                  <Link style={{ textDecoration: "none" }} href="/news">
+                    <div className={styles.read_more}>
+                      <p>Подробнее</p>
+                      <div className={styles.arrow}>
+                        <ReadMore />
+                      </div>
+                    </div>
+                  </Link>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className={styles.info_detail}>
-            <div className={styles.picture_third}></div>
-            <div className={styles.pic_info}>
-              <h1>Новости </h1>
-              <p>
-                Мы оказываем полный спектр <br /> услуг по установке, настройке,{" "}
-                <br />
-                обновлению, обучению и сопровождению <br /> программных
-                продуктов <br />
-                1С Предприятие.
-              </p>
-              <div className={styles.read_more}>
-                <p className={styles.p_read}>Подробнее</p>
-                <div className={styles.arrow}>
-                  <ReadMore />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.info_detail}>
-            <div className={styles.picture_fourth}></div>
-            <div className={styles.pic_info}>
-              <h1>Новости </h1>
-              <p>
-                Мы оказываем полный спектр <br /> услуг по установке, настройке,{" "}
-                <br />
-                обновлению, обучению и сопровождению <br /> программных
-                продуктов <br />
-                1С Предприятие.
-              </p>
-              <div className={styles.read_more}>
-                <p className={styles.p_read}>Подробнее</p>
-                <div className={styles.arrow}>
-                  <ReadMore />
-                </div>
-              </div>
-            </div>
-          </div>
+            ))}
         </div>
       </MainLayout>
     </div>

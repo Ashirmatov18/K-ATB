@@ -14,8 +14,8 @@ export default function Main() {
 
   const getInfo = async () => {
     const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/`);
-    console.log(data[0].translations.ru);
-    return data[0].translations.ru;
+    console.log(data);
+    return data.floor_one[0].translations.ru;
   };
 
   getInfo();
@@ -30,19 +30,13 @@ export default function Main() {
       <div className={styles.mount}>
         <MainLayout>
           <div className={styles.information}>
-            {/* {!!state?.length && */}
-            {/* state.map(({(description, title)}) => ( */}
-            <div>
-              <h1>
-                ДОБРО <br /> ПОЖАЛОВАТЬ
-                {/* {title} */}
-              </h1>
-              <span>
-                Профессионализм наших сотрудников, высокое <br /> качество
-                оказания услуг помогают компании находить
-              </span>
-            </div>
-            {/* ))} */}
+            {!!state?.length &&
+              state.map(({ title, description }) => (
+                <div className={styles.title_descr}>
+                  <h1>{title}</h1>
+                  <span>{description}</span>
+                </div>
+              ))}
             <div className={styles.button_click}>
               <button>Нажми</button>
             </div>

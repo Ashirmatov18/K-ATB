@@ -101,7 +101,11 @@
   justify-content: space-between;
   padding-top: 70px;
   padding-bottom: 120px;
-  flex-wrap: wrap;
+  overflow-x: auto;
+}
+
+.residents::-webkit-scrollbar {
+  width: 0;
 }
 
 .wrapper::-webkit-scrollbar {
@@ -122,7 +126,6 @@
 }
 
 .first_res {
-  background-image: url("../public/images/1.jpg");
   width: 210px;
   height: 210px;
   background-size: cover;

@@ -127,14 +127,16 @@
 .info_detail {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .picture_first {
-  background-image: url("../public/images/fi.jpg");
   width: 220px;
-  height: 400px;
+  height: 300px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
 }
 
 .picture_sec {
@@ -163,6 +165,13 @@
 
 .pic_info {
   padding-left: 40px;
+  width: 20vw;
+}
+
+.info_description {
+  height: 125px;
+  max-height: 200px;
+  overflow: hidden;
 }
 
 .read_more:hover {

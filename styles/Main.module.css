@@ -10,6 +10,10 @@
   max-width: 100vw;
 }
 
+.title_descr {
+  width: 40vw;
+}
+
 .information {
   color: white;
   margin-top: 190px;

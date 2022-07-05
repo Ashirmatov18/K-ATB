@@ -112,7 +112,6 @@ export default function ModalsPag(props) {
                       { last_name }
                     )
                   }
-                  style={{ backgroundImage: `url(${image})` }}
                   className={styles.first_per}
                 ></div>
                 <div className={styles.person_info}>
