@@ -11,17 +11,26 @@ import axios from "axios";
 
 export default function Exploration() {
   const [state, setState] = useState([]);
+  const [about, setAbout] = useState([]);
 
   const getInfo = async () => {
     const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/`);
     return data.guides;
   };
 
+  const getAbout = async () => {
+    const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/`);
+    console.log(data);
+    return data.kyrgyzstan;
+  };
+
   getInfo();
+  getAbout();
 
   useEffect(() => {
     // getInfo().then((data) => setState([data]));
     getInfo().then(setState);
+    getAbout().then(setAbout);
     Aos.init({ duration: 1000, once: true });
   }, []);
 
@@ -34,13 +43,8 @@ export default function Exploration() {
               <h1>KYRGYZSTAN</h1>
               <span>Подробнее о нас</span>
               <div>
-                <p>
-                  Мы оказываем полный спектр услуг по установке, настройке,{" "}
-                  <br />
-                  обновлению, обучению и сопровождению программных продуктов{" "}
-                  <br />
-                  1С Предприятие.
-                </p>
+                {!!about?.length &&
+                  about.map(({ description }) => <p>{description}</p>)}
               </div>
             </div>
             {/* <div className={styles.click}>

@@ -11,17 +11,24 @@ import axios from "axios";
 
 export default function Main() {
   const [state, setState] = useState([]);
+  const [about, setAbout] = useState([]);
 
   const getInfo = async () => {
     const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/`);
-    console.log(data);
     return data.floor_one[0].translations.ru;
   };
 
+  const getAbout = async () => {
+    const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/`);
+    return data.about_us;
+  };
+
   getInfo();
+  getAbout();
 
   useEffect(() => {
     getInfo().then((data) => setState([data]));
+    getAbout().then(setAbout);
     Aos.init({ duration: 1000, once: true });
   }, []);
 
@@ -56,11 +63,8 @@ export default function Main() {
                 нас
               </h1>
               <div className={styles.about_info}>
-                <span>
-                  Мы оказываем полный спектр услуг по установке, настройке,
-                  обновлению, обучению и сопровождению программных продуктов
-                  1С:Предприятие.
-                </span>
+                {!!about?.length &&
+                  about.map(({ description }) => <span>{description}</span>)}
               </div>
               <Link href="/about" style={{ textDecoration: "none" }}>
                 <div className={styles.read_more}>
