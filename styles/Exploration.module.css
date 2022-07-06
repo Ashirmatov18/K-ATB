@@ -130,6 +130,7 @@
   height: 210px;
   background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 110px;
 }
 
 .second_res {

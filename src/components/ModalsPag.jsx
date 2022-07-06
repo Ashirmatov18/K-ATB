@@ -113,6 +113,7 @@ export default function ModalsPag(props) {
                     )
                   }
                   className={styles.first_per}
+                  style={{ backgroundImage: `url(${image})` }}
                 ></div>
                 <div className={styles.person_info}>
                   <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>

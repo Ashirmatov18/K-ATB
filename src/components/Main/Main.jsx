@@ -44,9 +44,11 @@ export default function Main() {
                   <span>{description}</span>
                 </div>
               ))}
-            <div className={styles.button_click}>
-              <button>Нажми</button>
-            </div>
+            <Link style={{ textDecoration: "none" }} href="/kyrgyzstan">
+              <div className={styles.button_click}>
+                <button>Нажми</button>
+              </div>
+            </Link>
           </div>
           <div className={styles.sli} data-aos="fade-down">
             <SimpleSlider />
@@ -58,13 +60,14 @@ export default function Main() {
           <div className={styles.about_title} data-aos="fade-down">
             <h1 className={styles.about_us}>О НАС</h1>
             <div>
-              <h1 className={styles.explore}>
-                Информация о <br />
-                нас
-              </h1>
               <div className={styles.about_info}>
                 {!!about?.length &&
-                  about.map(({ description }) => <span>{description}</span>)}
+                  about.map(({ description, title }) => (
+                    <>
+                      <h1 className={styles.explore}>{title}</h1>
+                      <span>{description}</span>
+                    </>
+                  ))}
               </div>
               <Link href="/about" style={{ textDecoration: "none" }}>
                 <div className={styles.read_more}>

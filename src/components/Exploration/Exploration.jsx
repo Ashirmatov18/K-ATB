@@ -12,25 +12,43 @@ import axios from "axios";
 export default function Exploration() {
   const [state, setState] = useState([]);
   const [about, setAbout] = useState([]);
+  const [travel, setTravel] = useState([]);
+  const [guides, setGuides] = useState([]);
 
   const getInfo = async () => {
     const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/`);
     return data.guides;
   };
 
+  const getGuides = async () => {
+    const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/`);
+    return data.our_guides;
+  };
+
   const getAbout = async () => {
     const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/`);
     console.log(data);
+
     return data.kyrgyzstan;
+  };
+
+  const getTravel = async () => {
+    const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/`);
+
+    return data.our_companies;
   };
 
   getInfo();
   getAbout();
+  getTravel();
+  getGuides();
 
   useEffect(() => {
     // getInfo().then((data) => setState([data]));
     getInfo().then(setState);
     getAbout().then(setAbout);
+    getTravel().then(setTravel);
+    getGuides().then(setGuides);
     Aos.init({ duration: 1000, once: true });
   }, []);
 
@@ -41,10 +59,13 @@ export default function Exploration() {
           <div className={styles.kyrgyzstan}>
             <div>
               <h1>KYRGYZSTAN</h1>
-              <span>Подробнее о нас</span>
               <div>
                 {!!about?.length &&
-                  about.map(({ description }) => <p>{description}</p>)}
+                  about.map(({ description, title }) => (
+                    <>
+                      <span>{title}</span> <p>{description}</p>
+                    </>
+                  ))}
               </div>
             </div>
             {/* <div className={styles.click}>
@@ -83,14 +104,13 @@ export default function Exploration() {
           {/* data-aos="fade-right" */}
           <div>
             <h1>ГИДЫ</h1>
-            <span>Наши Гиды</span>
             <div>
-              <p>
-                Мы оказываем полный спектр услуг по установке, настройке, <br />
-                обновлению, обучению и сопровождению программных продуктов{" "}
-                <br />
-                1С Предприятие.
-              </p>
+              {!!guides?.length &&
+                guides.map(({ description, title }) => (
+                  <>
+                    <span>{title}</span> <p>{description}</p>
+                  </>
+                ))}
             </div>
           </div>
           <Link href="/guides" style={{ textDecoration: "none" }}>
@@ -125,14 +145,13 @@ export default function Exploration() {
         >
           <div>
             <h1>ТУРФИРМЫ</h1>
-            <span>Подробнее о Турфирмах</span>
             <div>
-              <p>
-                Мы оказываем полный спектр услуг по установке, настройке, <br />
-                обновлению, обучению и сопровождению программных продуктов{" "}
-                <br />
-                1С Предприятие.
-              </p>
+              {!!travel?.length &&
+                travel.map(({ description, title }) => (
+                  <>
+                    <span>{title}</span> <p>{description}</p>
+                  </>
+                ))}
             </div>
           </div>
           <Link href="/tours" style={{ textDecoration: "none" }}>
