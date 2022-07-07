@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../../styles/about.module.css";
 import MainLayout from "../ui/MainLayout";
 import News from "../News/News";
@@ -6,10 +6,22 @@ import Footer from "../Footer/Footer";
 import ExpoSlider from "../Exploration/ExpoSlider";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import axios from "axios";
 
 export default function About() {
+  const [state, setState] = useState([]);
+
+  const getInfo = async () => {
+    const { data } = await axios.get(
+      `https://admin.tabiyat.kg/api/v1/about-us/`
+    );
+    console.log(data.floor_two);
+    return data.floor_two;
+  };
+
   useEffect(() => {
     Aos.init({ duration: 1000, once: true });
+    getInfo().then((data) => setState([data]));
   }, []);
 
   return (
@@ -62,24 +74,35 @@ export default function About() {
             название города Пишпек
           </span>
 
-          <div className={styles.about_stat}>
-            <div className={styles.stat_info}>
-              <h1>520</h1>
-              <span>Lorem ipsum </span>
-            </div>
-            <div className={styles.stat_info}>
-              <h1>720</h1>
-              <span>Lorem ipsum </span>
-            </div>
-            <div className={styles.stat_info}>
-              <h1>25</h1>
-              <span>Lorem ipsum </span>
-            </div>
-            <div className={styles.stat_info}>
-              <h1>100</h1>
-              <span>Lorem ipsum </span>
-            </div>
-          </div>
+          {!!state?.length &&
+            state.map(
+              ({
+                number_four,
+                number_three,
+                number_two,
+                number_one,
+                translations,
+              }) => (
+                <div className={styles.about_stat}>
+                  <div className={styles.stat_info}>
+                    <h1>{number_one}</h1>
+                    <span>{translations.ru.title} </span>
+                  </div>
+                  <div className={styles.stat_info}>
+                    <h1>{number_two}</h1>
+                    <span>{translations.ru.title} </span>
+                  </div>
+                  <div className={styles.stat_info}>
+                    <h1>{number_three}</h1>
+                    <span>{translations.ru.title} </span>
+                  </div>
+                  <div className={styles.stat_info}>
+                    <h1>{number_four}</h1>
+                    <span>{translations.ru.title} </span>
+                  </div>
+                </div>
+              )
+            )}
         </div>
       </MainLayout>
 

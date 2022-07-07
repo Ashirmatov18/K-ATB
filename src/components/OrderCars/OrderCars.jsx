@@ -21,7 +21,7 @@ export default function OrderCars() {
       `https://admin.tabiyat.kg/api/v1/car-rentals/`
     );
     console.log(data);
-    return data.car - rentals;
+    return data.carrentals;
   };
 
   const getDescription = async () => {
