@@ -48,15 +48,22 @@ export default function Guides() {
 
   const getInfo = async () => {
     const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/guides/`);
-    console.log(data, "ssssss");
-    return data;
+    return data.guides;
+  };
+
+  const getDescription = async () => {
+    const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/guides/`);
+    console.log(data.description[0].translations.ru);
+    return data.description[0].translations.ru;
   };
 
   getInfo();
   const [state, setState] = useState([]);
+  const [description, setDescription] = useState([]);
 
   useEffect(() => {
     getInfo().then(setState);
+    getDescription().then((data) => setDescription([data]));
     setModal(!modal);
   }, []);
 
@@ -79,28 +86,29 @@ export default function Guides() {
       <MainLayout>
         <div className={styles.kyrgyzstan}>
           <div>
-            <div className={styles.search_explore}>
-              <span>Никогда не садитесь</span>
-              <div className={styles.main_search}>
-                <input
-                  type="text"
-                  className={styles.search}
-                  placeholder="Поиск"
-                  onChange={(e) => {
-                    setSearchItem(e.target.value);
-                  }}
-                />
-                <Search className={styles.search_icon} />
-              </div>
-            </div>
-            <div data-aos="fade-down">
-              <p style={{ paddingTop: "20px" }}>
-                Никогда не садитесь за руль в Кыргызстане, если не уверены в
-                себе. Потомки кочевников лихачат круче, чем это делают в Грузии
-                а вы же наверняка слышали про грузинских водителей. Есть
-                легенда, согласно которой
-              </p>
-            </div>
+            {!!description?.length &&
+              description.map(({ description, title }) => (
+                <>
+                  <div className={styles.search_explore}>
+                    <span>{title}</span>
+                    <div className={styles.main_search}>
+                      <input
+                        type="text"
+                        className={styles.search}
+                        placeholder="Поиск"
+                        onChange={(e) => {
+                          setSearchItem(e.target.value);
+                        }}
+                      />
+                      <Search className={styles.search_icon} />
+                    </div>
+                  </div>
+
+                  <div data-aos="fade-down">
+                    <p style={{ paddingTop: "20px" }}>{description}</p>
+                  </div>
+                </>
+              ))}
           </div>
         </div>
         <div

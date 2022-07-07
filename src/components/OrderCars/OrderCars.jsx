@@ -12,19 +12,30 @@ import "aos/dist/aos.css";
 
 export default function OrderCars() {
   const [modal, setModal] = useState(false);
+  const [description, setDescription] = useState([]);
+
   const [searchItem, setSearchItem] = useState("");
 
   const getInfo = async () => {
     const { data } = await axios.get(
       `https://admin.tabiyat.kg/api/v1/car-rentals/`
     );
-    return data;
+    console.log(data);
+    return data.car - rentals;
+  };
+
+  const getDescription = async () => {
+    const { data } = await axios.get(
+      `https://admin.tabiyat.kg/api/v1/car-rentals/`
+    );
+    return data.description[0].translations.ru;
   };
 
   const [state, setState] = useState([]);
 
   useEffect(() => {
     getInfo().then(setState);
+    getDescription().then((data) => setDescription([data]));
   }, []);
 
   useEffect(() => {
@@ -57,28 +68,29 @@ export default function OrderCars() {
       <MainLayout>
         <div className={styles.kyrgyzstan}>
           <div>
-            <div className={styles.search_explore}>
-              <span>Аренда наших машин</span>
-              <div className={styles.main_search}>
-                <input
-                  type="text"
-                  className={styles.search}
-                  placeholder="Поиск"
-                  onChange={(e) => {
-                    setSearchItem(e.target.value);
-                  }}
-                />
-                <Search className={styles.search_icon} />
-              </div>
-            </div>
-            <div data-aos="fade-up">
-              <p style={{ paddingTop: "20px" }}>
-                Никогда не садитесь за руль в Кыргызстане, если не уверены в
-                себе. Потомки кочевников лихачат круче, чем это делают в Грузии
-                а вы же наверняка слышали про грузинских водителей. Есть
-                легенда, согласно которой
-              </p>
-            </div>
+            {!!description?.length &&
+              description.map(({ description, title }) => (
+                <>
+                  <div className={styles.search_explore}>
+                    <span>{title}</span>
+                    <div className={styles.main_search}>
+                      <input
+                        type="text"
+                        className={styles.search}
+                        placeholder="Поиск"
+                        onChange={(e) => {
+                          setSearchItem(e.target.value);
+                        }}
+                      />
+                      <Search className={styles.search_icon} />
+                    </div>
+                  </div>
+
+                  <div data-aos="fade-down">
+                    <p style={{ paddingTop: "20px" }}>{description}</p>
+                  </div>
+                </>
+              ))}
           </div>
         </div>
         <div className={styles.person_cards}>

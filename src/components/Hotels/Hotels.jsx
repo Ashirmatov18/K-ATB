@@ -10,11 +10,17 @@ import "aos/dist/aos.css";
 export default function Hotels() {
   // const [modal, setModal] = useState(false);
   const [searchItem, setSearchItem] = useState("");
+  const [description, setDescription] = useState([]);
 
   const getHotel = async () => {
     const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/houses/`);
     console.log(data);
-    return data;
+    return data.houses;
+  };
+
+  const getDescription = async () => {
+    const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/houses/`);
+    return data.description[0].translations.ru;
   };
 
   const [hotel, setHotel] = useState([]);
@@ -25,6 +31,7 @@ export default function Hotels() {
       setHotel(data);
       setFilteredHotels(data);
     });
+    getDescription().then((data) => setDescription([data]));
   }, []);
 
   useEffect(() => {
@@ -38,20 +45,6 @@ export default function Hotels() {
     setFilteredHotels(result);
   };
 
-  // const imgs = [
-  //   { id: 0, value: "https://wallpaperaccess.com/full/2637581.jpg" },
-  //   { id: 1, value: "https://source.unsplash.com/user/c_v_r/1900x800" },
-  //   { id: 2, value: "https://source.unsplash.com/user/c_v_r/100x100" },
-  // ];
-
-  // const [wordData, setWordData] = useState(imgs[0]);
-  // const [slideIndex, setSlideIndex] = useState(1);
-
-  // const handleClick = (index) => {
-  //   const wordSlider = imgs[index];
-  //   setWordData(wordSlider);
-  // };
-
   return (
     <div className={styles.guides}>
       <div className={styles.main_guides}>
@@ -61,17 +54,17 @@ export default function Hotels() {
       </div>
       <MainLayout>
         <div style={{ paddingTop: "150px" }} className={styles.kyrgyzstan}>
-          <div data-aos="fade-up">
-            <span>Лучшие Отели</span>
-            <div>
-              <p>
-                Никогда не садитесь за руль в Кыргызстане, если не уверены в
-                себе. Потомки кочевников лихачат круче, чем это делают в Грузии
-                а вы же наверняка слышали про грузинских водителей. Есть
-                легенда, согласно которой
-              </p>
-            </div>
-          </div>
+          {!!description?.length &&
+            description.map(({ description, title }) => (
+              <>
+                <div data-aos="fade-up">
+                  <span>{title}</span>
+                  <div>
+                    <p>{description}</p>
+                  </div>
+                </div>
+              </>
+            ))}
         </div>
         <div data-aos="fade-down" className={styles.but_group}>
           <button

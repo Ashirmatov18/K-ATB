@@ -17,21 +17,32 @@ import axios from "axios";
 import Paginanation from "../Paginanation";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import ModalsPag from "../ModalsPag";
 
 export default function Cafe() {
-  // const [modal, setModal] = useState(false);
+  const [description, setDescription] = useState([]);
+
   const getCafe = async () => {
     const { data } = await axios.get(
       `https://admin.tabiyat.kg/api/v1/restaurants/`
     );
-    return data;
+    console.log(data);
+    return data.restaurants;
+  };
+
+  const getDescription = async () => {
+    const { data } = await axios.get(
+      `https://admin.tabiyat.kg/api/v1/restaurants/`
+    );
+    return data.description[0].translations.ru;
   };
 
   getCafe();
   const [restaraunt, setRestaraunt] = useState([]);
-  useEffect(() => {
-    getCafe().then(setRestaraunt);
-  }, []);
+
+  // useEffect(() => {
+  //   getCafe().then(setRestaraunt);
+  // }, []);
 
   const [hotel, setHotel] = useState([]);
   const [filteredHotels, setFilteredHotels] = useState(hotel);
@@ -41,6 +52,7 @@ export default function Cafe() {
       setHotel(data);
       setFilteredHotels(data);
     });
+    getDescription().then((data) => setDescription([data]));
   }, []);
 
   useEffect(() => {
@@ -56,29 +68,6 @@ export default function Cafe() {
 
   const [searchItem, setSearchItem] = useState("");
 
-  // const imgs = [
-  //   { id: 0, value: "https://wallpaperaccess.com/full/2637581.jpg" },
-  //   { id: 1, value: "https://source.unsplash.com/user/c_v_r/1900x800" },
-  //   { id: 2, value: "https://source.unsplash.com/user/c_v_r/100x100" },
-  // ];
-
-  // const [wordData, setWordData] = useState(imgs[0]);
-  // const [slideIndex, setSlideIndex] = useState(1);
-
-  // const handleClick = (index) => {
-  //   const wordSlider = imgs[index];
-  //   setWordData(wordSlider);
-  // };
-
-  // const next = (index) => {
-  //   const currentImageIndex = imgs[0];
-  //   if (currentImageIndex !== imgs.length) {
-  //     setWordData(currentImageIndex + 1);
-  //   } else if (wordData === imgs.length) {
-  //     setWordData(0);
-  //   }
-  // };
-
   return (
     <div className={styles.guides}>
       <div className={styles.main_guides}>
@@ -92,17 +81,17 @@ export default function Cafe() {
       </div>
       <MainLayout>
         <div style={{ paddingTop: "150px" }} className={styles.kyrgyzstan}>
-          <div data-aos="fade-up">
-            <span>Лучшие кафе и рестораны</span>
-            <div>
-              <p>
-                Никогда не садитесь за руль в Кыргызстане, если не уверены в
-                себе. Потомки кочевников лихачат круче, чем это делают в Грузии
-                а вы же наверняка слышали про грузинских водителей. Есть
-                легенда, согласно которой
-              </p>
-            </div>
-          </div>
+          {!!description?.length &&
+            description.map(({ description, title }) => (
+              <>
+                <div data-aos="fade-up">
+                  <span>{title}</span>
+                  <div>
+                    <p>{description}</p>
+                  </div>
+                </div>
+              </>
+            ))}
         </div>
         <div className={styles.but_group} data-aos="fade-up">
           <button
@@ -138,7 +127,7 @@ export default function Cafe() {
         </div>
         <div data-aos="fade-down" className={styles.person_cards}>
           {" "}
-          <Paginanation data={filteredHotels} searchItem={searchItem} />
+          <ModalsPag data={filteredHotels} searchItem={searchItem} />
         </div>
       </MainLayout>
       {/* {modal && (

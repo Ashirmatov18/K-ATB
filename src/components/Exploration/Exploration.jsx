@@ -27,7 +27,7 @@ export default function Exploration() {
 
   const getAbout = async () => {
     const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/`);
-    console.log(data);
+    console.log(data.our_guides);
 
     return data.kyrgyzstan;
   };

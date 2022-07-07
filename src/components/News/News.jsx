@@ -10,16 +10,23 @@ import axios from "axios";
 
 export default function News() {
   const [state, setState] = useState([]);
+  const [description, setDescription] = useState([]);
 
   const getInfo = async () => {
     const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/news/`);
-    return data;
+    return data.news;
   };
 
+  const getDescription = async () => {
+    const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/news/`);
+    return data.description[0].translations.ru;
+  };
   getInfo();
 
   useEffect(() => {
     getInfo().then(setState);
+    getDescription().then((data) => setDescription([data]));
+
     Aos.init({ duration: 1000, once: true });
   }, []);
 
@@ -32,16 +39,16 @@ export default function News() {
           data-aos="fade-down"
         >
           <div>
-            <h1>НОВОСТИ</h1>
-            <span>Наши новости</span>
-            <div>
-              <p>
-                Мы оказываем полный спектр услуг по установке, настройке, <br />
-                обновлению, обучению и сопровождению программных продуктов{" "}
-                <br />
-                1С Предприятие.
-              </p>
-            </div>
+            <h1>НОВОСТИ</h1>{" "}
+            {!!description?.length &&
+              description.map(({ description, title }) => (
+                <>
+                  <span>{title}</span>
+                  <div>
+                    <p>{description}</p>
+                  </div>
+                </>
+              ))}
             <Link href="news" style={{ textDecoration: "none" }}>
               <div className={styles.but_article}>
                 <button>Нажми меня</button>

@@ -10,17 +10,23 @@ import axios from "axios";
 
 export default function MainNews({ news }) {
   const [state, setState] = useState([]);
+  const [description, setDescription] = useState([]);
 
   const getInfo = async () => {
     const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/news/`);
     console.log(data);
-    return data;
+    return data.news;
   };
-
+  const getDescription = async () => {
+    const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/news/`);
+    return data.description[0].translations.ru;
+  };
   getInfo();
 
   useEffect(() => {
     getInfo().then(setState);
+    getDescription().then((data) => setDescription([data]));
+
     Aos.init({ duration: 1000, once: true });
   }, []);
 
@@ -33,17 +39,17 @@ export default function MainNews({ news }) {
       </div>
       <MainLayout>
         <div style={{ paddingTop: "150px" }} className={styles.kyrgyzstan}>
-          <div data-aos="fade-up">
-            <span>Последние новости</span>
-            <div>
-              <p>
-                Никогда не садитесь за руль в Кыргызстане, если не уверены в
-                себе. Потомки кочевников лихачат круче, чем это делают в Грузии
-                а вы же наверняка слышали про грузинских водителей. Есть
-                легенда, согласно которой
-              </p>
-            </div>
-          </div>
+          {!!description?.length &&
+            description.map(({ description, title }) => (
+              <>
+                <div data-aos="fade-up">
+                  <span>{title}</span>
+                  <div>
+                    <p>{description}</p>
+                  </div>
+                </div>
+              </>
+            ))}
         </div>
         <div className={styles.adv}>
           {!!state?.length &&
