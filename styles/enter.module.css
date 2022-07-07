@@ -123,8 +123,7 @@
     justify-content: center;
   }
 }
-
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
   .persons {
     width: 90vw !important;
     margin-top: 40px;

@@ -28,13 +28,17 @@ export default function KyrgyzstanMain() {
               Кыргызская Республика
             </h1>
             <span
+              className={styles.republic}
               data-aos="fade-down"
               style={{ color: "#2F2F2F", fontSize: "32px", fontWeight: "500" }}
             >
               Кыргызская Республика расположена в северо-восточной части
               Центральной Азии, в самом «сердце» континента Евразии.
             </span>
-            <span style={{ color: "#2F2F2F", fontSize: "24px" }}>
+            <span
+              className={styles.expo_name}
+              style={{ color: "#2F2F2F", fontSize: "24px" }}
+            >
               <br /> <br /> <br /> 22 разнообразных экосистем; 160
               разновидностей горных и равнинных ландшафтов. 94% территории
               занята горами, среди известных горных вершин, такие как пик Победы
@@ -54,6 +58,7 @@ export default function KyrgyzstanMain() {
             Виды туризма
           </h1>
           <span
+            className={styles.expo_name}
             style={{ color: "#2F2F2F", fontSize: "24px" }}
             data-aos="fade-down"
           >

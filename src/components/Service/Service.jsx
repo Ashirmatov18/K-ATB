@@ -18,13 +18,23 @@ export default function Service() {
     const { data } = await axios.get(
       `https://admin.tabiyat.kg/api/v1/car-rentals/`
     );
-    return data;
+    return data.carrentals;
+  };
+
+  const [description, setDescription] = useState([]);
+
+  const getDescription = async () => {
+    const { data } = await axios.get(
+      `https://admin.tabiyat.kg/api/v1/car-rentals/`
+    );
+    return data.description[0].translations.ru;
   };
 
   const [state, setState] = useState([]);
 
   useEffect(() => {
     getInfo().then(setState);
+    getDescription().then((data) => setDescription([data]));
   }, []);
 
   useEffect(() => {
@@ -57,27 +67,29 @@ export default function Service() {
       <MainLayout>
         <div className={styles.kyrgyzstan}>
           <div>
-            <div className={styles.search_explore}>
-              <span>Наши Сервисы</span>
-              <div className={styles.main_search}>
-                <input
-                  type="text"
-                  className={styles.search}
-                  placeholder="Поиск"
-                  onChange={(e) => {
-                    setSearchItem(e.target.value);
-                  }}
-                />
-                <Search className={styles.search_icon} />
-              </div>
-            </div>
-            <div data-aos="fade-up">
-              <p style={{ paddingTop: "20px" }}>
-                Мы оказываем полный спектр услуг по установке, настройке,
-                обновлению, обучению <br /> и сопровождению программных
-                продуктов 1С:Предприятие.
-              </p>
-            </div>
+            {!!description?.length &&
+              description.map(({ description, title }) => (
+                <>
+                  <div className={styles.search_explore}>
+                    <span>{title}</span>
+                    <div className={styles.main_search}>
+                      <input
+                        type="text"
+                        className={styles.search}
+                        placeholder="Поиск"
+                        onChange={(e) => {
+                          setSearchItem(e.target.value);
+                        }}
+                      />
+                      <Search className={styles.search_icon} />
+                    </div>
+                  </div>
+
+                  <div data-aos="fade-down">
+                    <p style={{ paddingTop: "20px" }}>{description}</p>
+                  </div>
+                </>
+              ))}
           </div>
         </div>
         <div className={styles.person_cards}>

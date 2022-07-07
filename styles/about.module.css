@@ -135,6 +135,15 @@
   }
 }
 
+@media only screen and (max-width: 480px) {
+  .republic {
+    font-size: 22px !important;
+  }
+  .info_explore {
+    width: 90vw;
+  }
+}
+
 @media only screen and (max-width: 430px) {
   .about_text h1 {
     font-size: 35px !important;
@@ -156,5 +165,8 @@
 
   .stat_info span {
     font-size: 16px;
+  }
+  .expo_name {
+    font-size: 20px !important;
   }
 }

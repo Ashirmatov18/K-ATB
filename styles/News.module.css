@@ -243,6 +243,12 @@
   transition: transform 0.85s;
 }
 
+@media only screen and (max-width: 780px) {
+  .pic_info {
+    width: 50vw;
+  }
+}
+
 @media only screen and (max-width: 630px) {
   .info_detail {
     flex-wrap: wrap;
@@ -276,14 +282,11 @@
   }
   .but_article {
     position: absolute;
-    margin-top: 2000px;
+    margin-top: 1700px;
   }
   .but_article button {
     width: 90vw;
     height: 60px;
-  }
-  .main_news {
-    /* padding-bottom: 200px; */
   }
   .adv {
     justify-content: center;
@@ -292,7 +295,7 @@
     margin-left: 30px;
   } */
   .adv {
-    margin-bottom: 100px;
+    margin-bottom: 200px;
   }
 }
 @media only screen and (max-width: 470px) {
@@ -313,11 +316,5 @@
 @media only screen and (max-width: 420px) {
   .kyrgyzstan button {
     margin-left: 0;
-  }
-}
-
-@media only screen and (max-width: 360px) {
-  .but_article {
-    margin-top: 2100px;
   }
 }

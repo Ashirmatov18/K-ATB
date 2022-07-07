@@ -170,19 +170,25 @@ export default function Footer() {
                 width: "15vw",
               }}
             >
-              <Link href="https://www.facebook.com/Tabiyatkg-105609372166838/">
+              <Link
+                target="_blank"
+                href="https://www.facebook.com/Tabiyatkg-105609372166838/"
+              >
                 <div className={styles.f}>
                   <Facebook />
                 </div>
               </Link>
 
-              <Link href="https://www.facebook.com/Tabiyatkg-105609372166838/">
+              <Link
+                target="_blank"
+                href="https://www.facebook.com/Tabiyatkg-105609372166838/"
+              >
                 <div className={styles.i}>
                   <Insta />
                 </div>
               </Link>
 
-              <Link href="https://vt.tiktok.com/ZSd3GcwJt/">
+              <Link target="_blank" href="https://vt.tiktok.com/ZSd3GcwJt/">
                 <div className={styles.w}>
                   <Whats />
                 </div>

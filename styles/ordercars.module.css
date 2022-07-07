@@ -332,14 +332,22 @@
 
   .persons {
     width: 90vw !important;
+    margin-left: 0;
+  }
+  .main_search {
+    margin-top: 300px !important;
+  }
+
+  .kyrgyzstan span {
+    font-size: 40px;
   }
 }
 
-/* @media only screen and (max-width: 470px) {
+@media only screen and (max-width: 420px) {
   .main_search {
-    margin-top: 550px !important;
+    margin-top: 350px !important;
   }
-} */
+}
 
 @media only screen and (max-width: 390px) {
   .persons {
@@ -352,13 +360,19 @@
   .line_pers {
     width: 80vw !important;
   }
+  .main_search {
+    margin-top: 450px !important;
+  }
 }
 
 @media only screen and (max-width: 370px) {
-  .main_search {
-    margin-top: 500px !important;
-  }
   .persons {
     margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .main_search {
+    margin-top: 450px !important;
   }
 }

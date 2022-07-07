@@ -40,6 +40,7 @@ export default function About() {
               Настоящая Киргизия
             </h1>
             <span
+              className={styles.republic}
               style={{ color: "#2F2F2F", fontSize: "32px", fontWeight: "500" }}
             >
               Швейцарская организация культурного развития Helvetas спонсировала
@@ -68,7 +69,10 @@ export default function About() {
           >
             Бишкек
           </h1>
-          <span style={{ color: "#2F2F2F", fontSize: "24px" }}>
+          <span
+            className={styles.expo_name}
+            style={{ color: "#2F2F2F", fontSize: "24px" }}
+          >
             это как будто ты оказался в частном секторе в районе Цнянского
             водохранилища, но с видом на снежные пики Тянь-Шаня.Первоначальное
             название города Пишпек

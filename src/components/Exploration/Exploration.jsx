@@ -14,6 +14,7 @@ export default function Exploration() {
   const [about, setAbout] = useState([]);
   const [travel, setTravel] = useState([]);
   const [guides, setGuides] = useState([]);
+  const [logo, setLogo] = useState([]);
 
   const getInfo = async () => {
     const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/`);
@@ -27,7 +28,7 @@ export default function Exploration() {
 
   const getAbout = async () => {
     const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/`);
-    console.log(data.our_guides);
+    console.log(data);
 
     return data.kyrgyzstan;
   };
@@ -38,10 +39,17 @@ export default function Exploration() {
     return data.our_companies;
   };
 
+  const getLogo = async () => {
+    const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/`);
+
+    return data.travelCompanies;
+  };
+
   getInfo();
   getAbout();
   getTravel();
   getGuides();
+  getLogo();
 
   useEffect(() => {
     // getInfo().then((data) => setState([data]));
@@ -49,6 +57,7 @@ export default function Exploration() {
     getAbout().then(setAbout);
     getTravel().then(setTravel);
     getGuides().then(setGuides);
+    getLogo().then(setLogo);
     Aos.init({ duration: 1000, once: true });
   }, []);
 
@@ -164,7 +173,19 @@ export default function Exploration() {
           </Link>
           {/* data-aos="fade-left" */}
           <div className={styles.wrapper}>
-            <div className={styles.logo_main}>
+            {!!logo?.length &&
+              logo.map(({ title, image }) => (
+                <div style={{ marginRight: "15px" }}>
+                  <div
+                    style={{ backgroundImage: `url(${image})` }}
+                    className={styles.first_res}
+                  ></div>
+                  <div className={styles.res_name}>
+                    <p>{title}</p>
+                  </div>
+                </div>
+              ))}
+            {/* <div className={styles.logo_main}>
               <div className={styles.first_logo}>
                 {" "}
                 <p className={styles.logo}>LOGO</p>
@@ -172,52 +193,7 @@ export default function Exploration() {
               <div className={styles.res_name}>
                 <p>Travel Company</p>
               </div>
-            </div>
-            <div className={styles.logo_main}>
-              <div className={styles.first_logo}>
-                {" "}
-                <p className={styles.logo}>LOGO</p>
-              </div>
-              <div className={styles.res_name}>
-                <p>Travel Company</p>
-              </div>
-            </div>
-
-            <div className={styles.logo_main}>
-              <div className={styles.first_logo}>
-                {" "}
-                <p className={styles.logo}>LOGO</p>
-              </div>
-              <div className={styles.res_name}>
-                <p>Travel Company</p>
-              </div>
-            </div>
-            <div className={styles.logo_main}>
-              <div className={styles.first_logo}>
-                <p className={styles.logo}>LOGO</p>
-              </div>
-              <div className={styles.res_name}>
-                <p>Travel Company</p>
-              </div>
-            </div>
-            <div className={styles.logo_main}>
-              <div className={styles.first_logo}>
-                {" "}
-                <p className={styles.logo}>LOGO</p>
-              </div>
-              <div className={styles.res_name}>
-                <p>Travel Company</p>
-              </div>
-            </div>
-            <div className={styles.logo_main}>
-              <div className={styles.first_logo}>
-                {" "}
-                <p className={styles.logo}>LOGO</p>
-              </div>
-              <div className={styles.res_name}>
-                <p>Travel Company</p>
-              </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </MainLayout>

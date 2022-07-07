@@ -65,15 +65,16 @@
 }
 
 .bishkeek {
-  width: 35vw;
+  width: 33vw;
   background-image: url("../public/images/bish.jpg");
   height: 500px;
   background-size: cover;
   border-radius: 10px;
+  margin-right: 20px;
 }
 
 .ala_a {
-  width: 35vw;
+  width: 33vw;
   background-image: url("../public/images/ala.jpg");
   height: 500px;
   background-size: cover;
@@ -81,16 +82,17 @@
 }
 
 .o {
-  width: 35vw;
+  width: 33vw;
   background-image: url("../public/images/osh.jpg");
   height: 500px;
   border-radius: 10px;
   margin-top: 15px;
   background-size: cover;
+  margin-right: 20px;
 }
 
 .is {
-  width: 35vw;
+  width: 33vw;
   background-image: url("../public/images/issyk.jpg");
   height: 500px;
   border-radius: 10px;
@@ -277,6 +279,12 @@
   }
 }
 
+@media only screen and (max-width: 915px) {
+  .info_explore {
+    width: 90vw;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   .bishkeek {
     width: 80vw;
@@ -332,5 +340,17 @@
   .issyk_kul {
     height: 170px !important;
     width: 90vw;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .republic {
+    font-size: 25px !important;
+  }
+  .info_img span br {
+    display: none;
+  }
+  .expo_name {
+    font-size: 19px !important;
   }
 }
