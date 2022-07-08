@@ -237,6 +237,17 @@
   width: 20vw;
 }
 
+.pic_info h1 {
+  max-height: 50px;
+  /* overflow: hidden; */
+  cursor: pointer;
+  overflow-x: auto;
+}
+
+.pic_info h1::-webkit-scrollbar {
+  width: 0;
+}
+
 .info_description {
   height: 200px;
   max-height: 200px;

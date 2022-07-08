@@ -17,7 +17,7 @@ export default function MainTour() {
     const { data } = await axios.get(
       `https://admin.tabiyat.kg/api/v1/travel-companies/`
     );
-    console.log(data.results);
+    console.log(data);
     return data;
   };
 
