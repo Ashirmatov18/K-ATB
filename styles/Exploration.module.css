@@ -98,7 +98,7 @@
 
 .residents {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   padding-top: 70px;
   padding-bottom: 120px;
   overflow-x: auto;
@@ -116,7 +116,7 @@
   display: flex;
   padding-top: 70px;
   padding-bottom: 120px;
-  justify-content: center;
+  /* justify-content: center; */
   /* flex-wrap: wrap; */
   overflow-x: auto;
 }
@@ -131,6 +131,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 110px;
+  background-position: center center;
 }
 
 .second_res {

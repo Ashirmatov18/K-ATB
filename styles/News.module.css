@@ -168,6 +168,17 @@
   width: 20vw;
 }
 
+.pic_info h1 {
+  max-height: 50px;
+  /* overflow: hidden; */
+  cursor: pointer;
+  overflow-x: auto;
+}
+
+.pic_info h1::-webkit-scrollbar {
+  width: 0;
+}
+
 .info_description {
   height: 125px;
   max-height: 200px;
@@ -243,7 +254,7 @@
   transition: transform 0.85s;
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 850px) {
   .pic_info {
     width: 50vw;
   }
@@ -296,6 +307,12 @@
   } */
   .adv {
     margin-bottom: 200px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .pic_info {
+    width: 80vw;
   }
 }
 @media only screen and (max-width: 470px) {
