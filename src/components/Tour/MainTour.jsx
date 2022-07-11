@@ -18,12 +18,13 @@ export default function MainTour() {
       `https://admin.tabiyat.kg/api/v1/travel-companies/`
     );
     console.log(data);
-    return data;
+    return data.travel_companies;
   };
 
   const getDescription = async () => {
-    const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/guides/`);
-    console.log(data.description[0].translations.ru);
+    const { data } = await axios.get(
+      `https://admin.tabiyat.kg/api/v1/travel-companies/`
+    );
     return data.description[0].translations.ru;
   };
 
