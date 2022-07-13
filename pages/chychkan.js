@@ -8,7 +8,7 @@ export default function chychkan() {
     <div>
       <main>
         <Navbar />
-        <Chyckan />
+        <Chychkan />
         <Footer />
       </main>
     </div>
