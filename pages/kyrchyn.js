@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../src/components/Footer/Footer";
-import Kyrchyn from "../src/components/KyrgyzstanDetails/Kyrchyn";
 import Navbar from "../src/components/Navbar/Navbar";
+import Kyrchyn from "../src/components/KyrgyzstanDetails/Kyrchyn";
 
 export default function kyrchyn() {
   return (

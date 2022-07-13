@@ -115,7 +115,20 @@ export default function ModalsPag(props) {
                   className={styles.first_per}
                   style={{ backgroundImage: `url(${image})` }}
                 ></div>
-                <div className={styles.person_info}>
+                <div
+                  className={styles.person_info}
+                  onClick={() =>
+                    getDataInfo(
+                      { title },
+                      { id },
+                      { image },
+                      { translations },
+                      { email },
+                      { phone_number },
+                      { last_name }
+                    )
+                  }
+                >
                   <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
                     {title} {last_name}
                   </h2>

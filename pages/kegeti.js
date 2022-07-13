@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../src/components/Footer/Footer";
-import Kegeti from "../src/components/KyrgyzstanDetails/Kegeti";
 import Navbar from "../src/components/Navbar/Navbar";
+import Kegeti from "../src/components/KyrgyzstanDetails/Kegeti";
 
 export default function kegeti() {
   return (

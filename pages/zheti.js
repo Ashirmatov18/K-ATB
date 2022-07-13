@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../src/components/Footer/Footer";
-import Zheti from "../src/components/KyrgyzstanDetails/Zheti";
 import Navbar from "../src/components/Navbar/Navbar";
+import Zheti from "../src/components/KyrgyzstanDetails/Zheti";
 
 export default function zheti() {
   return (

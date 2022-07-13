@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../src/components/Footer/Footer";
-import Orlovka from "../src/components/KyrgyzstanDetails/Orlovka";
 import Navbar from "../src/components/Navbar/Navbar";
+import Orlovka from "../src/components/KyrgyzstanDetails/Orlovka";
 
 export default function orlovka() {
   return (
