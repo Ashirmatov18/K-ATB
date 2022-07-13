@@ -5,11 +5,6 @@ import Footer from "../src/components/Footer/Footer";
 import Main from "../src/components/Main/Main";
 import Navbar from "../src/components/Navbar/Navbar";
 import News from "../src/components/News/News";
-import MainLayout from "../src/components/ui/MainLayout";
-import styles from "../styles/Home.module.css";
-import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
-import { MainLogo } from "../src/components/Navbar/NavbarIcons";
-import favico from "../static/favicon.ico";
 
 export default function Home() {
   return (

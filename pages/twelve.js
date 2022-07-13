@@ -3,7 +3,7 @@ import Footer from "../src/components/Footer/Footer";
 import Twelve from "../src/components/KyrgyzstanDetails/Twelve";
 import Navbar from "../src/components/Navbar/Navbar";
 
-export default function kashkasuu() {
+export default function twelve() {
   return (
     <div>
       <main>

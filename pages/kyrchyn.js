@@ -3,7 +3,7 @@ import Footer from "../src/components/Footer/Footer";
 import Kyrchyn from "../src/components/KyrgyzstanDetails/Kyrchyn";
 import Navbar from "../src/components/Navbar/Navbar";
 
-export default function kashkasuu() {
+export default function kyrchyn() {
   return (
     <div>
       <main>

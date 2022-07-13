@@ -3,7 +3,7 @@ import Footer from "../src/components/Footer/Footer";
 import Chunk from "../src/components/KyrgyzstanDetails/Chunk";
 import Navbar from "../src/components/Navbar/Navbar";
 
-export default function kashkasuu() {
+export default function chunk() {
   return (
     <div>
       <main>

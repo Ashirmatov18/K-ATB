@@ -3,7 +3,7 @@ import Footer from "../src/components/Footer/Footer";
 import Chychkan from "../src/components/KyrgyzstanDetails/Chyckan";
 import Navbar from "../src/components/Navbar/Navbar";
 
-export default function kashkasuu() {
+export default function chychkan() {
   return (
     <div>
       <main>

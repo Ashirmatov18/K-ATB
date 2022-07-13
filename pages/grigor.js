@@ -3,7 +3,7 @@ import Footer from "../src/components/Footer/Footer";
 import Grigor from "../src/components/KyrgyzstanDetails/Grigor";
 import Navbar from "../src/components/Navbar/Navbar";
 
-export default function kashkasuu() {
+export default function grigor() {
   return (
     <div>
       <main>
