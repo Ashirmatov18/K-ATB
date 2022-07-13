@@ -112,18 +112,18 @@ export default function Cafe() {
           >
             Кофейни
           </button>
-          <button
+          {/* <button
             className={styles.but_filter}
             onClick={() => filterResult("Кафетерии")}
           >
             Кафетерии
-          </button>
-          <button
+          </button> */}
+          {/* <button
             className={styles.but_filter}
             onClick={() => filterResult("Пекарни")}
           >
             Пекарни
-          </button>
+          </button> */}
         </div>
         <div data-aos="fade-down" className={styles.person_cards}>
           {" "}

@@ -16,9 +16,9 @@ export default function Service() {
 
   const getInfo = async () => {
     const { data } = await axios.get(
-      `https://admin.tabiyat.kg/api/v1/car-rentals/`
+      `https://admin.tabiyat.kg/api/v1/services/`
     );
-    return data.carrentals;
+    return data.service;
   };
 
   const [description, setDescription] = useState([]);

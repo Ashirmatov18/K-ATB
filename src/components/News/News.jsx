@@ -86,7 +86,7 @@ export default function News() {
                   className={styles.picture_first}
                 ></div>
                 <div className={styles.pic_info}>
-                  <h1>{translations.ru.title} </h1>
+                  <h3>{translations.ru.title} </h3>
                   <p className={styles.info_description}>
                     {translations.ru.description}
                   </p>

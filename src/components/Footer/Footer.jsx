@@ -161,7 +161,7 @@ export default function Footer() {
               <p>© K-BAT- 2022</p>
             </div>
             <div className={styles.phone_footer} style={{ fontSize: "20px" }}>
-              <p>+996 123 456</p>
+              <p>+996 554 16 05 89</p>
             </div>
             <div
               style={{
@@ -179,10 +179,7 @@ export default function Footer() {
                 </div>
               </Link>
 
-              <Link
-                target="_blank"
-                href="https://www.facebook.com/Tabiyatkg-105609372166838/"
-              >
+              <Link target="_blank" href="https://www.instagram.com/tabiat.kg/">
                 <div className={styles.i}>
                   <Insta />
                 </div>

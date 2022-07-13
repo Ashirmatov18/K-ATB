@@ -16,6 +16,7 @@ import ModalsPag from "../ModalsPag";
 import { useRouter } from "next/router";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import GuidesPag from "../GuidesPag";
 
 export default function Guides() {
   const [modal, setModal] = useState(false);
@@ -116,7 +117,7 @@ export default function Guides() {
           className={styles.person_cards}
           // data-aos="fade-up"
         >
-          <ModalsPag data={state} searchItem={searchItem} />
+          <GuidesPag data={state} searchItem={searchItem} />
         </div>
       </MainLayout>
     </div>
