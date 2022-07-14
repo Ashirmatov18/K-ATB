@@ -288,6 +288,7 @@
 @media only screen and (max-width: 900px) {
   .bishkeek {
     width: 80vw;
+    margin-right: 0;
   }
   .is {
     width: 80vw;
@@ -297,6 +298,7 @@
   }
   .o {
     width: 80vw;
+    margin-right: 0;
   }
 }
 
