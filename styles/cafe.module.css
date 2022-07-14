@@ -205,6 +205,9 @@
   .but_group {
     justify-content: space-around;
   }
+  .kyrgyzstan {
+    padding-top: 0 !important;
+  }
 }
 
 @media only screen and (max-width: 600px) {

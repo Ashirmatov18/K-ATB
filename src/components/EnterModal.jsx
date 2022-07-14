@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import ReactPaginate from "react-paginate";
-import styles from "../../styles/ordercars.module.css";
+import styles from "../../styles/enterModal.module.css";
 import Modal from "./Modal";
 import {
   Email,
@@ -17,14 +17,14 @@ import "aos/dist/aos.css";
 import Link from "next/link";
 import ModalWindow from "./Modal";
 
-export default function ModalsPag(props) {
+export default function EnterModal(props) {
   const { data } = props;
   const [currentItems, setCurrentItems] = useState([]);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
   const itemsPerPage = 9;
 
-  // console.log(data.searchItem, "sdsd");
+  // console.log(data, "ss");
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
@@ -130,7 +130,7 @@ export default function ModalsPag(props) {
                   }
                 >
                   <h2 style={{ color: "#2F2F2F", fontSize: "24px" }}>
-                    {title} {last_name}
+                    {translations.ru.title}
                   </h2>
                   <div className={styles.desc_info}>
                     <span className={styles.line}>

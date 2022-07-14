@@ -355,9 +355,9 @@
 }
 
 @media only screen and (max-width: 890px) {
-  .residents {
+  /* .residents {
     justify-content: space-evenly;
-  }
+  } */
 }
 
 @media only screen and (max-width: 520px) {

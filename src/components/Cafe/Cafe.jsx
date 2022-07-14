@@ -26,7 +26,6 @@ export default function Cafe() {
     const { data } = await axios.get(
       `https://admin.tabiyat.kg/api/v1/restaurants/`
     );
-    console.log(data);
     return data.restaurants;
   };
 
@@ -61,7 +60,7 @@ export default function Cafe() {
 
   const filterResult = (f) => {
     const result = hotel.filter((curDate) => {
-      return curDate.translations.ru.type_of_house == f;
+      return curDate.translations.ru.type_of_restaurant == f;
     });
     setFilteredHotels(result);
   };
@@ -130,36 +129,6 @@ export default function Cafe() {
           <ModalsPag data={filteredHotels} searchItem={searchItem} />
         </div>
       </MainLayout>
-      {/* {modal && (
-        <div className={styles.modal}>
-          <div className={styles.main}>
-            <div className={styles.controllers}>
-              <div>
-                <Left className={styles.next_prev} />
-                <Right />
-              </div>
-              <div>
-                <Exit onClick={() => setModal(false)} />
-              </div>
-            </div>
-            <img src={wordData.value} className={styles.main_carousel} />
-            <div className={styles.flex_row}>
-              {imgs.map((data, i) => (
-                <div className={styles.thumbnail} key={i}>
-                  <img
-                    // className={wordData.id == i ? "clicked" : ""}
-                    className={styles.mini_carousel}
-                    src={data.value}
-                    onClick={() => handleClick(i)}
-                    height="70"
-                    width="100"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )} */}
     </div>
   );
 }

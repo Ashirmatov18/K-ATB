@@ -14,7 +14,6 @@ export default function Hotels() {
 
   const getHotel = async () => {
     const { data } = await axios.get(`https://admin.tabiyat.kg/api/v1/houses/`);
-    console.log(data);
     return data.houses;
   };
 

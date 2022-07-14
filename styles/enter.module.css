@@ -1,5 +1,5 @@
 .main_guides {
-  background-image: url("../public/images/tobias-keller-73F4pKoUkM0-unsplash\ 1.jpg");
+  background-image: url("../public/images/ccc.jpg");
   height: 322px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,11 +15,56 @@
   max-width: 1280px;
 }
 
+.search {
+  width: 326.26px;
+  height: 45px;
+  background: #323232;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding-left: 20px;
+  color: #828282;
+  border: none;
+  position: relative;
+  font-size: 15px;
+}
+
+.search_icon {
+  position: absolute;
+  right: 175px;
+  margin-top: 10px;
+}
+
+.main_search {
+  display: flex;
+  justify-content: end;
+  padding: 0 20px;
+  padding-top: 20px !important;
+}
+
+.search_explore {
+  display: flex;
+  justify-content: space-between;
+}
+
+.kyrgyzstan {
+  padding-top: 50px;
+}
+
+.kyrgyzstan span {
+  color: #333333;
+  font-size: 50px;
+}
+
+.kyrgyzstan p {
+  color: #2f2f2f;
+  font-size: 24px;
+}
+
 .person_cards {
   display: flex;
   justify-content: space-between;
-  margin-top: 150px;
   flex-wrap: wrap;
+  margin-top: 150px;
   margin-bottom: 100px;
 }
 
@@ -42,35 +87,8 @@
   margin-bottom: 55px;
 }
 
-.persons_fourth {
-  width: 386px;
-  height: 560px;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  margin-left: 431px;
-}
-
 .first_per {
-  background-image: url("../public/images/Rectangle\ 328.jpg");
-  width: 386.14px;
-  height: 284px;
-}
-
-.sec_per {
-  background-image: url("../public/images/Rectangle\ 2.jpg");
-  width: 386.14px;
-  height: 284px;
-}
-
-.th_per {
-  background-image: url("../public/images/Rectangle\ 3.jpg");
-  width: 386.14px;
-  height: 284px;
-}
-
-.fou_per {
-  background-image: url("../public/images/Rectangle\ 4.jpg");
+  background-image: url("../public/images/fc.jpg");
   width: 386.14px;
   height: 284px;
 }
@@ -104,61 +122,201 @@
   color: #2f2f2f;
 }
 
-.last_card {
-  position: relative;
-  margin-bottom: 100px;
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* right: 0; */
+  /* bottom: 0; */
+  /* background-color: rgba(207, 201, 201, 0.973); */
+  display: flex;
+  justify-content: center;
+  /* align-items: center */
+  z-index: 999;
+  height: auto;
+  width: 100%;
+  box-shadow: #333333;
+  /* border: 2px solid #000; */
+  transform: translate(-50%, -50%);
+  line-height: 45px;
+}
+.info_few {
+  text-align: left;
+  padding-bottom: 30px;
 }
 
-@media only screen and (max-width: 1250px) {
-  .persons_fourth {
-    margin-left: 0;
+.contact_info {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.box::-webkit-scrollbar {
+  width: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: darkgrey;
+}
+
+.img_by img {
+  background-size: cover;
+  width: auto;
+  height: 30vw;
+  border-radius: 10px;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: 20px;
+}
+
+.guides {
+  position: relative;
+}
+
+.main {
+  text-align: center;
+  margin-top: 150px;
+  width: 80vw;
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  padding-top: 50px;
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+}
+
+.info_bt {
+  margin-top: 60px;
+}
+
+.desc_trans {
+  margin-top: 40px !important ;
+  font-size: 18px;
+  width: 60vw;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  /* white-space: 1px; */
+  /* word-break: normal; */
+}
+
+.desc_trans p {
+  font-size: 35px;
+}
+
+.desc_trans pre {
+  font-weight: bold;
+  color: #323232;
+  /* width: 50px !important; */
+  white-space: pre-wrap;
+}
+
+.title_bt h1 {
+  font-size: 60px !important;
+}
+
+.flex_row {
+  justify-content: left;
+  display: flex;
+  padding-top: 20px;
+}
+
+.clicked {
+  border: 5px solid black;
+}
+
+.main_carousel {
+  width: 1240px;
+  height: 658px;
+  border-radius: 20px;
+}
+
+.mini_carousel {
+  width: 147.15px;
+  height: 155px;
+  margin-right: 20px;
+  border-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.controllers {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.next_prev {
+  margin-right: 15px;
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 1470px) {
+  .search_icon {
+    right: 130px;
   }
-  .persons {
-    margin-top: 0;
+}
+
+@media only screen and (max-width: 1320px) {
+  .search_icon {
+    right: 70px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .persons:nth-child(3n + 2) {
+    transform: unset !important;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .main_search {
+    position: absolute;
+    margin-top: 300px !important;
+  }
+
+  .search {
+    width: 70vw;
+    height: 55px;
+    background-color: #f2f2f2;
+    font-size: 20px;
+    left: 10vw;
+  }
+
+  .search_icon {
+    margin-top: 15px;
+    display: none;
+  }
+  .kyrgyzstan {
+    padding-top: 0;
+  }
+  .person_cards {
+    margin-top: 50px;
   }
 }
 
 @media only screen and (max-width: 850px) {
   .person_cards {
     justify-content: center;
+    margin-bottom: 30px !important;
+    border-radius: 10px;
+  }
+
+  .about_title {
+    font-size: 50px;
   }
 }
-@media only screen and (max-width: 420px) {
-  .persons {
-    width: 90vw !important;
-    margin-top: 40px;
+
+@media only screen and (max-width: 600px) {
+  .main_search {
+    margin-top: 450px !important;
+    left: 0 !important;
   }
-  .first_per {
-    width: 90vw !important;
-    border-radius: 10px;
+}
+
+@media only screen and (max-width: 470px) {
+  .main_search {
+    margin-top: 550px !important;
   }
-  .line_pers {
-    width: 80vw !important;
-  }
-  .sec_per {
-    width: 90vw !important;
-    border-radius: 10px;
-  }
-  .th_per {
-    width: 90vw !important;
-    border-radius: 10px;
-  }
-  .fou_per {
-    width: 90vw !important;
-    border-radius: 10px;
-  }
-  .persons_sec {
-    width: 90vw !important;
-    margin-top: 30px;
-  }
-  .persons_fourth {
-    width: 90vw !important;
-    margin-top: 30px;
-  }
-  .line_height {
-    width: 50vw !important;
-  }
-  .person_cards {
-    margin-top: 0;
+  .about_title {
+    font-size: 35px;
   }
 }

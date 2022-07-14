@@ -76,7 +76,7 @@
 
 .persons {
   width: 386px;
-  max-height: 545px;
+  height: 545px;
   margin-bottom: 50px;
   border: 1px solid #e0e0e0;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
@@ -149,7 +149,6 @@
 .email {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
 }
 
 .desc_info {
@@ -284,9 +283,6 @@
     position: absolute;
     margin-top: 300px !important;
   }
-  .person_cards {
-    margin-top: 350px;
-  }
   .search {
     width: 70vw;
     height: 55px;
@@ -308,7 +304,6 @@
   .person_cards {
     justify-content: center;
     margin-bottom: 30px !important;
-    margin-top: 250px;
   }
 
   .about_title {
@@ -330,17 +325,13 @@
 }
 
 @media only screen and (max-width: 470px) {
-  .person_cards {
-    margin-top: 180px !important;
-  }
-
   .persons {
     width: 90vw !important;
     margin-left: 0;
   }
   /* .main_search {
-    margin-top: 300px !important;
-  } */
+      margin-top: 300px !important;
+    } */
 
   .kyrgyzstan span {
     font-size: 40px;
@@ -348,10 +339,10 @@
 }
 
 /* @media only screen and (max-width: 420px) {
-  .main_search {
-    margin-top: 350px !important;
-  }
-} */
+    .main_search {
+      margin-top: 350px !important;
+    }
+  } */
 
 @media only screen and (max-width: 390px) {
   .persons {
@@ -365,8 +356,8 @@
     width: 80vw !important;
   }
   /* .main_search {
-    margin-top: 450px !important;
-  } */
+      margin-top: 450px !important;
+    } */
   .person_cards {
     margin-top: 150px;
   }

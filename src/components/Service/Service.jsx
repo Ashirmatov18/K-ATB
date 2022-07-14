@@ -72,7 +72,7 @@ export default function Service() {
                 <>
                   <div className={styles.search_explore}>
                     <span>{title}</span>
-                    <div className={styles.main_search}>
+                    {/* <div className={styles.main_search}>
                       <input
                         type="text"
                         className={styles.search}
@@ -82,7 +82,7 @@ export default function Service() {
                         }}
                       />
                       <Search className={styles.search_icon} />
-                    </div>
+                    </div> */}
                   </div>
 
                   <div data-aos="fade-down">

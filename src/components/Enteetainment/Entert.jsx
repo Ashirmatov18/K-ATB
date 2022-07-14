@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import styles from "../../../styles/enter.module.css";
-import styles from "../../../styles/cars.module.css";
-
+import styles from "../../../styles/enter.module.css";
 import {
   Email,
   Facebook,
@@ -17,8 +15,7 @@ import Aos from "aos";
 import { useRouter } from "next/router";
 import "aos/dist/aos.css";
 import axios from "axios";
-import GuidesPag from "../GuidesPag";
-import ModalsPag from "../ModalsPag";
+import EnterModal from "../EnterModal";
 
 export default function Entert() {
   useEffect(() => {
@@ -82,7 +79,7 @@ export default function Entert() {
           className={styles.person_cards}
           // data-aos="fade-up"
         >
-          <ModalsPag data={state} searchItem={searchItem} />
+          <EnterModal data={state} searchItem={searchItem} />
         </div>
       </MainLayout>
       <Footer style={{ margin: "300px" }} />

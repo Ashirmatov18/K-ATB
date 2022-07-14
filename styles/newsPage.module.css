@@ -249,7 +249,6 @@
 }
 
 .info_description {
-  height: 200px;
   max-height: 200px;
   overflow: hidden;
 }
@@ -341,12 +340,16 @@
   .pic_info {
     width: 50vw;
   }
+  .kyrgyzstan {
+    padding-top: 0 !important;
+  }
 }
 
 @media only screen and (max-width: 630px) {
   .info_detail {
     flex-wrap: wrap;
     display: block;
+    margin-bottom: 50px;
   }
   .picture_first {
     width: 80vw;
@@ -396,5 +399,8 @@
 @media only screen and (max-width: 520px) {
   .pic_info {
     width: 80vw;
+  }
+  .kyrgyzstan span {
+    font-size: 35px;
   }
 }

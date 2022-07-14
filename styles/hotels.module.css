@@ -56,7 +56,7 @@
 
 .person_cards {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   margin-top: 150px;
   flex-wrap: wrap;
   margin-bottom: 100px;
@@ -196,7 +196,7 @@
   .person_cards {
     justify-content: center;
     margin-bottom: 30px !important;
-    margin-top: 250px;
+    margin-top: 30px;
   }
 
   .about_title {
@@ -206,7 +206,7 @@
     justify-content: space-around;
   }
   .kyrgyzstan {
-    padding-top: 0;
+    padding-top: 0 !important;
   }
 }
 
