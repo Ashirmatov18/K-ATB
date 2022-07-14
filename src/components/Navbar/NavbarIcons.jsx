@@ -1,6 +1,6 @@
 export const MainLogo = (props) => (
   <svg
-    width="59"
+    width="79"
     height="75"
     viewBox="0 0 59 75"
     fill="none"
