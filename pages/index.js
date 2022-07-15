@@ -36,9 +36,6 @@ export default function Home() {
       </Head>
       <main>
         <Navbar />
-        {/* <Link href="/">
-          <ArrowCircleUpIcon className={styles.up}></ArrowCircleUpIcon>
-        </Link> */}
         <Main />
         <Exploration />
         <News />

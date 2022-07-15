@@ -35,6 +35,7 @@ export default function Footer() {
   return (
     <div>
       <ScrollUpButton />
+
       <div className={styles.footer_img} style={{ color: "#fff" }}>
         <MainLayout>
           <div className={styles.horse_section} data-aos="fade-down">
