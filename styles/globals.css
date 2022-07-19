@@ -129,8 +129,8 @@ a {
 .popup-content {
   position: absolute !important;
   width: 100px;
-  left: 10px;
-  top: 50%;
+  right: 220px;
+  top: 45%;
   bottom: 0;
   z-index: 10010;
 }
@@ -202,10 +202,10 @@ a {
   z-index: 10000;
   position: absolute;
   position: fixed;
-  bottom: 20px;
+  bottom: 80px;
   width: 60px;
   height: 60px;
-  left: 20px;
+  right: 15px;
   background-image: url("../public/images/premium-icon-whatsapp-2504957.png");
   background-size: cover;
   cursor: pointer;

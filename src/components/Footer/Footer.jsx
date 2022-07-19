@@ -180,13 +180,19 @@ export default function Footer() {
                 </div>
               </Link>
 
-              <Link target="_blank" href="https://www.instagram.com/tabiat.kg/">
+              <Link
+                target="_blank"
+                href="https://instagram.com/tabiyatkg?igshid=YmMyMTA2M2Y="
+              >
                 <div className={styles.i}>
                   <Insta />
                 </div>
               </Link>
 
-              <Link target="_blank" href="https://vt.tiktok.com/ZSd3GcwJt/">
+              <Link
+                target="_blank"
+                href="https://api.whatsapp.com/send?phone=996554160589"
+              >
                 <div className={styles.w}>
                   <Whats />
                 </div>

@@ -157,7 +157,9 @@ export default function Navbar() {
             <div className="content">
               <input className="input_whats" placeholder="Ваше Имя" />
               <input className="input_whats" placeholder="Ваш Номер" />
-              <button className="but_whats">Отправить</button>
+              <button onClick={close} className="but_whats">
+                Отправить
+              </button>
             </div>
           </div>
         )}
