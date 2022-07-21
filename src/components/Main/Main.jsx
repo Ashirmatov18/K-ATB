@@ -46,7 +46,7 @@ export default function Main() {
               ))}
             <Link style={{ textDecoration: "none" }} href="/kyrgyzstan">
               <div className={styles.button_click}>
-                <button>Нажми</button>
+                <button>Подробнее</button>
               </div>
             </Link>
           </div>

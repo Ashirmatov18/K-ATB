@@ -358,6 +358,15 @@
   /* .residents {
     justify-content: space-evenly;
   } */
+  .residents {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+
+  .wrapper {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
 }
 
 @media only screen and (max-width: 520px) {

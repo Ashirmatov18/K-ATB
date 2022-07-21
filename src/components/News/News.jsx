@@ -51,7 +51,7 @@ export default function News() {
               ))}
             <Link href="news" style={{ textDecoration: "none" }}>
               <div className={styles.but_article}>
-                <button>Нажми меня</button>
+                <button>Подробнее</button>
               </div>
             </Link>
           </div>

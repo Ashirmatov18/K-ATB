@@ -95,7 +95,7 @@ export default function Exploration() {
                   Click Me
                 </animated.div>
               </div> */}
-              <button>Click me</button>
+              <button>Подробнее</button>
             </Link>
           </div>
         </MainLayout>
